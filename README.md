@@ -17,11 +17,7 @@ The ontology is designed to answer key questions that aid in understanding and a
 
 - What plants are beneficial to grow together for pest control?
 - Which plant combinations should be avoided in a garden or farm setting?
-- How does companion planting contribute to soil health?
 - What are the best companion plants for a specific crop (e.g., tomatoes)?
-- How can companion planting be used to attract pollinators?
-- What are the effects of companion planting on crop yield and quality?
-- How does companion planting influence water usage and conservation in agriculture?
-- What companion plants are suitable for a specific climatic or soil condition?
+- How can companion planting be used to combat specific pests (e.g., aphids)?
 
 Feel free to explore the ontology and contribute to its development. Your insights and feedback are valuable in enhancing this knowledge base.
