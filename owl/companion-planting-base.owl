@@ -21,6 +21,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#attractor_of -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#attractor_of">
@@ -56,7 +64,7 @@
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#fixates_nitrogen -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#fixates_nitrogen">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients"/>
     </owl:ObjectProperty>
     
 
@@ -133,6 +141,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_shade -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_shade">
@@ -177,6 +193,30 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#repeller_of">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_calcium -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_calcium">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_phosphorus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_phosphorus">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_potassium -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_potassium">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients"/>
     </owl:ObjectProperty>
     
 
