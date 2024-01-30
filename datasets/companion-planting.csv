@@ -1,0 +1,549 @@
+Apple,Chives,companion
+Apple,Garlic,companion
+Apple,Grass,antagonistic
+Apple,Horseradish,companion
+Apple,Lemon Balm,companion
+Apple,Marigold,companion
+Apple,Mustard,companion
+Apple,Nasturtiums,companion
+Apple,Potato,antagonistic
+Apple,Spinach,companion
+Apple,Tansy,companion
+Apple,Yarrow,companion
+Apricot,Basil,companion
+Apricot,Garlic,companion
+Apricot,Grass,antagonistic
+Apricot,Horseradish,companion
+Apricot,Lemon Balm,companion
+Apricot,Marigold,companion
+Apricot,Mustard,companion
+Apricot,Nasturtiums,companion
+Apricot,Spinach,companion
+Apricot,Sunﬂower,companion
+Apricot,Tansy,companion
+Apricot,Tomato,antagonistic
+Apricot,Yarrow,companion
+Asparagus,Basil,companion
+Asparagus,Chives,companion
+Asparagus,Marjoram,companion
+Asparagus,Parsley,companion
+Asparagus,Tomato,companion
+Basil,Apricot,companion
+Basil,Asparagus,companion
+Basil,Cucumber,companion
+Basil,Fennel,companion
+Basil,Rue,antagonistic
+Basil,Silverbeet,antagonistic
+Basil,Tomato,companion
+Beans,Cabbages,companion
+Beans,Carrots,companion
+Beans,Chives,antagonistic
+Beans,Corn,companion
+Beans,Cucumber,companion
+Beans,Eggplant,companion
+Beans,Fennel,antagonistic
+Beans,Garlic,antagonistic
+Beans,Lettuce,companion
+Beans,Marigold,companion
+Beans,Marjoram,companion
+Beans,Onions,antagonistic
+Beans,Parsley,companion
+Beans,Parsnip,companion
+Beans,Potato,companion
+Beans,Rosemary,companion
+Beans,Sage,companion
+Beans,Shallots,antagonistic
+Beets,Bush Beans,companion
+Beets,Cabbages,companion
+Beets,Climbing Beans,antagonistic
+Beets,Dill,companion
+Beets,Lettuce,companion
+Beets,Marjoram,companion
+Beets,Onions,companion
+Beets,Potato,companion
+Beets,Silverbeet,companion
+Beets,Tomato,antagonistic
+Borage,Cabbages,companion
+Borage,Cucumber,companion
+Borage,Strawberries,companion
+Borage,Tansy,companion
+Borage,Tomato,companion
+Broad Beans,Cabbages,companion
+Broad Beans,Chives,antagonistic
+Broad Beans,Corn,companion
+Broad Beans,Fennel,antagonistic
+Broad Beans,Garlic,antagonistic
+Broad Beans,Lettuce,companion
+Broad Beans,Marjoram,companion
+Broad Beans,Onions,antagonistic
+Broad Beans,Potato,companion
+Broad Beans,Spinach,companion
+Broccoli,Beans,companion
+Broccoli,Beets,companion
+Broccoli,Borage,companion
+Broccoli,Broad Beans,companion
+Broccoli,Bush Beans,companion
+Broccoli,Climbing Beans,companion
+Broccoli,Coriander,companion
+Broccoli,Cucumber,companion
+Broccoli,Dill,companion
+Broccoli,Marigold,companion
+Broccoli,Marjoram,companion
+Broccoli,Nasturtiums,companion
+Broccoli,Potato,companion
+Broccoli,Rue,antagonistic
+Broccoli,Strawberries,antagonistic
+Broccoli,Tomato,companion
+Brussell Sprouts,Beans,companion
+Brussell Sprouts,Beets,companion
+Brussell Sprouts,Borage,companion
+Brussell Sprouts,Broad Beans,companion
+Brussell Sprouts,Bush Beans,companion
+Brussell Sprouts,Climbing Beans,companion
+Brussell Sprouts,Coriander,companion
+Brussell Sprouts,Cucumber,companion
+Brussell Sprouts,Dill,companion
+Brussell Sprouts,Marigold,companion
+Brussell Sprouts,Marjoram,companion
+Brussell Sprouts,Potato,companion
+Brussell Sprouts,Strawberries,companion
+Brussell Sprouts,Sunﬂower,companion
+Bush Beans,Beets,companion
+Bush Beans,Cabbages,companion
+Bush Beans,Celery,companion
+Bush Beans,Chives,antagonistic
+Bush Beans,Corn,companion
+Bush Beans,Cucumber,companion
+Bush Beans,Garlic,antagonistic
+Bush Beans,Marjoram,companion
+Bush Beans,Onions,antagonistic
+Bush Beans,Potato,companion
+Bush Beans,Strawberries,companion
+Bush Beans,Sunﬂower,companion
+Cabbages,Beans,companion
+Cabbages,Beets,companion
+Cabbages,Borage,companion
+Cabbages,Broad Beans,companion
+Cabbages,Bush Beans,companion
+Cabbages,Celery,companion
+Cabbages,Climbing Beans,companion
+Cabbages,Coriander,companion
+Cabbages,Cucumber,companion
+Cabbages,Dill,companion
+Cabbages,Garlic,antagonistic
+Cabbages,Lavender,companion
+Cabbages,Lettuce,companion
+Cabbages,Marigold,companion
+Cabbages,Marjoram,companion
+Cabbages,Mints,companion
+Cabbages,Nasturtiums,companion
+Cabbages,Onions,companion
+Cabbages,Potato,companion
+Cabbages,Rosemary,companion
+Cabbages,Rue,antagonistic
+Cabbages,Sage,companion
+Cabbages,Strawberries,antagonistic
+Cabbages,Tansy,companion
+Cabbages,Thyme,companion
+Carrots,Beans,companion
+Carrots,Chives,companion
+Carrots,Coriander,companion
+Carrots,Cucumber,companion
+Carrots,Dill,companion
+Carrots,Fruit Trees,companion
+Carrots,Leeks,companion
+Carrots,Lettuce,companion
+Carrots,Marjoram,companion
+Carrots,Onions,companion
+Carrots,Parsnip,antagonistic
+Carrots,Radish,companion
+Carrots,Rue,companion
+Carrots,Tomato,companion
+Cauliﬂower,Beans,companion
+Cauliﬂower,Beets,companion
+Cauliﬂower,Borage,companion
+Cauliﬂower,Broad Beans,companion
+Cauliﬂower,Bush Beans,companion
+Cauliﬂower,Celery,companion
+Cauliﬂower,Climbing Beans,companion
+Cauliﬂower,Coriander,companion
+Cauliﬂower,Cucumber,companion
+Cauliﬂower,Dill,companion
+Cauliﬂower,Marigold,companion
+Cauliﬂower,Marjoram,companion
+Cauliﬂower,Potato,companion
+Cauliﬂower,Rue,antagonistic
+Cauliﬂower,Strawberries,antagonistic
+Cauliﬂower,Tomato,companion
+Celery,Bush Beans,companion
+Celery,Cabbages,companion
+Celery,Dill,companion
+Celery,Leeks,companion
+Celery,Marjoram,companion
+Celery,Parsnip,antagonistic
+Celery,Potato,antagonistic
+Celery,Tomato,companion
+Chamomile,Cabbages,companion
+Chamomile,Mints,antagonistic
+Cherry,Chives,companion
+Cherry,Garlic,companion
+Cherry,Grass,antagonistic
+Cherry,Horseradish,companion
+Cherry,Lemon Balm,companion
+Cherry,Lettuce,companion
+Cherry,Marigold,companion
+Cherry,Mustard,companion
+Cherry,Nasturtiums,companion
+Cherry,Potato,antagonistic
+Cherry,Silverbeet,companion
+Cherry,Spinach,companion
+Cherry,Tansy,companion
+Cherry,Yarrow,companion
+Chervil,Coriander,companion
+Chervil,Dill,companion
+Chervil,Lettuce,companion
+Chervil,Radish,companion
+Chives,Basil,companion
+Chives,Beans,antagonistic
+Chives,Broad Beans,antagonistic
+Chives,Bush Beans,antagonistic
+Chives,Carrots,companion
+Chives,Cherry,companion
+Chives,Climbing Beans,antagonistic
+Chives,Fruit Trees,companion
+Chives,Marjoram,companion
+Chives,Parsley,companion
+Chives,Parsnip,companion
+Chives,Roses,companion
+Chives,Strawberries,companion
+Chives,Tomato,companion
+Climbing Beans,Beets,antagonistic
+Climbing Beans,Cabbages,companion
+Climbing Beans,Chives,antagonistic
+Climbing Beans,Corn,companion
+Climbing Beans,Garlic,antagonistic
+Climbing Beans,Lettuce,companion
+Climbing Beans,Marjoram,companion
+Climbing Beans,Onions,antagonistic
+Climbing Beans,Radish,companion
+Climbing Beans,Sunﬂower,antagonistic
+Coriander/Dill,Cabbages,companion
+Coriander/Dill,Carrots,companion
+Coriander/Dill,Chervil,companion
+Coriander/Dill,Dill,companion
+Coriander/Dill,Parsnip,companion
+Corn,Beans,companion
+Corn,Broad Beans,companion
+Corn,Bush Beans,companion
+Corn,Climbing Beans,companion
+Corn,Cucumber,companion
+Corn,Marjoram,companion
+Corn,Parsnip,companion
+Corn,Potato,companion
+Corn,Pumpkin,companion
+Corn,Radish,companion
+Corn,Zucchini,companion
+Cucumber,Basil,companion
+Cucumber,Beans,companion
+Cucumber,Borage,companion
+Cucumber,Bush Beans,companion
+Cucumber,Cabbages,companion
+Cucumber,Carrots,companion
+Cucumber,Corn,companion
+Cucumber,Dill,companion
+Cucumber,Lettuce,companion
+Cucumber,Marjoram,companion
+Cucumber,Nasturtiums,companion
+Cucumber,Potato,antagonistic
+Cucumber,Radish,companion
+Cucumber,Sage,antagonistic
+Cucumber,Sunﬂower,companion
+Cucumber,Tansy,companion
+Fennel,Basil,companion
+Fennel,Beans,antagonistic
+Fennel,Broad Beans,antagonistic
+Fennel,Coriander,antagonistic
+Fennel,Dill,companion
+Fennel,Lavender,antagonistic
+Fennel,Tomato,antagonistic
+Fruit Trees,Chives,companion
+Fruit Trees,Garlic,companion
+Fruit Trees,Grass,antagonistic
+Fruit Trees,Lemon Balm,companion
+Fruit Trees,Marigold,companion
+Fruit Trees,Mustard,companion
+Fruit Trees,Nasturtiums,companion
+Fruit Trees,Silverbeet,companion
+Fruit Trees,Spinach,companion
+Fruit Trees,Tansy,companion
+Fruit Trees,Yarrow,companion
+Garlic,Apricot,companion
+Garlic,Beans,antagonistic
+Garlic,Broad Beans,antagonistic
+Garlic,Bush Beans,antagonistic
+Garlic,Cabbages,antagonistic
+Garlic,Chervil,companion
+Garlic,Climbing Beans,antagonistic
+Garlic,Fruit Trees,companion
+Garlic,Lavender,companion
+Garlic,Rosemary,companion
+Garlic,Roses,companion
+Garlic,Sunﬂower,antagonistic
+Grape Vine,Beans,companion
+Grape Vine,Mustard,companion
+Grape Vine,Tansy,companion
+Grape Vine,Tomato,companion
+Grape Vine,Yarrow,companion
+Lettuce,Beans,companion
+Lettuce,Beets,companion
+Lettuce,Broad Beans,companion
+Lettuce,Cabbages,companion
+Lettuce,Carrots,companion
+Lettuce,Cherry,companion
+Lettuce,Chervil,companion
+Lettuce,Climbing Beans,companion
+Lettuce,Cucumber,companion
+Lettuce,Marigold,companion
+Lettuce,Marjoram,companion
+Lettuce,Onions,companion
+Lettuce,Parsley,antagonistic
+Lettuce,Parsnip,companion
+Lettuce,Radish,companion
+Lettuce,Strawberries,companion
+Marigold,Apricot,companion
+Marigold,Beans,companion
+Marigold,Cabbages,companion
+Marigold,Carrots,companion
+Marigold,Cherry,companion
+Marigold,Fruit Trees,companion
+Marigold,Lettuce,companion
+Marigold,Potato,companion
+Marigold,Raspberry,companion
+Marigold,Roses,companion
+Marigold,Strawberries,companion
+Marigold,Tomato,companion
+Marjoram,Asparagus,companion
+Marjoram,Beans,companion
+Marjoram,Beets,companion
+Marjoram,Broad Beans,companion
+Marjoram,Bush Beans,companion
+Marjoram,Cabbages,companion
+Marjoram,Carrots,companion
+Marjoram,Celery,companion
+Marjoram,Chives,companion
+Marjoram,Climbing Beans,companion
+Marjoram,Corn,companion
+Marjoram,Cucumber,companion
+Marjoram,Eggplant,companion
+Marjoram,Lavender,companion
+Marjoram,Leeks,companion
+Marjoram,Lettuce,companion
+Marjoram,Onions,companion
+Marjoram,Parsnip,companion
+Marjoram,Potato,companion
+Marjoram,Pumpkin,companion
+Marjoram,Radish,companion
+Marjoram,Shallots,companion
+Marjoram,Silverbeet,companion
+Marjoram,Spinach,companion
+Marjoram,Tomato,companion
+Marjoram,Zucchini,companion
+Mulberry,Chives,companion
+Mulberry,Garlic,companion
+Mulberry,Grape Vine,companion
+Mulberry,Grass,companion
+Mulberry,Lemon Balm,companion
+Mulberry,Marigold,companion
+Mulberry,Mustard,companion
+Mulberry,Nasturtiums,companion
+Mulberry,Silverbeet,companion
+Mulberry,Spinach,companion
+Mulberry,Tansy,companion
+Mulberry,Yarrow,companion
+Nasturtium,Apricot,companion
+Nasturtium,Cabbages,companion
+Nasturtium,Cherry,companion
+Nasturtium,Cucumber,companion
+Nasturtium,Fruit Trees,companion
+Nasturtium,Potato,companion
+Nasturtium,Radish,companion
+Nasturtium,Roses,companion
+Nasturtium,Tomato,companion
+Nasturtium,Zucchini,companion
+Onions,Beans,antagonistic
+Onions,Beets,companion
+Onions,Broad Beans,antagonistic
+Onions,Bush Beans,antagonistic
+Onions,Cabbages,companion
+Onions,Carrots,companion
+Onions,Climbing Beans,antagonistic
+Onions,Leeks,companion
+Onions,Lettuce,companion
+Onions,Marjoram,companion
+Onions,Parsley,companion
+Onions,Parsnip,companion
+Onions,Roses,companion
+Onions,Silverbeet,companion
+Onions,Strawberries,companion
+Onions,Tomato,companion
+Parsley,Asparagus,companion
+Parsley,Beans,companion
+Parsley,Chervil,companion
+Parsley,Lettuce,antagonistic
+Parsley,Mints,antagonistic
+Parsley,Onions,companion
+Parsley,Roses,companion
+Parsley,Tomato,companion
+Peas,Beans,companion
+Peas,Borage,companion
+Peas,Cabbages,companion
+Peas,Carrots,companion
+Peas,Celery,companion
+Peas,Chives,antagonistic
+Peas,Corn,companion
+Peas,Cucumber,companion
+Peas,Garlic,antagonistic
+Peas,Lettuce,companion
+Peas,Marjoram,companion
+Peas,Onions,antagonistic
+Peas,Parsnip,companion
+Peas,Potato,companion
+Peas,Raspberry,companion
+Peas,Sage,companion
+Peas,Shallots,antagonistic
+Pennyroyal,Cabbages,companion
+Potatoes,Beans,companion
+Potatoes,Beets,companion
+Potatoes,Broad Beans,companion
+Potatoes,Bush Beans,companion
+Potatoes,Cabbages,companion
+Potatoes,Celery,antagonistic
+Potatoes,Cherry,antagonistic
+Potatoes,Corn,companion
+Potatoes,Cucumber,antagonistic
+Potatoes,Eggplant,companion
+Potatoes,Horseradish,companion
+Potatoes,Marjoram,companion
+Potatoes,Nasturtiums,companion
+Potatoes,Parsnip,companion
+Potatoes,Pumpkin,antagonistic
+Potatoes,Raspberry,antagonistic
+Potatoes,Rosemary,antagonistic
+Potatoes,Sunﬂower,antagonistic
+Potatoes,Tomato,antagonistic
+Pumpkin,Corn,companion
+Pumpkin,Marjoram,companion
+Radish,Carrots,companion
+Radish,Chervil,companion
+Radish,Climbing Beans,companion
+Radish,Corn,companion
+Radish,Cucumber,companion
+Radish,Lettuce,companion
+Radish,Marjoram,companion
+Radish,Nasturtiums,companion
+Radish,Parsnip,companion
+Rosemary,Beans,companion
+Rosemary,Cabbages,companion
+Rosemary,Carrots,companion
+Rosemary,Garlic,companion
+Rosemary,Parsley,companion
+Rosemary,Sage,companion
+Rosemary,Tomato,antagonistic
+Roses,Chives,companion
+Roses,Garlic,companion
+Roses,Horseradish,companion
+Roses,Lavender,companion
+Roses,Lemon Balm,companion
+Roses,Marigold,companion
+Roses,Nasturtiums,companion
+Roses,Onions,companion
+Roses,Parsley,companion
+Roses,Rue,companion
+Roses,Sage,companion
+Roses,Tansy,companion
+Roses,Thyme,companion
+Rue,Basil,antagonistic
+Rue,Cabbages,antagonistic
+Rue,Raspberry,companion
+Rue,Roses,companion
+Rue,Sage,antagonistic
+Sage,Beans,companion
+Sage,Cabbages,companion
+Sage,Carrots,companion
+Sage,Cucumber,antagonistic
+Sage,Grass,antagonistic
+Sage,Parsnip,companion
+Sage,Rosemary,companion
+Sage,Roses,companion
+Sage,Rue,antagonistic
+Sage,Strawberries,companion
+Savory,Beans,companion
+Savory,Onions,companion
+Silverbeet,Basil,antagonistic
+Silverbeet,Beets,companion
+Silverbeet,Cherry,companion
+Silverbeet,Fruit Trees,companion
+Silverbeet,Lavender,companion
+Silverbeet,Marjoram,companion
+Silverbeet,Onions,companion
+Spinach,Apricot,companion
+Spinach,Broad Beans,companion
+Spinach,Cherry,companion
+Spinach,Fruit Trees,companion
+Spinach,Marjoram,companion
+Spinach,Strawberries,companion
+Squash,Borage,companion
+Squash,Corn,companion
+Squash,Marjoram,companion
+Squash,Nasturtiums,companion
+Squash,Sunﬂower,companion
+Squash,Tansy,companion
+Stinging Nettle,Apricot,companion
+Stinging Nettle,Fruit Trees,companion
+Stinging Nettle,Horseradish,companion
+Stinging Nettle,Tomato,companion
+Strawberry,Borage,companion
+Strawberry,Bush Beans,companion
+Strawberry,Cabbages,antagonistic
+Strawberry,Chives,companion
+Strawberry,Garlic,antagonistic
+Strawberry,Lavender,companion
+Strawberry,Lettuce,companion
+Strawberry,Marigold,companion
+Strawberry,Onions,companion
+Strawberry,Sage,companion
+Strawberry,Spinach,companion
+Sunﬂower,Apricot,companion
+Sunﬂower,Bush Beans,companion
+Sunﬂower,Climbing Beans,antagonistic
+Sunﬂower,Cucumber,companion
+Tomato,Apricot,antagonistic
+Tomato,Asparagus,companion
+Tomato,Basil,companion
+Tomato,Beets,antagonistic
+Tomato,Borage,companion
+Tomato,Cabbages,antagonistic
+Tomato,Carrots,companion
+Tomato,Celery,companion
+Tomato,Chives,companion
+Tomato,Dill,companion
+Tomato,Fennel,antagonistic
+Tomato,Gooseberry,companion
+Tomato,Grape Vine,companion
+Tomato,Marigold,companion
+Tomato,Marjoram,companion
+Tomato,Mints,companion
+Tomato,Nasturtiums,companion
+Tomato,Onions,companion
+Tomato,Parsley,companion
+Tomato,Parsnip,companion
+Tomato,Rosemary,antagonistic
+Yarrow,Apricot,companion
+Yarrow,Chervil,companion
+Yarrow,Fruit Trees,companion
+Yarrow,Grape Vine,companion
+Yarrow,Grass,companion
+Yarrow,Tansy,companion
+Zucchini,Corn,companion
+Zucchini,Marjoram,companion
+Zucchini,Nasturtiums,companion
