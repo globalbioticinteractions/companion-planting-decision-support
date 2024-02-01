@@ -101,13 +101,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour -->
-
-
-    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-    
-
-
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction -->
 
 
@@ -378,66 +371,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mustard"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -525,72 +458,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Basil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mustard"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sunﬂower"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -627,36 +494,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Basil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -708,36 +545,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Asparagus"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fennel"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -858,84 +665,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Eggplant"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rosemary"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -1015,54 +744,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -1109,36 +790,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -1208,42 +859,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -1352,90 +967,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -1529,90 +1060,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sunﬂower"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sunﬂower"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -1700,60 +1147,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sunﬂower"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Celery"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sunﬂower"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -1925,138 +1318,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Thyme"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Celery"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mints"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rosemary"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Thyme"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -2168,84 +1429,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTrees"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Leeks"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rue"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -2351,90 +1534,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Celery"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -2492,42 +1591,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Leeks"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -2546,12 +1609,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -2648,78 +1705,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mustard"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -2750,30 +1735,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -2870,66 +1831,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Basil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTrees"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -2996,36 +1897,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -3119,72 +1990,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pumpkin"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -3293,90 +2098,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Basil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sunﬂower"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -3452,18 +2173,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Basil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -3567,66 +2276,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mustard"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -3708,42 +2357,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTrees"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rosemary"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -3804,36 +2417,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mustard"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -4021,96 +2604,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -4198,78 +2691,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTrees"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Raspberry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -4438,162 +2859,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Asparagus"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Celery"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Eggplant"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Leeks"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pumpkin"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -4693,78 +2958,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#GrapeVine"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Grass"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mustard"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -4854,66 +3047,6 @@
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#croptrap_of"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Aphid"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTrees"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5045,78 +3178,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Leeks"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -5180,42 +3241,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Asparagus"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -5339,84 +3364,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Celery"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Raspberry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -5429,12 +3376,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -5589,72 +3530,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Eggplant"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -5682,18 +3557,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -5769,60 +3632,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -5889,42 +3698,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -6015,84 +3788,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Thyme"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rue"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Thyme"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -6129,18 +3824,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Raspberry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -6213,48 +3896,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rosemary"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Roses"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -6273,18 +3914,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -6354,42 +3983,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beets"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTrees"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -6465,42 +4058,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTrees"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberries"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -6546,42 +4103,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sunﬂower"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -6612,30 +4133,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTrees"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -6723,60 +4220,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -6807,24 +4250,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBeans"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -6981,102 +4406,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Asparagus"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Basil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Celery"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Gooseberry"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#GrapeVine"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mints"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onions"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -7149,42 +4478,6 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTrees"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#GrapeVine"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Grass"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -7209,24 +4502,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtiums"/>
             </Restriction>
         </rdfs:subClassOf>
@@ -7266,36 +4541,6 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbages"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrots"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ideal_neighbour"/>
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip"/>
             </Restriction>
         </rdfs:subClassOf>

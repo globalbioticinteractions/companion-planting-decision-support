@@ -51,8 +51,7 @@ for _, row in df.iterrows():
         #this might be redundant
         role = fac.getRole(iri + 'companion_with')
         onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
-        role = fac.getRole(iri + 'ideal_neighbour')
-        onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
+
     if row['rel'] == 'antagonistic':
         role = fac.getRole(iri + 'anticompanion_with')
         onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
