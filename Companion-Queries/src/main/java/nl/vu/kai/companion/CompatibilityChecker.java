@@ -74,7 +74,7 @@ public class CompatibilityChecker {
     public Set<OWLIndividualAxiom> organizePlants(Set<OWLClass> plants) throws OWLOntologyCreationException, RepairException {
         OWLOntology maximalABox = createMaximalABox(plants);
 
-        Set<OWLIndividualAxiom> flexible = maximalABox.aboxAxioms(Imports.EXCLUDED)
+        Set<OWLIndividualAxiom> aboxAxioms = maximalABox.aboxAxioms(Imports.EXCLUDED)
                 .map(x -> (OWLIndividualAxiom)x)
                 .collect(Collectors.toSet());
 
@@ -82,7 +82,23 @@ public class CompatibilityChecker {
 
         ClassicalRepairGenerator repairGenerator = new ClassicalRepairGenerator();
 
-        return repairGenerator.computeRepair(maximalABox, flexible);
+        Set<OWLIndividualAxiom> flexible =
+                aboxAxioms.stream()
+                        .filter(x -> x instanceof OWLObjectPropertyAssertionAxiom)
+                        .map(x -> (OWLIndividualAxiom) x)
+                        .collect(Collectors.toSet());
+
+        Set<OWLClassAssertionAxiom> rest =
+                aboxAxioms.stream()
+                        .filter(x -> x instanceof OWLClassAssertionAxiom)
+                        .map(x -> (OWLClassAssertionAxiom) x)
+                        .collect(Collectors.toSet());
+
+        Set<OWLIndividualAxiom> repair = repairGenerator.computeRepair(maximalABox, flexible);
+
+        repair.addAll(rest);
+
+        return repair;
     }
 
     /**
