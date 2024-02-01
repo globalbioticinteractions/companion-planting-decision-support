@@ -166,8 +166,9 @@ class OWLExporter(simplifiedNames: Boolean = true) {
   def toIRI(owlOntology: OWLOntology, name: String): IRI = 
     if(!simplifiedNames && name.startsWith("<") && name.endsWith(">")) {
       IRI.create(name.substring(1,name.length-1))
-    };
-    else { 
+    } else if(!simplifiedNames) {
+      IRI.create(name)
+    } else {
       // val ontIRI = owlOntology.getOntologyID().getOntologyIRI() // <-- needed?
       // IRI.create(ontIRI.getNamespace(), name)
       IRI.create("http://example.com/ns/foo#"+name)
