@@ -1,6 +1,7 @@
 package nl.vu.kai.companion.cmd;
 
 import nl.vu.kai.companion.CompatibilityChecker;
+import nl.vu.kai.companion.repairs.RepairException;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 
@@ -37,12 +38,16 @@ public class Main {
             System.out.println("There was an exception:");
             e.printStackTrace();
             System.exit(1);
+        } catch (RepairException e) {
+            System.out.println("There was an exception:");
+            e.printStackTrace();
+            System.exit(1);
         }
     }
 
-    private static void suggest(CompatibilityChecker checker, Set<OWLClass> plants) {
+    private static void suggest(CompatibilityChecker checker, Set<OWLClass> plants) throws OWLOntologyCreationException, RepairException {
         System.out.println("Here is a configuration that should work:");
-        checker.configurePlants(plants).forEach(System.out::println);
+        checker.organizePlants(plants).forEach(System.out::println);
     }
 
     private static void explain(CompatibilityChecker checker, Set<OWLClass> plants) throws OWLOntologyCreationException {
@@ -60,9 +65,9 @@ public class Main {
     private static void check(CompatibilityChecker checker, Set<OWLClass> plants) throws OWLOntologyCreationException {
         boolean result = checker.compatible(plants);
         if(result){
-            System.out.println("Plants are not compatible.");
-        } else
             System.out.println("Plants are compatible.");
+        } else
+            System.out.println("Plants are not compatible.");
     }
 
     private static Set<OWLClass> getPlants(File file) throws FileNotFoundException {
