@@ -85,6 +85,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#idealNeighbour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#idealNeighbour"/>
+    
+
+
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction">
