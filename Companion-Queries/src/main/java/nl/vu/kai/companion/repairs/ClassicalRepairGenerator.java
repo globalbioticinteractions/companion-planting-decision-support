@@ -1,9 +1,11 @@
 package nl.vu.kai.companion.repairs;
 
-import com.clarkparsia.owlapi.explanation.DefaultExplanationGenerator;
-import com.clarkparsia.owlapi.explanation.ExplanationGenerator;
-import com.clarkparsia.owlapi.explanation.util.SilentExplanationProgressMonitor;
+import nl.vu.kai.companion.util.OWLFormatter;
 import org.semanticweb.HermiT.ReasonerFactory;
+import org.semanticweb.owl.explanation.api.Explanation;
+import org.semanticweb.owl.explanation.api.ExplanationGenerator;
+import org.semanticweb.owl.explanation.api.ExplanationGeneratorFactory;
+import org.semanticweb.owl.explanation.impl.blackbox.checker.InconsistentOntologyExplanationGeneratorFactory;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -29,19 +31,37 @@ public class ClassicalRepairGenerator {
         OWLOntologyManager owlManager = ontology.getOWLOntologyManager();
         OWLDataFactory owlFactory = owlManager.getOWLDataFactory();
 
+        OWLAxiom incAxiom = owlFactory.getOWLSubClassOfAxiom(
+                owlFactory.getOWLThing(),
+                owlFactory.getOWLNothing()
+        );
+
         OWLReasonerFactory reasonerFactory = new ReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
+        ExplanationGeneratorFactory egFactory =
+                new InconsistentOntologyExplanationGeneratorFactory(
+                        reasonerFactory,
+                        owlFactory,
+                        () -> owlManager,
+                        1000);
+
+        OWLFormatter formatter = new OWLFormatter(ontology);
 
         while(!reasoner.isConsistent()) {
-            ExplanationGenerator explanationGenerator =
-                    new DefaultExplanationGenerator(
-                            owlManager,
-                            reasonerFactory,
-                            ontology,
-                            new SilentExplanationProgressMonitor()
-                    );
+            ExplanationGenerator<OWLAxiom> explanationGenerator =
+                    egFactory.createExplanationGenerator(ontology);
 
-            Set<OWLAxiom> explanation = explanationGenerator.getExplanation(owlFactory.getOWLThing());
+            Optional<Explanation<OWLAxiom>> optExplanation =
+                    explanationGenerator.getExplanations(incAxiom,1)
+                            .stream()
+                            .findFirst();
+
+            if(!optExplanation.isPresent())
+                throw new RepairException("Inconsistency couldn't be explained!");
+
+             Set<OWLAxiom> explanation = optExplanation.get().getAxioms();
+
+
             Optional<OWLAxiom> optRemove = explanation.stream()
                     .filter(flexibleAxioms::contains)
                     .findAny();
@@ -52,6 +72,7 @@ public class ClassicalRepairGenerator {
                 OWLAxiom remove = optRemove.get();
                 flexibleAxioms.remove(remove);
                 ontology.remove(remove);
+                reasoner.flush();
             }
         }
 
