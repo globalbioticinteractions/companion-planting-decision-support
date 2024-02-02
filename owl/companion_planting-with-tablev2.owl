@@ -21,6 +21,12 @@
     
 
 
+    <!-- http://www.co-ode.org/ontologies/ont.owl#companion_neighbour -->
+
+    <ObjectProperty rdf:about="http://www.co-ode.org/ontologies/ont.owl#companion_neighbour"/>
+    
+
+
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with -->
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with">
@@ -87,7 +93,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#idealNeighbour -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#idealNeighbour"/>
+    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#idealNeighbour">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </ObjectProperty>
     
 
 
@@ -251,6 +259,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.co-ode.org/ontologies/ont.owl#Companion -->
+
+    <Class rdf:about="http://www.co-ode.org/ontologies/ont.owl#Companion"/>
     
 
 
