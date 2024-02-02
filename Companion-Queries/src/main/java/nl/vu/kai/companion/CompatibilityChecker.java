@@ -1,11 +1,12 @@
 package nl.vu.kai.companion;
 
-import com.clarkparsia.owlapi.explanation.ExplanationGenerator;
-import com.clarkparsia.owlapi.explanation.DefaultExplanationGenerator;
-import com.clarkparsia.owlapi.explanation.util.SilentExplanationProgressMonitor;
 import nl.vu.kai.companion.repairs.ClassicalRepairGenerator;
 import nl.vu.kai.companion.repairs.RepairException;
 import org.semanticweb.HermiT.ReasonerFactory;
+import org.semanticweb.owl.explanation.api.Explanation;
+import org.semanticweb.owl.explanation.api.ExplanationGenerator;
+import org.semanticweb.owl.explanation.api.ExplanationManager;
+import org.semanticweb.owl.explanation.impl.blackbox.checker.InconsistentOntologyExplanationGeneratorFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.model.parameters.Imports;
@@ -26,6 +27,10 @@ public class CompatibilityChecker {
         owlManager = OWLManager.createOWLOntologyManager();
         owlFactory = owlManager.getOWLDataFactory();
         plantOntology = owlManager.loadOntologyFromOntologyDocument(new File(Configuration.ONTOLOGY_PATH));
+    }
+
+    public OWLOntology getPlantOntology() {
+        return plantOntology;
     }
 
     /**
@@ -58,14 +63,23 @@ public class CompatibilityChecker {
             throw new IllegalArgumentException("Plants are compatible!");
 
         ExplanationGenerator explanationGenerator =
-                new DefaultExplanationGenerator(
-                        owlManager,
+                new InconsistentOntologyExplanationGeneratorFactory(
                         reasonerFactory,
-                        maximalABox,
-                        new SilentExplanationProgressMonitor()
-                );
+                        owlFactory,
+                        () -> owlManager,
+                        1000)
+                        .createExplanationGenerator(maximalABox);
 
-        return explanationGenerator.getExplanation(owlFactory.getOWLThing());
+
+        Set<Explanation<OWLAxiom>> explanations = explanationGenerator.getExplanations(
+                owlFactory.getOWLSubClassOfAxiom(owlFactory.getOWLThing(), owlFactory.getOWLNothing()),
+                1);
+
+        return explanations
+                .stream()
+                .map((Explanation x) -> x.getAxioms())
+                .findFirst()
+                .get();
     }
 
     /**

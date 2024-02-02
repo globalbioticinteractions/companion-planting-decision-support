@@ -2,6 +2,7 @@ package nl.vu.kai.companion.cmd;
 
 import nl.vu.kai.companion.CompatibilityChecker;
 import nl.vu.kai.companion.repairs.RepairException;
+import nl.vu.kai.companion.util.OWLFormatter;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 
@@ -20,10 +21,13 @@ public class Main {
 
             CompatibilityChecker checker = new CompatibilityChecker();
 
+            OWLOntology ontology = checker.getPlantOntology();
+            OWLFormatter formatter = new OWLFormatter(ontology);
+
             switch(args[0]) {
                 case "check": check(checker,plants); break;
-                case "explain": explain(checker,plants); break;
-                case "suggest": suggest(checker,plants); break;
+                case "explain": explain(checker,plants,formatter); break;
+                case "suggest": suggest(checker,plants,formatter); break;
                 default:
                     System.out.println("Unknown parameter: "+args[0]);
                     System.out.println();
@@ -45,12 +49,17 @@ public class Main {
         }
     }
 
-    private static void suggest(CompatibilityChecker checker, Set<OWLClass> plants) throws OWLOntologyCreationException, RepairException {
+    private static void suggest(CompatibilityChecker checker, Set<OWLClass> plants, OWLFormatter formatter)
+            throws OWLOntologyCreationException, RepairException {
         System.out.println("Here is a configuration that should work:");
-        checker.organizePlants(plants).forEach(System.out::println);
+        checker.organizePlants(plants)
+                .stream()
+                .map(formatter::format)
+                .forEach(System.out::println);
     }
 
-    private static void explain(CompatibilityChecker checker, Set<OWLClass> plants) throws OWLOntologyCreationException {
+    private static void explain(CompatibilityChecker checker, Set<OWLClass> plants, OWLFormatter formatter)
+            throws OWLOntologyCreationException {
         boolean compatible = checker.compatible(plants);
         if(compatible){
             System.out.println("Plants are compatible.");
@@ -58,7 +67,10 @@ public class Main {
             System.out.println("Plants are not compatible.");
             System.out.println();
             System.out.println("Explanation:");
-            checker.explainIncompatibility(plants).forEach(System.out::println);
+            checker.explainIncompatibility(plants)
+                    .stream()
+                    .map(formatter::format)
+                    .forEach(System.out::println);
         }
     }
 
