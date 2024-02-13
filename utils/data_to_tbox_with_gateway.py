@@ -2,6 +2,7 @@
 # Before running the script, make sure that dl4python jar is running with:
 # java -jar "./utils/dl4python-0.1.2-jar-with-dependencies.jar"
 #################
+import itertools
 
 import pandas as pd
 from py4j.java_gateway import JavaGateway
@@ -11,7 +12,7 @@ from py4j.java_gateway import JavaGateway
 iri = 'http://www.semanticweb.org/kai/ontologies/2024/companion-planting#'
 gateway = JavaGateway()
 parser = gateway.getOWLParser(False)
-onto = parser.parseFile('./owl/companion-planting-base.owl')
+onto = parser.parseFile('./owl/companion-planting-base0.1.owl')
 fac = gateway.getDLFactory()
 
 # load the companion planting dataset/table
@@ -19,29 +20,73 @@ df = pd.read_csv('./../datasets/companion-planting.csv', names=['v1', 'v2', 'rel
 
 # adding the various vegetables
 vegetables = pd.unique(df[['v1', 'v2']].values.ravel())
-vegConcept = fac.getConceptName(iri + "Vegetable")
+vegetableConcept = fac.getConceptName(iri + "Vegetable")
 
+allVegConcepts = []
 for v in vegetables:
     concept = fac.getConceptName(iri+ v.replace(" ", ""))
+    allVegConcepts.append(concept)
+    onto.addStatement(fac.getGCI(concept, vegetableConcept))
 
-    onto.addStatement(fac.getGCI(concept, vegConcept))
+    # onto.addStatement(
+    #     fac.getGCI(
+    #         fac.getConjunction(
+    #             fac.getExistentialRoleRestriction(
+    #                 fac.getRole(iri + 'anticompanion_with'),
+    #                 concept
+    #             ),
+    #             fac.getExistentialRoleRestriction(
+    #                 fac.getRole(iri + 'idealNeighbour'),
+    #                 concept
+    #             )
+    #         ),
+    #         fac.getBottom()
+    #
+    #     )
+    # )
 
     onto.addStatement(
         fac.getGCI(
             fac.getConjunction(
                 fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'anticompanion_with'),
+                    fac.getRole(iri + 'neighbour'),
                     concept
                 ),
                 fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'idealNeighbour'),
+                    fac.getRole(iri + 'companion_with'),
                     concept
                 )
             ),
-            fac.getBottom()
-
+            fac.getExistentialRoleRestriction(
+                fac.getRole(iri + 'companionNeighbour'),
+                concept
+            )
         )
     )
+
+    onto.addStatement(
+        fac.getGCI(
+            fac.getConjunction(
+                fac.getExistentialRoleRestriction(
+                    fac.getRole(iri + 'neighbour'),
+                    concept
+                ),
+                fac.getExistentialRoleRestriction(
+                    fac.getRole(iri + 'anticompanion_with'),
+                    concept
+                )
+            ),
+            fac.getExistentialRoleRestriction(
+                fac.getRole(iri + 'incompatibleNeighbour'),
+                concept
+            )
+        )
+    )
+
+## add disjointness
+for v1,v2 in itertools.combinations(allVegConcepts,2):
+    onto.addStatement(fac.disjointnessAxiom(v1,v2))
+
 
 # adding the companion/anticompanion restrictions
 for _, row in df.iterrows():
@@ -57,7 +102,7 @@ for _, row in df.iterrows():
         onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
 
 # export the ontology
-gateway.getOWLExporter().exportOntology(onto, './owl/companion_planting-with-tablev2.owl')
+gateway.getOWLExporter().exportOntology(onto, './owl/companion_planting-with-tablev3.owl')
 
 # converting the default iri into the correct one - will improve in the future
 # with open('./../owl/companion_planting-with-table.owl', 'r') as file:

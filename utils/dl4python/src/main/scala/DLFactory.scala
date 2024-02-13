@@ -35,4 +35,9 @@ object DLFactory {
   def roleName(name: String) = RoleName(name)
 
   def individual(name: String) = Individual(name)
+
+  def disjointnessAxiom (first: Concept, second: Concept) =
+      DisjointnessAxiom(Seq(first, second))
 }
+
+
