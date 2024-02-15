@@ -5,7 +5,6 @@ import nl.vu.kai.companion.repairs.RepairException;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owl.explanation.api.Explanation;
 import org.semanticweb.owl.explanation.api.ExplanationGenerator;
-import org.semanticweb.owl.explanation.api.ExplanationManager;
 import org.semanticweb.owl.explanation.impl.blackbox.checker.InconsistentOntologyExplanationGeneratorFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
@@ -17,13 +16,15 @@ import java.io.File;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class CompatibilityChecker {
+public class GardenConfigurationChecker {
 
     private final OWLOntology plantOntology;
     private final OWLDataFactory owlFactory;
     private final OWLOntologyManager owlManager;
 
-    public CompatibilityChecker() throws OWLOntologyCreationException {
+    private final static String GARDEN_NAME = "garden";
+
+    public GardenConfigurationChecker() throws OWLOntologyCreationException {
         owlManager = OWLManager.createOWLOntologyManager();
         owlFactory = owlManager.getOWLDataFactory();
         plantOntology = owlManager.loadOntologyFromOntologyDocument(new File(Configuration.ONTOLOGY_PATH));
@@ -36,14 +37,16 @@ public class CompatibilityChecker {
     /**
      * Check whether plants represented by given classes are compatible.
      */
-    public boolean compatible(Set<OWLClass> plants) throws OWLOntologyCreationException {
+    public boolean checkProperty(
+            Set<OWLClass> plants,
+            Configuration.GardenConfigurationProperty property) throws OWLOntologyCreationException {
         OWLOntology maximalABox = createMaximalABox(plants);
 
         maximalABox.addAxioms(plantOntology.axioms());
 
         OWLReasoner reasoner = new ReasonerFactory().createReasoner(maximalABox);
 
-        return reasoner.isConsistent();
+        return reasoner.isEntailed(getAxiom(property));
     }
 
     /**
@@ -51,16 +54,19 @@ public class CompatibilityChecker {
      *
      * @throws IllegalArgumentException if the set of plants is actually compatible
      */
-    public Set<OWLAxiom> explainIncompatibility(Set<OWLClass> plants) throws OWLOntologyCreationException {
+    public Set<OWLAxiom> explainProperty(
+            Set<OWLClass> plants,
+            Configuration.GardenConfigurationProperty property) throws OWLOntologyCreationException {
         OWLOntology maximalABox = createMaximalABox(plants);
+        OWLAxiom axiom = getAxiom(property);
 
         maximalABox.addAxioms(plantOntology.axioms());
 
         OWLReasonerFactory reasonerFactory = new ReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(maximalABox);
 
-        if(reasoner.isConsistent())
-            throw new IllegalArgumentException("Plants are compatible!");
+        if(!reasoner.isEntailed(axiom))
+            throw new IllegalArgumentException("Property not satisfied!");
 
         ExplanationGenerator explanationGenerator =
                 new InconsistentOntologyExplanationGeneratorFactory(
@@ -72,7 +78,7 @@ public class CompatibilityChecker {
 
 
         Set<Explanation<OWLAxiom>> explanations = explanationGenerator.getExplanations(
-                owlFactory.getOWLSubClassOfAxiom(owlFactory.getOWLThing(), owlFactory.getOWLNothing()),
+                axiom,
                 1);
 
         return explanations
@@ -82,10 +88,45 @@ public class CompatibilityChecker {
                 .get();
     }
 
+
+    public Set<OWLIndividualAxiom> organizePlants(Set<OWLClass> plants) throws OWLOntologyCreationException {
+        List<Configuration.GardenConfigurationProperty> properties =
+                Arrays.stream(Configuration.GardenConfigurationProperty.values()).filter(
+                        x -> {
+                            try {
+                                return checkProperty(plants,x);
+                            } catch (OWLOntologyCreationException e) {
+                                return false;
+                            }
+                        }
+                ).collect(Collectors.toList());
+
+        properties.remove(Configuration.GardenConfigurationProperty.BAD_GARDEN);
+
+        Set<OWLIndividualAxiom> currentABox=null;
+        while(currentABox==null){
+            Configuration.GardenConfigurationProperty bestProperty = bestProperty(properties);
+            try {
+                currentABox = organizePlants(plants,bestProperty);
+            } catch(RepairException re) {
+                // repair not possible -> we continue
+                System.out.println("Cannot preserve property "+bestProperty);
+            }
+        }
+        return currentABox;
+    }
+
+    private static Configuration.GardenConfigurationProperty bestProperty(Collection<Configuration.GardenConfigurationProperty> properties)  {
+        return properties.stream().max((x,y) -> x.rating-y.rating).get();
+    }
+
     /**
-     * Return an organization of given plants that respects their compatibility
+     * Return an organization of given plants that satisfies the given property, yet still does not lead to a
+     * bad garden.
      */
-    public Set<OWLIndividualAxiom> organizePlants(Set<OWLClass> plants) throws OWLOntologyCreationException, RepairException {
+    public Set<OWLIndividualAxiom> organizePlants(
+            Set<OWLClass> plants, Configuration.GardenConfigurationProperty desiredProperty)
+            throws OWLOntologyCreationException, RepairException {
         OWLOntology maximalABox = createMaximalABox(plants);
 
         Set<OWLIndividualAxiom> aboxAxioms = maximalABox.aboxAxioms(Imports.EXCLUDED)
@@ -122,19 +163,35 @@ public class CompatibilityChecker {
         throw new AssertionError("Not implemented!");
     }
 
+    private OWLAxiom getAxiom(Configuration.GardenConfigurationProperty property)  {
+        return owlFactory.getOWLClassAssertionAxiom(
+                owlFactory.getOWLClass(IRI.create(property.iri)),
+                owlFactory.getOWLNamedIndividual(IRI.create(GARDEN_NAME)));
+    }
 
     private OWLOntology createMaximalABox(Set<OWLClass> plants) throws OWLOntologyCreationException {
         OWLOntology ontology = owlManager.createOntology();
 
-        OWLObjectProperty neighbour = owlFactory.getOWLObjectProperty(IRI.create(Configuration.nextToIRI));
+        OWLObjectProperty neighbour = owlFactory.getOWLObjectProperty(IRI.create(Configuration.NEIGHBOUR_IRI));
+
+        OWLIndividual garden = owlFactory.getOWLNamedIndividual(IRI.create(GARDEN_NAME));
+
+        ontology.add(owlFactory.getOWLClassAssertionAxiom(
+                owlFactory.getOWLClass(IRI.create(Configuration.GARDEN_IRI)),
+                garden));
+
 
         Set<OWLIndividual> instances = new HashSet<>();
         int count = 0;
         for(OWLClass plant:plants) {
-            OWLIndividual ind = owlFactory.getOWLNamedIndividual(IRI.create("p"+count));
+            OWLIndividual ind = owlFactory.getOWLNamedIndividual(IRI.create("plant"+count));
             count++;
             instances.add(ind);
             ontology.add(owlFactory.getOWLClassAssertionAxiom(plant,ind));
+            ontology.add(owlFactory.getOWLObjectPropertyAssertionAxiom(
+                    owlFactory.getOWLObjectProperty(IRI.create(Configuration.GARDEN_RELATION_IRI)),
+                            garden, ind)
+            );
         }
 
         for(OWLIndividual i1: instances)

@@ -1,13 +1,15 @@
 package nl.vu.kai.companion.cmd;
 
-import nl.vu.kai.companion.CompatibilityChecker;
+import nl.vu.kai.companion.Configuration;
+import nl.vu.kai.companion.Configuration.*;
+import nl.vu.kai.companion.GardenConfigurationChecker;
 import nl.vu.kai.companion.repairs.RepairException;
 import nl.vu.kai.companion.util.OWLFormatter;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 
 import java.io.*;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -19,7 +21,7 @@ public class Main {
         try {
             Set<OWLClass> plants = getPlants(new File(args[1]));
 
-            CompatibilityChecker checker = new CompatibilityChecker();
+            GardenConfigurationChecker checker = new GardenConfigurationChecker();
 
             OWLOntology ontology = checker.getPlantOntology();
             OWLFormatter formatter = new OWLFormatter(ontology);
@@ -49,37 +51,52 @@ public class Main {
         }
     }
 
-    private static void suggest(CompatibilityChecker checker, Set<OWLClass> plants, OWLFormatter formatter)
-            throws OWLOntologyCreationException, RepairException {
-        System.out.println("Here is a configuration that should work:");
-        checker.organizePlants(plants)
-                .stream()
-                .map(formatter::format)
-                .forEach(System.out::println);
-    }
+    private static void check(GardenConfigurationChecker checker, Set<OWLClass> plants) throws OWLOntologyCreationException {
+        for(GardenConfigurationProperty property
+                : GardenConfigurationProperty.values()) {
 
-    private static void explain(CompatibilityChecker checker, Set<OWLClass> plants, OWLFormatter formatter)
-            throws OWLOntologyCreationException {
-        boolean compatible = checker.compatible(plants);
-        if(compatible){
-            System.out.println("Plants are compatible.");
-        } else {
-            System.out.println("Plants are not compatible.");
-            System.out.println();
-            System.out.println("Explanation:");
-            checker.explainIncompatibility(plants)
-                    .stream()
-                    .map(formatter::format)
-                    .forEach(System.out::println);
+            if(property.equals(GardenConfigurationProperty.GARDEN))
+                continue; // this is not relevant
+            boolean result = checker.checkProperty(plants, property);
+            if (result) {
+                System.out.println("Plants satisfy "+property);
+            } else
+                System.out.println("Plants do not satisfy "+property);
         }
     }
 
-    private static void check(CompatibilityChecker checker, Set<OWLClass> plants) throws OWLOntologyCreationException {
-        boolean result = checker.compatible(plants);
-        if(result){
-            System.out.println("Plants are compatible.");
-        } else
-            System.out.println("Plants are not compatible.");
+    private static void explain(GardenConfigurationChecker checker, Set<OWLClass> plants, OWLFormatter formatter)
+            throws OWLOntologyCreationException {
+        for(GardenConfigurationProperty property: GardenConfigurationProperty.values()) {
+            if(property.equals(GardenConfigurationProperty.GARDEN))
+                continue; // this is not relevant
+            try {
+                Set<OWLAxiom> explanation = checker.explainProperty(plants, property);
+
+                System.out.println("Explanation for "+explanation+":");
+                System.out.println("Explanation for "+explanation+":".replaceAll(".","="));
+                System.out.println();
+                explanation
+                        .stream()
+                        .map(formatter::format)
+                        .forEach(System.out::println);
+                System.out.println();
+                System.out.println();
+            } catch(IllegalArgumentException ie) {
+                ;
+            }
+        }
+    }
+
+    private static void suggest(GardenConfigurationChecker checker, Set<OWLClass> plants, OWLFormatter formatter)
+            throws OWLOntologyCreationException, RepairException {
+
+        System.out.println("This would be an optimal way to place the plants without having anti companions next to each other:");
+        System.out.println("===============================");
+        System.out.println();
+        for(OWLIndividualAxiom axiom:checker.organizePlants(plants)){
+            System.out.println(formatter.format(axiom));
+        }
     }
 
     private static Set<OWLClass> getPlants(File file) throws FileNotFoundException {
@@ -99,9 +116,10 @@ public class Main {
         System.out.println("java -jar ... "+Main.class.getCanonicalName()+" [check|explain|suggest] FILE_NAME");
         System.out.println();
         System.out.println("FILE_NAME should contain a list of IRIs of plants.");
-        System.out.println("'check' checks whether those plants are compatible with each other.");
-        System.out.println("'explain' additionally explains why they are not.");
-        System.out.println("'suggest' suggests an arrangement of the given plants that is compatible.");
+        System.out.println("'check' checks which configurations those plants would satisfy if all put together.");
+        System.out.println("'explain' additionally explains why.");
+        System.out.println("'suggest' suggests an arrangement of the given plants such that no incompatible " +
+                "plants are next to each other, while the best positive configuration is reached.");
         System.exit(1);
     }
 }

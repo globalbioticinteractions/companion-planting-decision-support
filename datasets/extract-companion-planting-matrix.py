@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 import fitz
 from collections import defaultdict
 import csv

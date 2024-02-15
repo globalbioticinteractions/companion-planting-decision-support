@@ -27,16 +27,13 @@ public class ClassicalRepairGenerator {
      */
     public <T extends OWLAxiom> Optional<Set<T>> computeRepair(
             OWLOntology ontology,
+            T undesiredAxiom,
             Set<T> flexibleAxioms,
             Set<OWLAxiom> keepEntailments) {
 
         OWLOntologyManager owlManager = ontology.getOWLOntologyManager();
         OWLDataFactory owlFactory = owlManager.getOWLDataFactory();
 
-        OWLAxiom incAxiom = owlFactory.getOWLSubClassOfAxiom(
-                owlFactory.getOWLThing(),
-                owlFactory.getOWLNothing()
-        );
 
         OWLReasonerFactory reasonerFactory = new ReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
@@ -49,7 +46,7 @@ public class ClassicalRepairGenerator {
 
         OWLFormatter formatter = new OWLFormatter(ontology);
 
-        return innerRepair(ontology,flexibleAxioms,keepEntailments,reasoner, egFactory, formatter, incAxiom);
+        return innerRepair(ontology,flexibleAxioms,keepEntailments,reasoner, egFactory, formatter, undesiredAxiom);
     }
 
     private <T extends OWLAxiom> Optional<Set<T>> innerRepair(
