@@ -9,14 +9,18 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Ontology(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting>
 
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Aphid>))
+Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadGarden>))
+Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadlyPlacedFlora>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bee>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beneficial>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bumblebee>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Canopy_Layer>))
+Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#CompanionGarden>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flower>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fruit>))
+Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herb>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herbacaeous_Layer>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Ladybug>))
@@ -24,6 +28,9 @@ Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-plan
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Low_Tree_Layer>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mite>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests>))
+Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith2Companions>))
+Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith3Companions>))
+Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pollinator>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Predatory>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rizosphere_Layer>))
@@ -34,19 +41,24 @@ Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-plan
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vegetable>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vertical_Layer>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Whitefly>))
+Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3CompanionGarden>))
+Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3TripleCompanionGarden>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#attractor_of>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#belongs_to_layer>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#croptrap_of>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#fixates_nitrogen>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_benefit>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#hosts_beneficial>))
-Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#idealNeighbour>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increases_quality>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increases_yield>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#parasite_of>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#predator_of>))
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_climbing_surface>))
@@ -64,6 +76,7 @@ Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/compa
 Declaration(ObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#trap_crop_of>))
 Declaration(DataProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_ideal_Ph>))
 Declaration(DataProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_light_requirement>))
+
 ############################
 #   Object Properties
 ############################
@@ -80,9 +93,20 @@ SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-pl
 
 SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#belongs_to_layer> owl:topObjectProperty)
 
+# Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with>)
+SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour>)
+DisjointObjectProperties(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour>)
+
 # Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with>)
 
 SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with> owl:topObjectProperty)
+
+# Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora>)
+
+ObjectPropertyDomain(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden>)
+ObjectPropertyRange(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
 
 # Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#croptrap_of> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#croptrap_of>)
 
@@ -100,6 +124,11 @@ SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-pl
 
 SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#hosts_beneficial> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with>)
 
+# Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour>)
+
+SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with>)
+SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour>)
+
 # Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction>)
 
 SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with>)
@@ -115,6 +144,13 @@ SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-pl
 # Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect>)
 
 SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect> owl:topObjectProperty)
+
+# Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour> "Plants placed next to each other in the garden")
+SymmetricObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour>)
+ObjectPropertyDomain(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
+ObjectPropertyRange(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
 
 # Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#parasite_of> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#parasite_of>)
 
@@ -190,6 +226,7 @@ SubDataPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-plan
 SubDataPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_light_requirement> owl:topDataProperty)
 
 
+
 ############################
 #   Classes
 ############################
@@ -197,6 +234,17 @@ SubDataPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-plan
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Aphid> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Aphid>)
 
 SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Aphid> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests>)
+
+# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadGarden> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadGarden>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadGarden> "Name not optimal - feel free to change, but please inform Patrick, so he can update his code accordingly.")
+EquivalentClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadGarden> ObjectIntersectionOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden> ObjectSomeValuesFrom(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadlyPlacedFlora>)))
+SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadGarden> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden>)
+
+# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadlyPlacedFlora> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadlyPlacedFlora>)
+
+EquivalentClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadlyPlacedFlora> ObjectIntersectionOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora> ObjectSomeValuesFrom(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour> owl:Thing)))
+SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadlyPlacedFlora> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
 
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bee> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bee>)
 
@@ -216,6 +264,10 @@ SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bu
 
 SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Canopy_Layer> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer>)
 
+# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#CompanionGarden> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#CompanionGarden>)
+
+EquivalentClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#CompanionGarden> ObjectIntersectionOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden> ObjectSomeValuesFrom(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion>)))
+
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna>)
 
 DisjointClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
@@ -230,6 +282,10 @@ SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fl
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fruit> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fruit>)
 
 SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fruit> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
+
+# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden>)
+
+AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden> "Used for the use case scenario: the tool will build a Garden with some flora associated, and tries to maximise companionNeighbours while removing incompatibleNeighbours")
 
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herb> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herb>)
 
@@ -257,6 +313,19 @@ SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mi
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests>)
 
 SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna>)
+
+# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith2Companions> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith2Companions>)
+
+EquivalentClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith2Companions> ObjectIntersectionOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora> ObjectMinCardinality(2 <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour>)))
+
+# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith3Companions> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith3Companions>)
+
+EquivalentClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith3Companions> ObjectIntersectionOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora> ObjectMinCardinality(3 <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour>)))
+
+# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion>)
+
+EquivalentClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion> ObjectIntersectionOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora> ObjectSomeValuesFrom(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour> owl:Thing)))
+SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
 
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pollinator> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pollinator>)
 
@@ -298,6 +367,15 @@ SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Ve
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Whitefly> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Whitefly>)
 
 SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Whitefly> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests>)
+
+# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3CompanionGarden> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3CompanionGarden>)
+
+EquivalentClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3CompanionGarden> ObjectIntersectionOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden> ObjectMinCardinality(3 <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion>)))
+
+# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3TripleCompanionGarden> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3TripleCompanionGarden>)
+
+EquivalentClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3TripleCompanionGarden> ObjectIntersectionOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden> ObjectMinCardinality(3 <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith3Companions>)))
+SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3TripleCompanionGarden> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden>)
 
 
 DisjointClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Aphid> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mite> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Slug> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Snail> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Whitefly>)
