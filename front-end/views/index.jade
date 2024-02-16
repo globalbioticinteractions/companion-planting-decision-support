@@ -3,28 +3,18 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  <select class="form-select" id="multiple-select-field" data-placeholder="Choose anything" multiple>
-  <option>Carrot</option>
-  <option>Zuccini</option>
-  <option>Strawberry</option>
-  <option>Blue Berry</option>
-  <option>Apple</option>
-  <option>Patatoe</option>
-  <option>Cabbage</option>
-  <option>Leek</option>
-  <option>Basil</option>
-  <option>Thyme</option>
-  <option>Cherry Tomato</option>
-  <option>Heirloom Tomato</option>
-  <option>Tomato</option>
-  <option>Legume</option>
-  <option>Yellow Mustard</option>
-  <option>Rye</option>
-  <option>Barley</option>
-  <option>Pear</option>
-  <option>Lentils</option>
-  <option>Pumpkin</option>
+
+  h4 Please select the plants that you must have in your garden
+  <select class="multiple-select" id="must-select" data-placeholder="Choose anything" multiple>
   </select>
 
-  <h2>Let AJAX change this text</h2>
-  <button type="button" onclick="loadDoc()">Change Content</button>
+  h4 Please select the plants that you would like to have in your garden
+  <select class="multiple-select" id="may-select" data-placeholder="Choose anything" multiple>
+  </select>
+
+  <button type='button' id='SubmitButton' class='btn btn-primary btn-lg btn-block'> Submit  </button>
+  
+  <table id='ResultTable' class='table'>
+
+  </table>
+
