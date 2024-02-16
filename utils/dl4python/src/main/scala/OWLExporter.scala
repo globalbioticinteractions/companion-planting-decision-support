@@ -2,16 +2,12 @@ package nl.vu.kai.dl4python.owlapi
 
 import java.io.File
 import java.net.URL
-
 import scala.collection.JavaConversions._
-
 import com.typesafe.scalalogging.Logger
-
 import org.semanticweb.owlapi.apibinding.OWLManager
 import org.semanticweb.owlapi.io._
 import org.semanticweb.owlapi.model._
-
-import nl.vu.kai.dl4python.datatypes._
+import nl.vu.kai.dl4python.datatypes.{Annotation, LabelAnnotation, _}
 
 class OWLExporter(simplifiedNames: Boolean = true) {
 //  implicit val (logger, formatter, appender) = ZeroLoggerFactory.newLogger(this)
@@ -34,6 +30,7 @@ class OWLExporter(simplifiedNames: Boolean = true) {
     ontology.tbox.axioms.foreach(addAxiom(owlOntology, _))
     ontology.rbox.axioms.foreach(addAxiom(owlOntology, _))
     ontology.abox.assertions.foreach(addAxiom(owlOntology,_))
+    ontology.annotations.foreach(addAxiom(owlOntology,_))
 
     val format = new RDFXMLOntologyFormat()
 
@@ -84,6 +81,9 @@ class OWLExporter(simplifiedNames: Boolean = true) {
 
   def addAxiom(owlOntology: OWLOntology, assertion: Assertion) = 
     manager.addAxiom(owlOntology, toOwl(owlOntology, assertion))
+
+  def addAxiom(owlOntology: OWLOntology, annotation: Annotation) =
+    manager.addAxiom(owlOntology, toOwl(owlOntology, annotation))
 
   def toOwl(owlOntology: OWLOntology, statement: DLStatement): OWLLogicalAxiom = statement match {
     case a: Axiom => toOwl(owlOntology, a)
@@ -162,6 +162,18 @@ class OWLExporter(simplifiedNames: Boolean = true) {
 
   def toOwl(owlOntology: OWLOntology, individual: Individual): OWLIndividual =
     factory.getOWLNamedIndividual(toIRI(owlOntology, individual.name))
+
+  def toOwl(owlOntology: OWLOntology, annotation: Annotation): OWLAnnotationAssertionAxiom = annotation match {
+    case LabelAnnotation(name: Name, label, language) =>
+      factory.getOWLAnnotationAssertionAxiom(
+        getLabelProperty(),
+        toIRI(owlOntology,name.nameAsString()),
+        factory.getOWLLiteral(label, language)
+      )
+    case other => throw new AssertionError("Unsupported annotation type: "+other)
+  }
+
+  def getLabelProperty() = factory.getOWLAnnotationProperty("http://www.w3.org/2000/01/rdf-schema#label")
 
   def toIRI(owlOntology: OWLOntology, name: String): IRI = 
     if(!simplifiedNames && name.startsWith("<") && name.endsWith(">")) {

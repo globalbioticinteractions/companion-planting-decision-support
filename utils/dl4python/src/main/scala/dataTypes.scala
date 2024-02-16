@@ -47,10 +47,13 @@ object BottomConcept extends Concept {
   override def subConcepts = MultiSet(BottomConcept)
 }
 
-trait Symbol
+trait Name {
+  def nameAsString(): String
+}
 
-case class ConceptName(name: String) extends Concept with Symbol {
+case class ConceptName(name: String) extends Concept with Name {
   override def toString = name
+  override def nameAsString = name
   override def signature = Set(name)
   override def conceptNames = Set(name)
   override def roleNames = Set()
@@ -127,8 +130,9 @@ abstract class Role extends Expression {
   override def roles = Set(this)
 }
 
-case class RoleName(name: String) extends Role with Symbol {
+case class RoleName(name: String) extends Role with Name {
   override def toString = name
+  override def nameAsString = name
   override def signature = Set(name)
   override def size = 1
 }
@@ -559,6 +563,8 @@ object Ontology {
 class Ontology(var tbox:TBox = new TBox(Set()),
 	       var abox: ABox = new ABox(Set()),
 	       var rbox: RBox = new RBox(Set())) extends DLStatement {
+
+  var annotations: Set[Annotation] = Set()
 
   def this(tbox: TBox, abox: ABox) = this(tbox, abox, new RBox(Set()))
 

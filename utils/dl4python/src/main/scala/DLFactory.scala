@@ -38,6 +38,9 @@ object DLFactory {
 
   def disjointnessAxiom (first: Concept, second: Concept) =
       DisjointnessAxiom(Seq(first, second))
+
+  def getLabelAnnotation(name: Name, label: String, language: String) =
+    LabelAnnotation(name,label,language)
 }
 
 
