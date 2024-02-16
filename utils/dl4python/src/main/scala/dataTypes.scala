@@ -584,6 +584,9 @@ class Ontology(var tbox:TBox = new TBox(Set()),
   def addStatements(statements: Iterable[DLStatement]) =
     statements.foreach(addStatement)
 
+  def addAnnotation(annotation: Annotation) =
+    annotations += annotation
+
   def statements: Iterable[DLStatement] = tbox.axioms ++ rbox.axioms ++ abox.assertions
 
   override def toString = "TBox:\n" + tbox.toString + "\n\nRBox:\n" + rbox.toString+"\n\n"+ "\n\nABox:\n" + abox.toString+"\n\n"
