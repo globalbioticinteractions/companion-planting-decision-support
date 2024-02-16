@@ -23,48 +23,25 @@ class OWLExporter(simplifiedNames: Boolean = true) {
   }
 
   def exportOntology(ontology: Ontology, file: File): Unit = {
-    val manager = OWLManager.createOWLOntologyManager()
 
-    val owlOntology = manager.createOntology()
-
-    ontology.tbox.axioms.foreach(addAxiom(owlOntology, _))
-    ontology.rbox.axioms.foreach(addAxiom(owlOntology, _))
-    ontology.abox.assertions.foreach(addAxiom(owlOntology,_))
-    ontology.annotations.foreach(addAxiom(owlOntology,_))
+    val owlOntology = toOwlOntology(ontology)
 
     val format = new RDFXMLOntologyFormat()
 
     manager.saveOntology(owlOntology, format, IRI.create(file.toURI()))
   }
 
-  def toOwlOntology(ontology: Ontology): OWLOntology = { 
-    val manager = OWLManager.createOWLOntologyManager()
-    
-    val factory = manager.getOWLDataFactory()
-  
+  def toOwlOntology(ontology: Ontology): OWLOntology = {
     val owlOntology = manager.createOntology()
 
-    ontology.tbox.axioms.foreach(axiom => 
-      manager.addAxiom(owlOntology, toOwl(owlOntology, axiom)))
+    ontology.tbox.axioms.foreach(addAxiom(owlOntology, _))
     ontology.rbox.axioms.foreach(addAxiom(owlOntology, _))
     ontology.abox.assertions.foreach(addAxiom(owlOntology,_))
-
-
+    ontology.annotations.foreach(addAxiom(owlOntology,_))
+    ontology.unsupportedOWLAxioms.foreach(owlOntology.addAxiom)
     owlOntology
   }
 
-  def toOwlOntology(axioms: Iterable[OWLAxiom]): OWLOntology = { 
-    val manager = OWLManager.createOWLOntologyManager()
-    
-    val factory = manager.getOWLDataFactory()
-  
-    val owlOntology = manager.createOntology()
-
-    axioms.foreach(axiom => 
-      manager.addAxiom(owlOntology, axiom))
-
-    owlOntology
-  }
 
   def save(owlOntology: OWLOntology, file: File,
   format:OWLOntologyFormat = new OWLXMLOntologyFormat()) = {
@@ -114,6 +91,7 @@ class OWLExporter(simplifiedNames: Boolean = true) {
       toOwl(owlOntology, sup))
     case TransitiveRoleAxiom(r) => factory.getOWLTransitiveObjectPropertyAxiom(toOwl(owlOntology,r))
     case FunctionalRoleAxiom(r) => factory.getOWLFunctionalObjectPropertyAxiom(toOwl(owlOntology, r))
+    case SymmetricRoleAxiom(r) => factory.getOWLSymmetricObjectPropertyAxiom(toOwl(owlOntology,r))
   }
 
   def toOwl(owlOntology: OWLOntology, assertion: Assertion): OWLIndividualAxiom = assertion match { 
