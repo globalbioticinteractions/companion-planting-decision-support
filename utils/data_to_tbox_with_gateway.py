@@ -16,7 +16,7 @@ import numpy as np
 iri = 'http://www.semanticweb.org/kai/ontologies/2024/companion-planting#'
 gateway = JavaGateway()
 parser = gateway.getOWLParser(False)
-onto = parser.parseFile('./owl/companion-planting-base0.1.owl')
+onto = parser.parseFile('./owl/companion-planting-base-noPlantHierarchy.owl')
 fac = gateway.getDLFactory()
 
 # load the companion planting dataset/table
