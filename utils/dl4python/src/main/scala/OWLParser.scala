@@ -118,7 +118,7 @@ class OWLParser(converter: OWLApiConverter) {
 }
 
 
-class OWLApiConverter(simplifiedNames: Boolean = true, 
+class OWLApiConverter(simplifiedNames: Boolean = false,
 		    var referenceOntology: Option[OWLOntology] = None) {
 //  implicit val (logger, formatter, appender) =
 //  ZeroLoggerFactory.newLogger(this)
@@ -131,15 +131,20 @@ class OWLApiConverter(simplifiedNames: Boolean = true,
   val prefLabelAnnotationProperty = 
     factory.getOWLAnnotationProperty(SKOSVocabulary.PREFLABEL.getIRI())
 
+  var unsupportedAxiomsEncountered = Set[OWLAxiom]()
 
   def convert(owlOntology: OWLOntology): Ontology = {
     val oldReferenceOntology = referenceOntology
     referenceOntology = Some(owlOntology)
 
+    unsupportedAxiomsEncountered = Set()
+
     val result = new Ontology
-    val statements = owlOntology.getTBoxAxioms(Imports.EXCLUDED).asScala.toSet++
+    val statements =
+      owlOntology.getAxioms(Imports.EXCLUDED).asScala
+      /*owlOntology.getTBoxAxioms(Imports.EXCLUDED).asScala.toSet++
       owlOntology.getABoxAxioms(Imports.EXCLUDED).asScala++
-      owlOntology.getRBoxAxioms(Imports.EXCLUDED).asScala
+      owlOntology.getRBoxAxioms(Imports.EXCLUDED).asScala*/
     val statementsNr = statements.size
 
     val s1 = statements.map(convert)
@@ -147,6 +152,8 @@ class OWLApiConverter(simplifiedNames: Boolean = true,
       logger.debug("Converted statement: " + st.toString)
       result.addStatement(st)
     }
+    unsupportedAxiomsEncountered.foreach(result.addUnsupportedOWLAxiom)
+
     logger.debug("Difference in statements size after conversion: "+(result.statements.size-statementsNr))
     referenceOntology = oldReferenceOntology
     result
@@ -206,18 +213,18 @@ class OWLApiConverter(simplifiedNames: Boolean = true,
           convert(axiom.asOWLSubClassOfAxiom)
         case axiom: OWLSymmetricObjectPropertyAxiom =>
           Set(SymmetricRoleAxiom(convert(axiom.getProperty)))
-	    case _ => {
+	    case other => {
 	      logger.warn("ignored axiom (not supported) " + owlAxiom.toString() )
+        unsupportedAxiomsEncountered += other
 	      Set()
 	    }
       }
     } catch {
-      case e: Throwable => e.printStackTrace; logger.warn("ignored axiom because of exception: " + owlAxiom.toString())
+      case e: Throwable =>
+        e.printStackTrace;
+        logger.warn("ignored axiom because of exception: " + owlAxiom.toString())
+        unsupportedAxiomsEncountered += owlAxiom
       Set()
-    }
-
-    if(result.isEmpty){ 
-
     }
 
     result
@@ -300,6 +307,9 @@ class OWLApiConverter(simplifiedNames: Boolean = true,
 
   def getName(owlObject: OWLEntity): String = 
     {
+      if(!simplifiedNames){
+        owlObject.getIRI.toString
+      }
  //     getPreferedLabel(owlObject.getIRI) match {
  //	case Some(label) => "\"" + label+ "\""
 	//case _ =>

@@ -3,6 +3,10 @@ package nl.vu.kai.dl4python
 import nl.vu.kai.dl4python.datatypes._
 
 object DLFactory {
+
+  def getOntology() =
+    new Ontology()
+
   def getConceptName(name: String) =
     ConceptName(name)
 
