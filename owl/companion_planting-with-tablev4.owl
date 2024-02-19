@@ -18,10 +18,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -31,6 +33,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#attractor_of -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#attractor_of">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect"/>
     </ObjectProperty>
@@ -38,6 +41,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#belongs_to_layer -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#belongs_to_layer">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -47,11 +51,16 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour"/>
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour"/>
+    </ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -59,7 +68,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#croptrap_of -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#croptrap_of">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect"/>
@@ -69,6 +89,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#fixates_nitrogen -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#fixates_nitrogen">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients"/>
     </ObjectProperty>
@@ -76,6 +97,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_benefit -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_benefit">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
@@ -85,6 +107,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#hosts_beneficial -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#hosts_beneficial">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
     </ObjectProperty>
@@ -93,11 +116,16 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour"/>
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour"/>
+    </ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -107,6 +135,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increases_quality -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increases_quality">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
     </ObjectProperty>
@@ -114,6 +143,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increases_yield -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increases_yield">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -123,6 +153,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     </ObjectProperty>
@@ -131,11 +162,16 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour"/>
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
+    </ObjectProperty>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#parasite_of -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#parasite_of">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect"/>
@@ -145,6 +181,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#predator_of -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#predator_of">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect"/>
     </ObjectProperty>
@@ -152,6 +189,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_climbing_surface -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_climbing_surface">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction"/>
@@ -161,6 +199,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
     </ObjectProperty>
@@ -168,6 +207,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_shade -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_shade">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction"/>
@@ -177,6 +217,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_water -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_water">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction"/>
     </ObjectProperty>
@@ -184,6 +225,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_wind_protection -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_wind_protection">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#increased_level_interaction"/>
@@ -193,6 +235,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#recruits_pollinators -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#recruits_pollinators">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#hosts_beneficial"/>
     </ObjectProperty>
@@ -200,6 +243,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#recruits_predators -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#recruits_predators">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#hosts_beneficial"/>
@@ -209,6 +253,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#repeller_of -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#repeller_of">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#interaction_effect"/>
     </ObjectProperty>
@@ -216,6 +261,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_calcium -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_calcium">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients"/>
@@ -225,6 +271,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_phosphorus -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_phosphorus">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients"/>
     </ObjectProperty>
@@ -232,6 +279,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_potassium -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishes_potassium">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#provides_nutrients"/>
@@ -241,6 +289,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#suppresses_pests -->
 
+
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#suppresses_pests">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
     </ObjectProperty>
@@ -248,6 +297,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#trap_crop_of -->
+
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#trap_crop_of">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -263,10 +313,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Aphid -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Aphid">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests"/>
@@ -276,7 +328,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apple -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -292,7 +346,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -366,7 +420,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -416,13 +470,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">apple</rdfs:label>
+        <rdfs:label xml:lang="lt">malus domestica</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Apricot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -517,7 +575,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -567,13 +625,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">apricot</rdfs:label>
+        <rdfs:label xml:lang="lt">prunus armeniaca</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Asparagus -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Asparagus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -583,7 +645,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -619,7 +681,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -669,13 +731,57 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">asparagus</rdfs:label>
+        <rdfs:label xml:lang="lt">asparagus officinalis</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadGarden -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadGarden">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora"/>
+                        <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadlyPlacedFlora"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadlyPlacedFlora -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BadlyPlacedFlora">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour"/>
+                        <someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Basil -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Basil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -732,7 +838,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -782,17 +888,21 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">basil</rdfs:label>
+        <rdfs:label xml:lang="lt">ocimum basilicum</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bean -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bean">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -910,7 +1020,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -960,11 +1070,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">bean</rdfs:label>
+        <rdfs:label xml:lang="lt">phaseolus</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bee -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pollinator"/>
@@ -975,7 +1088,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beet -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -1048,7 +1163,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -1098,11 +1213,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">beet</rdfs:label>
+        <rdfs:label xml:lang="lt">beta vulgaris</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beneficial -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beneficial">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna"/>
@@ -1113,7 +1231,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Borage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -1155,7 +1275,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -1205,17 +1325,21 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">borage</rdfs:label>
+        <rdfs:label xml:lang="lt">borago officinalis</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBean -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BroadBean">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1282,7 +1406,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -1332,13 +1456,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">broad bean</rdfs:label>
+        <rdfs:label xml:lang="lt">vicia faba</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Broccoli -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Broccoli">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -1444,7 +1572,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -1494,13 +1622,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">brassica oleracea var. italica</rdfs:label>
+        <rdfs:label xml:lang="en">broccoli</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BrussellSprout -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BrussellSprout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -1593,7 +1725,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -1643,11 +1775,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">brassica oleracea var. gemmifera</rdfs:label>
+        <rdfs:label xml:lang="en">brussell sprout</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bumblebee -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Bumblebee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pollinator"/>
@@ -1657,11 +1792,13 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBean -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#BushBean">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1737,7 +1874,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -1787,13 +1924,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">bush bean</rdfs:label>
+        <rdfs:label xml:lang="lt">phaseolus vulgaris</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbage -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cabbage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -1950,7 +2091,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -2000,11 +2141,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">brassica oleracea</rdfs:label>
+        <rdfs:label xml:lang="en">cabbage</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Canopy_Layer -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Canopy_Layer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer"/>
@@ -2014,7 +2158,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -2030,7 +2176,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2104,7 +2250,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -2154,13 +2300,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">carrot</rdfs:label>
+        <rdfs:label xml:lang="lt">daucus carota</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cauliﬂower -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cauliﬂower">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -2261,7 +2411,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -2311,13 +2461,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">brassica oleracea var. botrytis</rdfs:label>
+        <rdfs:label xml:lang="en">cauliﬂower</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Celery -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Celery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -2369,7 +2523,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -2419,13 +2573,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">apium graveolens</rdfs:label>
+        <rdfs:label xml:lang="en">celery</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chamomile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -2440,7 +2598,7 @@
         </rdfs:subClassOf>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -2490,13 +2648,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">chamomile</rdfs:label>
+        <rdfs:label xml:lang="lt">matricaria chamomilla</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cherry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -2512,7 +2674,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2582,7 +2744,7 @@
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -2632,13 +2794,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">cherry</rdfs:label>
+        <rdfs:label xml:lang="lt">prunus subg. cerasus </rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chervil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -2663,7 +2829,7 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish"/>
             </Restriction>
         </rdfs:subClassOf>
-        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
@@ -2713,13 +2879,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">anthriscus cerefolium</rdfs:label>
+        <rdfs:label xml:lang="en">chervil</rdfs:label>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive -->
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives -->
 
-    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive">
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -2853,13 +3023,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">allium schoenoprasum</rdfs:label>
+        <rdfs:label xml:lang="en">chives</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#ClimbingBean">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -2869,7 +3043,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2968,13 +3142,36 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">climbing bean</rdfs:label>
+        <rdfs:label xml:lang="lt">phaseolus vulgaris</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#CompanionGarden -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#CompanionGarden">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora"/>
+                        <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Coriander">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill"/>
@@ -3022,13 +3219,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">coriander</rdfs:label>
+        <rdfs:label xml:lang="lt">coriandrum sativum</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Corn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -3141,13 +3342,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">corn</rdfs:label>
+        <rdfs:label xml:lang="lt">zea mays</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Cucumber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -3289,13 +3494,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">cucumber</rdfs:label>
+        <rdfs:label xml:lang="lt">cucumis sativus</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Dill">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Eggplant"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fennel"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTree"/>
@@ -3340,13 +3549,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">anethum graveolens</rdfs:label>
+        <rdfs:label xml:lang="en">dill</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Eggplant -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Eggplant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fennel"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTree"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic"/>
@@ -3390,11 +3603,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">eggplant</rdfs:label>
+        <rdfs:label xml:lang="lt">solanum melongena</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna">
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
@@ -3404,7 +3620,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fennel -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fennel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -3489,11 +3707,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">fennel</rdfs:label>
+        <rdfs:label xml:lang="lt">foeniculum vulgare</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
     
@@ -3501,7 +3722,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTree -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#FruitTree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -3511,7 +3734,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3609,13 +3832,23 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">fruit tree</rdfs:label>
     </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garlic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -3728,13 +3961,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">allium sativum</rdfs:label>
+        <rdfs:label xml:lang="en">garlic</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Gooseberry -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Gooseberry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#GrapeVine"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Grass"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish"/>
@@ -3774,13 +4011,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">gooseberry</rdfs:label>
+        <rdfs:label xml:lang="lt">ribes uva-crispa</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#GrapeVine -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#GrapeVine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -3849,13 +4090,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">grape vine</rdfs:label>
+        <rdfs:label xml:lang="lt">vitis vinifera</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Grass -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Grass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Leek"/>
@@ -3893,11 +4138,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">grass</rdfs:label>
+        <rdfs:label xml:lang="lt">poaceae</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herbacaeous_Layer -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herbacaeous_Layer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer"/>
@@ -3907,7 +4155,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Horseradish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Leek"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm"/>
@@ -3944,11 +4194,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">armoracia rusticana</rdfs:label>
+        <rdfs:label xml:lang="en">horseradish</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Ladybug -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Ladybug">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Predatory"/>
@@ -3958,7 +4211,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lavender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Leek"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
@@ -3994,11 +4249,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">lavandula</rdfs:label>
+        <rdfs:label xml:lang="en">lavender</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer"/>
     
@@ -4006,7 +4264,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Leek -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Leek">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
@@ -4041,13 +4301,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">allium ampeloprasum var. porrum</rdfs:label>
+        <rdfs:label xml:lang="en">leek</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#LemonBalm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram"/>
@@ -4081,13 +4345,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">lemon balm</rdfs:label>
+        <rdfs:label xml:lang="lt">melissa officinalis</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Lettuce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -4216,11 +4484,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">lactuca sativa</rdfs:label>
+        <rdfs:label xml:lang="en">lettuce</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Low_Tree_Layer -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Low_Tree_Layer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer"/>
@@ -4230,7 +4501,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marigold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -4334,13 +4607,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">marigold</rdfs:label>
+        <rdfs:label xml:lang="lt">tagetes</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Marjoram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -4392,7 +4669,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4527,13 +4804,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">marjoram</rdfs:label>
+        <rdfs:label xml:lang="lt">origanum majorana</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mulberry"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mustard"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtium"/>
@@ -4563,11 +4844,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">mentha</rdfs:label>
+        <rdfs:label xml:lang="en">mint</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mite -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mite">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests"/>
@@ -4577,11 +4861,13 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mulberry -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mulberry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4678,13 +4964,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">morus</rdfs:label>
+        <rdfs:label xml:lang="en">mulberry</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mustard -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mustard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtium"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onion"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley"/>
@@ -4712,13 +5002,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">brassica</rdfs:label>
+        <rdfs:label xml:lang="en">mustard</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtium -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -4805,13 +5099,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">nasturtium</rdfs:label>
+        <rdfs:label xml:lang="lt">nasturtium</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onion -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Onion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -4933,13 +5231,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">allium cepa</rdfs:label>
+        <rdfs:label xml:lang="en">onion</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsley">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -5012,13 +5314,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">parsley</rdfs:label>
+        <rdfs:label xml:lang="lt">petroselinum crispum</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Parsnip">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pea"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pennyroyal"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato"/>
@@ -5042,17 +5348,21 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">parsnip</rdfs:label>
+        <rdfs:label xml:lang="lt">pastinaca sativa</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pea -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5173,13 +5483,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">pea</rdfs:label>
+        <rdfs:label xml:lang="lt">pisum sativum</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pennyroyal -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pennyroyal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -5207,11 +5521,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">mentha pulegium</rdfs:label>
+        <rdfs:label xml:lang="en">pennyroyal</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna"/>
@@ -5219,7 +5536,66 @@
     
 
 
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith2Companions -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith2Companions">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour"/>
+                        <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</minCardinality>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith3Companions -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith3Companions">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour"/>
+                        <minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</minCardinality>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour"/>
+                        <someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
+    </Class>
+    
+
+
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pollinator -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pollinator">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beneficial"/>
@@ -5230,7 +5606,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Potato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -5365,11 +5743,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">potato</rdfs:label>
+        <rdfs:label xml:lang="lt">solanum tuberosum</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Predatory -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Predatory">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Beneficial"/>
@@ -5379,7 +5760,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pumpkin -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pumpkin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -5411,13 +5794,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">cucurbita pepo</rdfs:label>
+        <rdfs:label xml:lang="en">pumpkin</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Radish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -5490,13 +5877,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">radish</rdfs:label>
+        <rdfs:label xml:lang="lt">raphanus sativus</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Raspberry -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Raspberry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rose"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rosemary"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rue"/>
@@ -5514,11 +5905,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">raspberry</rdfs:label>
+        <rdfs:label xml:lang="lt">rubus idaeus</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rizosphere_Layer -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rizosphere_Layer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer"/>
@@ -5528,11 +5922,13 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rose -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -5623,13 +6019,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">rosa</rdfs:label>
+        <rdfs:label xml:lang="en">rose</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rosemary -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rosemary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -5687,13 +6087,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">rosemary</rdfs:label>
+        <rdfs:label xml:lang="lt">salvia rosmarinus</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rue -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rue">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -5738,13 +6142,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">rue</rdfs:label>
+        <rdfs:label xml:lang="lt">ruta graveolens</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -5818,13 +6226,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">sage</rdfs:label>
+        <rdfs:label xml:lang="lt">salvia officinalis</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Savory -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Savory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -5849,13 +6261,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">satureja</rdfs:label>
+        <rdfs:label xml:lang="en">savory</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Squash"/>
@@ -5867,11 +6283,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">allium ascalonicum</rdfs:label>
+        <rdfs:label xml:lang="en">shallot</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shrub_Layer -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shrub_Layer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer"/>
@@ -5881,7 +6300,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Silverbeet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -5934,11 +6355,14 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">beta vulgaris var. flavescens</rdfs:label>
+        <rdfs:label xml:lang="en">silverbeet</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Slug -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Slug">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests"/>
@@ -5948,6 +6372,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Snail -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Snail">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests"/>
     </Class>
@@ -5955,6 +6380,7 @@
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Soil_Surface_Layer -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Soil_Surface_Layer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer"/>
@@ -5964,7 +6390,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Spinach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -6010,13 +6438,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">spinach</rdfs:label>
+        <rdfs:label xml:lang="lt">spinacia oleracea</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Squash -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Squash">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -6061,13 +6493,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">cucurbita</rdfs:label>
+        <rdfs:label xml:lang="en">squash</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#StingingNettle -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#StingingNettle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -6099,13 +6535,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">stinging nettle</rdfs:label>
+        <rdfs:label xml:lang="lt">urtica dioica</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberry -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Strawberry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -6133,7 +6573,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6178,13 +6618,17 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">fragaria</rdfs:label>
+        <rdfs:label xml:lang="en">strawberry</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sunﬂower -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sunﬂower">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -6214,34 +6658,46 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">helianthus annuus</rdfs:label>
+        <rdfs:label xml:lang="en">sunﬂower</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tansy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Thyme"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">tanacetum vulgare</rdfs:label>
+        <rdfs:label xml:lang="en">tansy</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Thyme -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Thyme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="en">thyme</rdfs:label>
+        <rdfs:label xml:lang="lt">thymus vulgaris</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
@@ -6305,7 +6761,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6370,11 +6826,14 @@
         </rdfs:subClassOf>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">solanum lycopersicum</rdfs:label>
+        <rdfs:label xml:lang="en">tomato</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vertical_Layer -->
+
 
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vertical_Layer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer"/>
@@ -6384,6 +6843,7 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Whitefly -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Whitefly">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Pests"/>
     </Class>
@@ -6392,7 +6852,9 @@
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -6430,13 +6892,17 @@
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
+        <rdfs:label xml:lang="lt">achillea millefolium</rdfs:label>
+        <rdfs:label xml:lang="en">yarrow</rdfs:label>
     </Class>
     
 
 
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini -->
 
+
     <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
@@ -6455,6 +6921,49 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtium"/>
             </Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="lt">cucurbita pepo</rdfs:label>
+        <rdfs:label xml:lang="en">zucchini</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3CompanionGarden -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3CompanionGarden">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora"/>
+                        <minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</minQualifiedCardinality>
+                        <onClass rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWithCompanion"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3TripleCompanionGarden -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3TripleCompanionGarden">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#containsFlora"/>
+                        <minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</minQualifiedCardinality>
+                        <onClass rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#PlantWith3Companions"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
     </Class>
     
 
@@ -6467,6 +6976,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     <Class>
         <intersectionOf rdf:parseType="Collection">
             <Restriction>
@@ -6795,17 +7305,17 @@
         <intersectionOf rdf:parseType="Collection">
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </intersectionOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
     </Class>
@@ -8019,17 +8529,17 @@
         <intersectionOf rdf:parseType="Collection">
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </intersectionOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chive"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Chives"/>
             </Restriction>
         </rdfs:subClassOf>
     </Class>
@@ -8949,5 +9459,6 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/ -->
+
 
