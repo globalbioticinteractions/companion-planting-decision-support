@@ -1,6 +1,6 @@
 
 // TODO: Replace this with an API call
-import data from '../data/taxon_product.json' assert { type: 'json' };
+import data from '../data/taxon_product.js';
 
 addEventListener('DOMContentLoaded', (event) =>
 {
