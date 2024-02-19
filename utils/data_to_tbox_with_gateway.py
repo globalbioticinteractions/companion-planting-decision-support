@@ -7,6 +7,10 @@ import itertools
 import pandas as pd
 from py4j.java_gateway import JavaGateway
 
+def toPascalCase(s):
+    return ''.join(x for x in s.title() if not x.isspace())
+
+import numpy as np
 # create the links to the java gateway and parse the ontology
 
 iri = 'http://www.semanticweb.org/kai/ontologies/2024/companion-planting#'
@@ -16,18 +20,23 @@ onto = parser.parseFile('./owl/companion-planting-base0.1.owl')
 fac = gateway.getDLFactory()
 
 # load the companion planting dataset/table
-df = pd.read_csv('./../datasets/companion-planting.csv', names=['v1', 'v2', 'rel'])
+df = pd.read_csv('./../datasets/companion_plants_including_taxon.csv')
+#load the names-taxon-products dataframe: idx, taxon,plantCommonName,plantWikidata,productCommonName,productWikidata
+ntp = pd.read_csv('./../datasets/names-taxon-products.csv')
 
 # adding the various vegetables
-vegetables = pd.unique(df[['v1', 'v2']].values.ravel())
-vegetableConcept = fac.getConceptName(iri + "Vegetable")
+#vegetables = pd.unique(df[['v1', 'v2']].values.ravel())
+plants=pd.concat([df[['v1','taxon_v1']].rename(columns={'v1':'v','taxon_v1':'taxon'}),df[['v2','taxon_v2']].rename(columns={'v2':'v','taxon_v2':'taxon'})]).drop_duplicates().values
+floraConcept = fac.getConceptName(iri + "Flora")
 
-allVegConcepts = []
-for v in vegetables:
-    concept = fac.getConceptName(iri+ v.replace(" ", ""))
-    allVegConcepts.append(concept)
-    onto.addStatement(fac.getGCI(concept, vegetableConcept))
-
+allPlantConcepts = []
+for v in plants:
+    concept = fac.getConceptName(iri+ toPascalCase(v[0])) #v1 for latin name
+    allPlantConcepts.append(concept)
+    onto.addStatement(fac.getGCI(concept, floraConcept))
+    onto.addAnnotation(fac.getLabelAnnotation(concept,v[0],'en' ))
+    if(not pd.isna(v[1])):
+        onto.addAnnotation(fac.getLabelAnnotation(concept, v[1], 'lt'))
     # onto.addStatement(
     #     fac.getGCI(
     #         fac.getConjunction(
@@ -84,14 +93,14 @@ for v in vegetables:
     )
 
 ## add disjointness
-for v1,v2 in itertools.combinations(allVegConcepts,2):
+for v1,v2 in itertools.combinations(allPlantConcepts,2):
     onto.addStatement(fac.disjointnessAxiom(v1,v2))
 
 
 # adding the companion/anticompanion restrictions
 for _, row in df.iterrows():
-    v1 = fac.getConceptName(iri + row['v1'].replace(" ", ""))
-    v2 = fac.getConceptName(iri + row['v2'].replace(" ", ""))
+    v1 = fac.getConceptName(iri + toPascalCase(row.v1))
+    v2 = fac.getConceptName(iri + toPascalCase(row.v2))
     if row['rel'] == 'companion':
         #this might be redundant
         role = fac.getRole(iri + 'companion_with')
@@ -102,7 +111,9 @@ for _, row in df.iterrows():
         onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
 
 # export the ontology
-gateway.getOWLExporter().exportOntology(onto, './owl/companion_planting-with-tablev3.owl')
+
+#current fix, remember to make neighbour symmetric
+gateway.getOWLExporter().exportOntology(onto, './owl/companion_planting-with-tablev4.owl')
 
 # converting the default iri into the correct one - will improve in the future
 # with open('./../owl/companion_planting-with-table.owl', 'r') as file:

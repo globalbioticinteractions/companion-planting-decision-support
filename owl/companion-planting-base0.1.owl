@@ -18,10 +18,7 @@ Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-plan
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#CompanionGarden>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>))
-Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flower>))
-Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fruit>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden>))
-Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herb>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herbacaeous_Layer>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Ladybug>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer>))
@@ -38,7 +35,6 @@ Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-plan
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Slug>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Snail>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Soil_Surface_Layer>))
-Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vegetable>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vertical_Layer>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Whitefly>))
 Declaration(Class(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3CompanionGarden>))
@@ -148,7 +144,6 @@ SubObjectPropertyOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-pl
 # Object Property: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour>)
 
 AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour> "Plants placed next to each other in the garden")
-SymmetricObjectProperty(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour>)
 ObjectPropertyDomain(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
 ObjectPropertyRange(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
 
@@ -275,21 +270,9 @@ DisjointClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planti
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
 
 
-# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flower> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flower>)
-
-SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flower> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
-
-# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fruit> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fruit>)
-
-SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fruit> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
-
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden>)
 
 AnnotationAssertion(rdfs:comment <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden> "Used for the use case scenario: the tool will build a Garden with some flora associated, and tries to maximise companionNeighbours while removing incompatibleNeighbours")
-
-# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herb> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herb>)
-
-SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herb> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
 
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herbacaeous_Layer> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herbacaeous_Layer>)
 
@@ -356,10 +339,6 @@ SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Sn
 
 SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Soil_Surface_Layer> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer>)
 
-# Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vegetable> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vegetable>)
-
-SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vegetable> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora>)
-
 # Class: <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vertical_Layer> (<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vertical_Layer>)
 
 SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vertical_Layer> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer>)
@@ -381,5 +360,4 @@ SubClassOf(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#3T
 DisjointClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Aphid> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mite> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Slug> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Snail> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Whitefly>)
 DisjointClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Canopy_Layer> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herbacaeous_Layer> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Low_Tree_Layer> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Rizosphere_Layer> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shrub_Layer> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Soil_Surface_Layer> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vertical_Layer>)
 DisjointClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fauna> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Layer>)
-DisjointClasses(<http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flower> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Fruit> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Herb> <http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Vegetable>)
 )
