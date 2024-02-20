@@ -4,12 +4,10 @@ package nl.vu.kai.dl4python.datatypes
 
 
 import com.typesafe.scalalogging.Logger
-
-
 import nl.vu.kai.dl4python.tools.MultiSet
+import org.semanticweb.owlapi.model.OWLAxiom
 
 import scala.collection.JavaConverters._
-
 import java.util
 
 
@@ -47,10 +45,13 @@ object BottomConcept extends Concept {
   override def subConcepts = MultiSet(BottomConcept)
 }
 
-trait Symbol
+trait Name {
+  def nameAsString(): String
+}
 
-case class ConceptName(name: String) extends Concept with Symbol {
+case class ConceptName(name: String) extends Concept with Name {
   override def toString = name
+  override def nameAsString = name
   override def signature = Set(name)
   override def conceptNames = Set(name)
   override def roleNames = Set()
@@ -127,8 +128,9 @@ abstract class Role extends Expression {
   override def roles = Set(this)
 }
 
-case class RoleName(name: String) extends Role with Symbol {
+case class RoleName(name: String) extends Role with Name {
   override def toString = name
+  override def nameAsString = name
   override def signature = Set(name)
   override def size = 1
 }
@@ -408,7 +410,7 @@ case class TransitiveRoleAxiom(role: Role) extends RoleAxiom {
 }
 
 case class SymmetricRoleAxiom(role: Role) extends RoleAxiom {
-  override def toString = "trans("+role+")"
+  override def toString = "symmetric("+role+")"
   override def signature = role.signature
   override def roleNames = role.signature
   override def size = role.size+1
@@ -560,6 +562,9 @@ class Ontology(var tbox:TBox = new TBox(Set()),
 	       var abox: ABox = new ABox(Set()),
 	       var rbox: RBox = new RBox(Set())) extends DLStatement {
 
+  var annotations: Set[Annotation] = Set()
+  var unsupportedOWLAxioms: Set[OWLAxiom] = Set()
+
   def this(tbox: TBox, abox: ABox) = this(tbox, abox, new RBox(Set()))
 
   def this() = this(new TBox(Set()), new ABox(Set()))
@@ -577,6 +582,12 @@ class Ontology(var tbox:TBox = new TBox(Set()),
 
   def addStatements(statements: Iterable[DLStatement]) =
     statements.foreach(addStatement)
+
+  def addAnnotation(annotation: Annotation) =
+    annotations += annotation
+
+  def addUnsupportedOWLAxiom(axiom: OWLAxiom) =
+    unsupportedOWLAxioms+=axiom
 
   def statements: Iterable[DLStatement] = tbox.axioms ++ rbox.axioms ++ abox.assertions
 

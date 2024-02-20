@@ -3,6 +3,10 @@ package nl.vu.kai.dl4python
 import nl.vu.kai.dl4python.datatypes._
 
 object DLFactory {
+
+  def getOntology() =
+    new Ontology()
+
   def getConceptName(name: String) =
     ConceptName(name)
 
@@ -35,4 +39,18 @@ object DLFactory {
   def roleName(name: String) = RoleName(name)
 
   def individual(name: String) = Individual(name)
+
+  def disjointnessAxiom (first: Concept, second: Concept) =
+      DisjointnessAxiom(Seq(first, second))
+
+  def getLabelAnnotation(name: Name, label: String, language: String) =
+    LabelAnnotation(name,label,language)
+
+  def getSeeAlsoAnnotation(name:Name, ref:String) =
+    SeeAlsoAnnotation(name,ref)
+
+  def getTaxonAnnotation(name:Name, ref:String) =
+    TaxonAnnotation(name,ref)
 }
+
+
