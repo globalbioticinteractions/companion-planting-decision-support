@@ -1,0 +1,7 @@
+services:
+  queries:
+    build: Companion-Queries/.
+  front-end:
+    build: front-end/.
+    ports:
+      - "0:3000"
