@@ -5,8 +5,28 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf-schema="https://www.w3.org/TR/rdf-schema#">
     <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://www.w3.org/TR/rdf-schema#seealso -->
+
+
+    <AnnotationProperty rdf:about="https://www.w3.org/TR/rdf-schema#seealso"/>
     
 
 
@@ -55,6 +75,7 @@
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companionNeighbour">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour"/>
+        <propertyDisjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#incompatibleNeighbour"/>
     </ObjectProperty>
     
 
@@ -166,6 +187,7 @@
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#neighbour">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Flora"/>
+        <rdfs:comment>Plants placed next to each other in the garden</rdfs:comment>
     </ObjectProperty>
     
 
@@ -302,6 +324,36 @@
     <ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#trap_crop_of">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#companion_with"/>
     </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_ideal_Ph -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_ideal_Ph">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_light_requirement -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#has_light_requirement">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </DatatypeProperty>
     
 
 
@@ -470,8 +522,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">apple</rdfs:label>
-        <rdfs:label xml:lang="lt">malus domestica</rdfs:label>
+        <rdfs:label xml:lang="en">Apple</rdfs:label>
+        <rdfs:label xml:lang="lt">Malus Domestica</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q18674606</rdf-schema:seealso>
     </Class>
     
 
@@ -625,8 +678,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">apricot</rdfs:label>
-        <rdfs:label xml:lang="lt">prunus armeniaca</rdfs:label>
+        <rdfs:label xml:lang="en">Apricot</rdfs:label>
+        <rdfs:label xml:lang="lt">Prunus Armeniaca</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q37453</rdf-schema:seealso>
     </Class>
     
 
@@ -731,8 +785,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">asparagus</rdfs:label>
-        <rdfs:label xml:lang="lt">asparagus officinalis</rdfs:label>
+        <rdfs:label xml:lang="en">Asparagus</rdfs:label>
+        <rdfs:label xml:lang="lt">Asparagus Officinalis</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q28367</rdf-schema:seealso>
     </Class>
     
 
@@ -753,6 +808,7 @@
             </Class>
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
+        <rdfs:comment>Name not optimal - feel free to change, but please inform Patrick, so he can update his code accordingly.</rdfs:comment>
     </Class>
     
 
@@ -888,8 +944,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">basil</rdfs:label>
-        <rdfs:label xml:lang="lt">ocimum basilicum</rdfs:label>
+        <rdfs:label xml:lang="en">Basil</rdfs:label>
+        <rdfs:label xml:lang="lt">Ocimum Basilicum</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q38859</rdf-schema:seealso>
     </Class>
     
 
@@ -1070,8 +1127,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">bean</rdfs:label>
-        <rdfs:label xml:lang="lt">phaseolus</rdfs:label>
+        <rdfs:label xml:lang="en">Bean</rdfs:label>
+        <rdfs:label xml:lang="lt">Phaseolus</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q310438</rdf-schema:seealso>
     </Class>
     
 
@@ -1213,8 +1271,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">beet</rdfs:label>
-        <rdfs:label xml:lang="lt">beta vulgaris</rdfs:label>
+        <rdfs:label xml:lang="en">Beet</rdfs:label>
+        <rdfs:label xml:lang="lt">Beta Vulgaris</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q165191</rdf-schema:seealso>
     </Class>
     
 
@@ -1325,8 +1384,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">borage</rdfs:label>
-        <rdfs:label xml:lang="lt">borago officinalis</rdfs:label>
+        <rdfs:label xml:lang="en">Borage</rdfs:label>
+        <rdfs:label xml:lang="lt">Borago Officinalis</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q147075</rdf-schema:seealso>
     </Class>
     
 
@@ -1456,8 +1516,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">broad bean</rdfs:label>
-        <rdfs:label xml:lang="lt">vicia faba</rdfs:label>
+        <rdfs:label xml:lang="en">Broad Bean</rdfs:label>
+        <rdfs:label xml:lang="lt">Vicia Faba</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q131342</rdf-schema:seealso>
     </Class>
     
 
@@ -1622,8 +1683,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">brassica oleracea var. italica</rdfs:label>
-        <rdfs:label xml:lang="en">broccoli</rdfs:label>
+        <rdfs:label xml:lang="lt">Brassica Oleracea Var. Italica</rdfs:label>
+        <rdfs:label xml:lang="en">Broccoli</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q47722</rdf-schema:seealso>
     </Class>
     
 
@@ -1775,8 +1837,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">brassica oleracea var. gemmifera</rdfs:label>
-        <rdfs:label xml:lang="en">brussell sprout</rdfs:label>
+        <rdfs:label xml:lang="lt">Brassica Oleracea Var. Gemmifera</rdfs:label>
+        <rdfs:label xml:lang="en">Brussell Sprout</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q146212</rdf-schema:seealso>
     </Class>
     
 
@@ -1924,8 +1987,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">bush bean</rdfs:label>
-        <rdfs:label xml:lang="lt">phaseolus vulgaris</rdfs:label>
+        <rdfs:label xml:lang="en">Bush Bean</rdfs:label>
+        <rdfs:label xml:lang="lt">Phaseolus Vulgaris</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q42339</rdf-schema:seealso>
     </Class>
     
 
@@ -2141,8 +2205,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">brassica oleracea</rdfs:label>
-        <rdfs:label xml:lang="en">cabbage</rdfs:label>
+        <rdfs:label xml:lang="lt">Brassica Oleracea</rdfs:label>
+        <rdfs:label xml:lang="en">Cabbage</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q146212</rdf-schema:seealso>
     </Class>
     
 
@@ -2300,8 +2365,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">carrot</rdfs:label>
-        <rdfs:label xml:lang="lt">daucus carota</rdfs:label>
+        <rdfs:label xml:lang="en">Carrot</rdfs:label>
+        <rdfs:label xml:lang="lt">Daucus Carota</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q11678009</rdf-schema:seealso>
     </Class>
     
 
@@ -2461,8 +2527,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">brassica oleracea var. botrytis</rdfs:label>
-        <rdfs:label xml:lang="en">cauliﬂower</rdfs:label>
+        <rdfs:label xml:lang="lt">Brassica Oleracea Var. Botrytis</rdfs:label>
+        <rdfs:label xml:lang="en">Cauliﬂower</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q7537</rdf-schema:seealso>
     </Class>
     
 
@@ -2573,8 +2640,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">apium graveolens</rdfs:label>
-        <rdfs:label xml:lang="en">celery</rdfs:label>
+        <rdfs:label xml:lang="lt">Apium Graveolens</rdfs:label>
+        <rdfs:label xml:lang="en">Celery</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q28298</rdf-schema:seealso>
     </Class>
     
 
@@ -2648,8 +2716,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">chamomile</rdfs:label>
-        <rdfs:label xml:lang="lt">matricaria chamomilla</rdfs:label>
+        <rdfs:label xml:lang="en">Chamomile</rdfs:label>
+        <rdfs:label xml:lang="lt">Matricaria Chamomilla</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q28437</rdf-schema:seealso>
     </Class>
     
 
@@ -2794,8 +2863,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">cherry</rdfs:label>
-        <rdfs:label xml:lang="lt">prunus subg. cerasus </rdfs:label>
+        <rdfs:label xml:lang="en">Cherry</rdfs:label>
+        <rdfs:label xml:lang="lt">Prunus Subg. Cerasus </rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q2946681</rdf-schema:seealso>
     </Class>
     
 
@@ -2879,8 +2949,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">anthriscus cerefolium</rdfs:label>
-        <rdfs:label xml:lang="en">chervil</rdfs:label>
+        <rdfs:label xml:lang="lt">Anthriscus Cerefolium</rdfs:label>
+        <rdfs:label xml:lang="en">Chervil</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q218462</rdf-schema:seealso>
     </Class>
     
 
@@ -3023,8 +3094,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">allium schoenoprasum</rdfs:label>
-        <rdfs:label xml:lang="en">chives</rdfs:label>
+        <rdfs:label xml:lang="lt">Allium Schoenoprasum</rdfs:label>
+        <rdfs:label xml:lang="en">Chives</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q51148</rdf-schema:seealso>
     </Class>
     
 
@@ -3142,8 +3214,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">climbing bean</rdfs:label>
-        <rdfs:label xml:lang="lt">phaseolus vulgaris</rdfs:label>
+        <rdfs:label xml:lang="en">Climbing Bean</rdfs:label>
+        <rdfs:label xml:lang="lt">Phaseolus Vulgaris</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q42339</rdf-schema:seealso>
     </Class>
     
 
@@ -3219,8 +3292,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">coriander</rdfs:label>
-        <rdfs:label xml:lang="lt">coriandrum sativum</rdfs:label>
+        <rdfs:label xml:lang="en">Coriander</rdfs:label>
+        <rdfs:label xml:lang="lt">Coriandrum Sativum</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q41611</rdf-schema:seealso>
     </Class>
     
 
@@ -3342,8 +3416,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">corn</rdfs:label>
-        <rdfs:label xml:lang="lt">zea mays</rdfs:label>
+        <rdfs:label xml:lang="en">Corn</rdfs:label>
+        <rdfs:label xml:lang="lt">Zea Mays</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q11575</rdf-schema:seealso>
     </Class>
     
 
@@ -3494,8 +3569,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">cucumber</rdfs:label>
-        <rdfs:label xml:lang="lt">cucumis sativus</rdfs:label>
+        <rdfs:label xml:lang="en">Cucumber</rdfs:label>
+        <rdfs:label xml:lang="lt">Cucumis Sativus</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q23425</rdf-schema:seealso>
     </Class>
     
 
@@ -3549,8 +3625,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">anethum graveolens</rdfs:label>
-        <rdfs:label xml:lang="en">dill</rdfs:label>
+        <rdfs:label xml:lang="lt">Anethum Graveolens</rdfs:label>
+        <rdfs:label xml:lang="en">Dill</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q26686</rdf-schema:seealso>
     </Class>
     
 
@@ -3603,8 +3680,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">eggplant</rdfs:label>
-        <rdfs:label xml:lang="lt">solanum melongena</rdfs:label>
+        <rdfs:label xml:lang="en">Eggplant</rdfs:label>
+        <rdfs:label xml:lang="lt">Solanum Melongena</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q7540</rdf-schema:seealso>
     </Class>
     
 
@@ -3707,8 +3785,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">fennel</rdfs:label>
-        <rdfs:label xml:lang="lt">foeniculum vulgare</rdfs:label>
+        <rdfs:label xml:lang="en">Fennel</rdfs:label>
+        <rdfs:label xml:lang="lt">Foeniculum Vulgare</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q43511</rdf-schema:seealso>
     </Class>
     
 
@@ -3832,7 +3911,7 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">fruit tree</rdfs:label>
+        <rdfs:label xml:lang="en">Fruit Tree</rdfs:label>
     </Class>
     
 
@@ -3840,7 +3919,9 @@
     <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden -->
 
 
-    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden"/>
+    <Class rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Garden">
+        <rdfs:comment>Used for the use case scenario: the tool will build a Garden with some flora associated, and tries to maximise companionNeighbours while removing incompatibleNeighbours</rdfs:comment>
+    </Class>
     
 
 
@@ -3961,8 +4042,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">allium sativum</rdfs:label>
-        <rdfs:label xml:lang="en">garlic</rdfs:label>
+        <rdfs:label xml:lang="lt">Allium Sativum</rdfs:label>
+        <rdfs:label xml:lang="en">Garlic</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q23400</rdf-schema:seealso>
     </Class>
     
 
@@ -4011,8 +4093,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">gooseberry</rdfs:label>
-        <rdfs:label xml:lang="lt">ribes uva-crispa</rdfs:label>
+        <rdfs:label xml:lang="en">Gooseberry</rdfs:label>
+        <rdfs:label xml:lang="lt">Ribes Uva-Crispa</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q41503</rdf-schema:seealso>
     </Class>
     
 
@@ -4090,8 +4173,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">grape vine</rdfs:label>
-        <rdfs:label xml:lang="lt">vitis vinifera</rdfs:label>
+        <rdfs:label xml:lang="en">Grape Vine</rdfs:label>
+        <rdfs:label xml:lang="lt">Vitis Vinifera</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q30046</rdf-schema:seealso>
     </Class>
     
 
@@ -4138,8 +4222,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">grass</rdfs:label>
-        <rdfs:label xml:lang="lt">poaceae</rdfs:label>
+        <rdfs:label xml:lang="en">Grass</rdfs:label>
+        <rdfs:label xml:lang="lt">Poaceae</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q43238</rdf-schema:seealso>
     </Class>
     
 
@@ -4194,8 +4279,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">armoracia rusticana</rdfs:label>
-        <rdfs:label xml:lang="en">horseradish</rdfs:label>
+        <rdfs:label xml:lang="lt">Armoracia Rusticana</rdfs:label>
+        <rdfs:label xml:lang="en">Horseradish</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q26545</rdf-schema:seealso>
     </Class>
     
 
@@ -4249,8 +4335,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">lavandula</rdfs:label>
-        <rdfs:label xml:lang="en">lavender</rdfs:label>
+        <rdfs:label xml:lang="lt">Lavandula</rdfs:label>
+        <rdfs:label xml:lang="en">Lavender</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q171892</rdf-schema:seealso>
     </Class>
     
 
@@ -4301,8 +4388,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">allium ampeloprasum var. porrum</rdfs:label>
-        <rdfs:label xml:lang="en">leek</rdfs:label>
+        <rdfs:label xml:lang="lt">Allium Ampeloprasum Var. Porrum</rdfs:label>
+        <rdfs:label xml:lang="en">Leek</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q33681353</rdf-schema:seealso>
     </Class>
     
 
@@ -4345,8 +4433,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">lemon balm</rdfs:label>
-        <rdfs:label xml:lang="lt">melissa officinalis</rdfs:label>
+        <rdfs:label xml:lang="en">Lemon Balm</rdfs:label>
+        <rdfs:label xml:lang="lt">Melissa Officinalis</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q148396</rdf-schema:seealso>
     </Class>
     
 
@@ -4484,8 +4573,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">lactuca sativa</rdfs:label>
-        <rdfs:label xml:lang="en">lettuce</rdfs:label>
+        <rdfs:label xml:lang="lt">Lactuca Sativa</rdfs:label>
+        <rdfs:label xml:lang="en">Lettuce</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q83193</rdf-schema:seealso>
     </Class>
     
 
@@ -4607,8 +4697,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">marigold</rdfs:label>
-        <rdfs:label xml:lang="lt">tagetes</rdfs:label>
+        <rdfs:label xml:lang="en">Marigold</rdfs:label>
+        <rdfs:label xml:lang="lt">Tagetes</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q147552</rdf-schema:seealso>
     </Class>
     
 
@@ -4804,8 +4895,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">marjoram</rdfs:label>
-        <rdfs:label xml:lang="lt">origanum majorana</rdfs:label>
+        <rdfs:label xml:lang="en">Marjoram</rdfs:label>
+        <rdfs:label xml:lang="lt">Origanum Majorana</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q22694</rdf-schema:seealso>
     </Class>
     
 
@@ -4844,8 +4936,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">mentha</rdfs:label>
-        <rdfs:label xml:lang="en">mint</rdfs:label>
+        <rdfs:label xml:lang="lt">Mentha</rdfs:label>
+        <rdfs:label xml:lang="en">Mint</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q47859</rdf-schema:seealso>
     </Class>
     
 
@@ -4964,8 +5057,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">morus</rdfs:label>
-        <rdfs:label xml:lang="en">mulberry</rdfs:label>
+        <rdfs:label xml:lang="lt">Morus</rdfs:label>
+        <rdfs:label xml:lang="en">Mulberry</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q44789</rdf-schema:seealso>
     </Class>
     
 
@@ -5002,8 +5096,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">brassica</rdfs:label>
-        <rdfs:label xml:lang="en">mustard</rdfs:label>
+        <rdfs:label xml:lang="lt">Brassica</rdfs:label>
+        <rdfs:label xml:lang="en">Mustard</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q58677</rdf-schema:seealso>
     </Class>
     
 
@@ -5099,8 +5194,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">nasturtium</rdfs:label>
-        <rdfs:label xml:lang="lt">nasturtium</rdfs:label>
+        <rdfs:label xml:lang="en">Nasturtium</rdfs:label>
+        <rdfs:label xml:lang="lt">Nasturtium</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q161068</rdf-schema:seealso>
     </Class>
     
 
@@ -5231,8 +5327,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">allium cepa</rdfs:label>
-        <rdfs:label xml:lang="en">onion</rdfs:label>
+        <rdfs:label xml:lang="lt">Allium Cepa</rdfs:label>
+        <rdfs:label xml:lang="en">Onion</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q23485</rdf-schema:seealso>
     </Class>
     
 
@@ -5314,8 +5411,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">parsley</rdfs:label>
-        <rdfs:label xml:lang="lt">petroselinum crispum</rdfs:label>
+        <rdfs:label xml:lang="en">Parsley</rdfs:label>
+        <rdfs:label xml:lang="lt">Petroselinum Crispum</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q25284</rdf-schema:seealso>
     </Class>
     
 
@@ -5348,8 +5446,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">parsnip</rdfs:label>
-        <rdfs:label xml:lang="lt">pastinaca sativa</rdfs:label>
+        <rdfs:label xml:lang="en">Parsnip</rdfs:label>
+        <rdfs:label xml:lang="lt">Pastinaca Sativa</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q188614</rdf-schema:seealso>
     </Class>
     
 
@@ -5483,8 +5582,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">pea</rdfs:label>
-        <rdfs:label xml:lang="lt">pisum sativum</rdfs:label>
+        <rdfs:label xml:lang="en">Pea</rdfs:label>
+        <rdfs:label xml:lang="lt">Pisum Sativum</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q25237</rdf-schema:seealso>
     </Class>
     
 
@@ -5521,8 +5621,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">mentha pulegium</rdfs:label>
-        <rdfs:label xml:lang="en">pennyroyal</rdfs:label>
+        <rdfs:label xml:lang="lt">Mentha Pulegium</rdfs:label>
+        <rdfs:label xml:lang="en">Pennyroyal</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q161235</rdf-schema:seealso>
     </Class>
     
 
@@ -5743,8 +5844,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">potato</rdfs:label>
-        <rdfs:label xml:lang="lt">solanum tuberosum</rdfs:label>
+        <rdfs:label xml:lang="en">Potato</rdfs:label>
+        <rdfs:label xml:lang="lt">Solanum Tuberosum</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q10998</rdf-schema:seealso>
     </Class>
     
 
@@ -5794,8 +5896,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">cucurbita pepo</rdfs:label>
-        <rdfs:label xml:lang="en">pumpkin</rdfs:label>
+        <rdfs:label xml:lang="lt">Cucurbita Pepo</rdfs:label>
+        <rdfs:label xml:lang="en">Pumpkin</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q7229863</rdf-schema:seealso>
     </Class>
     
 
@@ -5877,8 +5980,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">radish</rdfs:label>
-        <rdfs:label xml:lang="lt">raphanus sativus</rdfs:label>
+        <rdfs:label xml:lang="en">Radish</rdfs:label>
+        <rdfs:label xml:lang="lt">Raphanus Sativus</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q7224565</rdf-schema:seealso>
     </Class>
     
 
@@ -5905,8 +6009,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">raspberry</rdfs:label>
-        <rdfs:label xml:lang="lt">rubus idaeus</rdfs:label>
+        <rdfs:label xml:lang="en">Raspberry</rdfs:label>
+        <rdfs:label xml:lang="lt">Rubus Idaeus</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q12252383</rdf-schema:seealso>
     </Class>
     
 
@@ -6019,8 +6124,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">rosa</rdfs:label>
-        <rdfs:label xml:lang="en">rose</rdfs:label>
+        <rdfs:label xml:lang="lt">Rosa</rdfs:label>
+        <rdfs:label xml:lang="en">Rose</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q34687</rdf-schema:seealso>
     </Class>
     
 
@@ -6087,8 +6193,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">rosemary</rdfs:label>
-        <rdfs:label xml:lang="lt">salvia rosmarinus</rdfs:label>
+        <rdfs:label xml:lang="en">Rosemary</rdfs:label>
+        <rdfs:label xml:lang="lt">Salvia Rosmarinus</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q102240169</rdf-schema:seealso>
     </Class>
     
 
@@ -6142,8 +6249,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">rue</rdfs:label>
-        <rdfs:label xml:lang="lt">ruta graveolens</rdfs:label>
+        <rdfs:label xml:lang="en">Rue</rdfs:label>
+        <rdfs:label xml:lang="lt">Ruta Graveolens</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q25062</rdf-schema:seealso>
     </Class>
     
 
@@ -6226,8 +6334,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">sage</rdfs:label>
-        <rdfs:label xml:lang="lt">salvia officinalis</rdfs:label>
+        <rdfs:label xml:lang="en">Sage</rdfs:label>
+        <rdfs:label xml:lang="lt">Salvia Officinalis</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q1111359</rdf-schema:seealso>
     </Class>
     
 
@@ -6261,8 +6370,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">satureja</rdfs:label>
-        <rdfs:label xml:lang="en">savory</rdfs:label>
+        <rdfs:label xml:lang="lt">Satureja</rdfs:label>
+        <rdfs:label xml:lang="en">Savory</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q22858</rdf-schema:seealso>
     </Class>
     
 
@@ -6283,8 +6393,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">allium ascalonicum</rdfs:label>
-        <rdfs:label xml:lang="en">shallot</rdfs:label>
+        <rdfs:label xml:lang="lt">Allium Ascalonicum</rdfs:label>
+        <rdfs:label xml:lang="en">Shallot</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q193498</rdf-schema:seealso>
     </Class>
     
 
@@ -6355,8 +6466,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">beta vulgaris var. flavescens</rdfs:label>
-        <rdfs:label xml:lang="en">silverbeet</rdfs:label>
+        <rdfs:label xml:lang="lt">Beta Vulgaris Var. Flavescens</rdfs:label>
+        <rdfs:label xml:lang="en">Silverbeet</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q99730767</rdf-schema:seealso>
     </Class>
     
 
@@ -6438,8 +6550,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">spinach</rdfs:label>
-        <rdfs:label xml:lang="lt">spinacia oleracea</rdfs:label>
+        <rdfs:label xml:lang="en">Spinach</rdfs:label>
+        <rdfs:label xml:lang="lt">Spinacia Oleracea</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q81464</rdf-schema:seealso>
     </Class>
     
 
@@ -6493,8 +6606,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">cucurbita</rdfs:label>
-        <rdfs:label xml:lang="en">squash</rdfs:label>
+        <rdfs:label xml:lang="lt">Cucurbita</rdfs:label>
+        <rdfs:label xml:lang="en">Squash</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q5339301</rdf-schema:seealso>
     </Class>
     
 
@@ -6535,8 +6649,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">stinging nettle</rdfs:label>
-        <rdfs:label xml:lang="lt">urtica dioica</rdfs:label>
+        <rdfs:label xml:lang="en">Stinging Nettle</rdfs:label>
+        <rdfs:label xml:lang="lt">Urtica Dioica</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q155909</rdf-schema:seealso>
     </Class>
     
 
@@ -6618,8 +6733,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">fragaria</rdfs:label>
-        <rdfs:label xml:lang="en">strawberry</rdfs:label>
+        <rdfs:label xml:lang="lt">Fragaria</rdfs:label>
+        <rdfs:label xml:lang="en">Strawberry</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q745</rdf-schema:seealso>
     </Class>
     
 
@@ -6658,8 +6774,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">helianthus annuus</rdfs:label>
-        <rdfs:label xml:lang="en">sunﬂower</rdfs:label>
+        <rdfs:label xml:lang="lt">Helianthus Annuus</rdfs:label>
+        <rdfs:label xml:lang="en">Sunﬂower</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q171497</rdf-schema:seealso>
     </Class>
     
 
@@ -6673,8 +6790,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">tanacetum vulgare</rdfs:label>
-        <rdfs:label xml:lang="en">tansy</rdfs:label>
+        <rdfs:label xml:lang="lt">Tanacetum Vulgare</rdfs:label>
+        <rdfs:label xml:lang="en">Tansy</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q27079</rdf-schema:seealso>
     </Class>
     
 
@@ -6687,8 +6805,9 @@
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Tomato"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="en">thyme</rdfs:label>
-        <rdfs:label xml:lang="lt">thymus vulgaris</rdfs:label>
+        <rdfs:label xml:lang="en">Thyme</rdfs:label>
+        <rdfs:label xml:lang="lt">Thymus Vulgaris</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q148668</rdf-schema:seealso>
     </Class>
     
 
@@ -6826,8 +6945,9 @@
         </rdfs:subClassOf>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Yarrow"/>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">solanum lycopersicum</rdfs:label>
-        <rdfs:label xml:lang="en">tomato</rdfs:label>
+        <rdfs:label xml:lang="lt">Solanum Lycopersicum</rdfs:label>
+        <rdfs:label xml:lang="en">Tomato</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q23501</rdf-schema:seealso>
     </Class>
     
 
@@ -6892,8 +7012,9 @@
             </Restriction>
         </rdfs:subClassOf>
         <disjointWith rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Zucchini"/>
-        <rdfs:label xml:lang="lt">achillea millefolium</rdfs:label>
-        <rdfs:label xml:lang="en">yarrow</rdfs:label>
+        <rdfs:label xml:lang="lt">Achillea Millefolium</rdfs:label>
+        <rdfs:label xml:lang="en">Yarrow</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q25408</rdf-schema:seealso>
     </Class>
     
 
@@ -6921,8 +7042,9 @@
                 <someValuesFrom rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Nasturtium"/>
             </Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="lt">cucurbita pepo</rdfs:label>
-        <rdfs:label xml:lang="en">zucchini</rdfs:label>
+        <rdfs:label xml:lang="lt">Cucurbita Pepo</rdfs:label>
+        <rdfs:label xml:lang="en">Zucchini</rdfs:label>
+        <rdf-schema:seealso>http://www.wikidata.org/entity/q7229863</rdf-schema:seealso>
     </Class>
     
 

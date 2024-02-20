@@ -34,25 +34,12 @@ for v in plants:
     concept = fac.getConceptName(iri+ toPascalCase(v[0])) #v1 for latin name
     allPlantConcepts.append(concept)
     onto.addStatement(fac.getGCI(concept, floraConcept))
-    onto.addAnnotation(fac.getLabelAnnotation(concept,v[0],'en' ))
+    onto.addAnnotation(fac.getLabelAnnotation(concept,v[0].title(),'en' ))
     if(not pd.isna(v[1])):
-        onto.addAnnotation(fac.getLabelAnnotation(concept, v[1], 'lt'))
-    # onto.addStatement(
-    #     fac.getGCI(
-    #         fac.getConjunction(
-    #             fac.getExistentialRoleRestriction(
-    #                 fac.getRole(iri + 'anticompanion_with'),
-    #                 concept
-    #             ),
-    #             fac.getExistentialRoleRestriction(
-    #                 fac.getRole(iri + 'idealNeighbour'),
-    #                 concept
-    #             )
-    #         ),
-    #         fac.getBottom()
-    #
-    #     )
-    # )
+        onto.addAnnotation(fac.getLabelAnnotation(concept, v[1].title(), 'lt'))
+        row = ntp[ntp.taxon == v[1]]
+        if not row.empty:
+            onto.addAnnotation(fac.getSeeAlsoAnnotation(concept, row.iloc[0].plantWikidata))
 
     onto.addStatement(
         fac.getGCI(

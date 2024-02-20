@@ -148,11 +148,18 @@ class OWLExporter(simplifiedNames: Boolean = true) {
         toIRI(owlOntology,name.nameAsString()),
         factory.getOWLLiteral(label, language)
       )
+    case SeeAlsoAnnotation(name: Name, ref: String) =>
+      factory.getOWLAnnotationAssertionAxiom(
+        getSeeAlsoProperty(),
+        toIRI(owlOntology,name.nameAsString()),
+        factory.getOWLLiteral(ref)
+      )
     case other => throw new AssertionError("Unsupported annotation type: "+other)
   }
 
   def getLabelProperty() = factory.getOWLAnnotationProperty("http://www.w3.org/2000/01/rdf-schema#label")
 
+  def getSeeAlsoProperty() = factory.getOWLAnnotationProperty("https://www.w3.org/TR/rdf-schema#seealso") //maybe add '/'
   def toIRI(owlOntology: OWLOntology, name: String): IRI = 
     if(!simplifiedNames && name.startsWith("<") && name.endsWith(">")) {
       IRI.create(name.substring(1,name.length-1))
