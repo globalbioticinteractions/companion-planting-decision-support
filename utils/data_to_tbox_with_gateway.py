@@ -1,6 +1,6 @@
 #################
 # Before running the script, make sure that dl4python jar is running with:
-# java -jar "./utils/dl4python-0.1.2-jar-with-dependencies.jar"
+# java -jar "./utils/dl4python/target/dl4python-0.1.5-jar-with-dependencies.jar"
 #################
 import itertools
 
@@ -36,7 +36,7 @@ for v in plants:
     onto.addStatement(fac.getGCI(concept, floraConcept))
     onto.addAnnotation(fac.getLabelAnnotation(concept,v[0].title(),'en' ))
     if(not pd.isna(v[1])):
-        onto.addAnnotation(fac.getLabelAnnotation(concept, v[1].title(), 'lt'))
+        onto.addAnnotation(fac.getTaxonAnnotation(concept, v[1].title()))
         row = ntp[ntp.taxon == v[1]]
         if not row.empty:
             onto.addAnnotation(fac.getSeeAlsoAnnotation(concept, row.iloc[0].plantWikidata))
