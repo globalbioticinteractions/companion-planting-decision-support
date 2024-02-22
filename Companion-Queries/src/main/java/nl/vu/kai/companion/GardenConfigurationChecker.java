@@ -68,7 +68,7 @@ public class GardenConfigurationChecker {
         Optional<String> scientificName = plantOntology.annotationAssertionAxioms(iri)
                 .filter(x -> x.getProperty().isLabel())
                 .flatMap(x->  x.literalValue().stream())
-                .filter(x -> x.hasLang(Configuration.SCIENTIFIC_LANGUAGE))
+                .filter(x -> x.hasLang(Configuration.SCIENTIFIC_NAME))
                 .map(x -> x.getLiteral())
                 .findFirst();
 
