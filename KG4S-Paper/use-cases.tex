@@ -4,11 +4,86 @@
 
 If we have a specific plant, and want to look for (anti-)companinons, these can be
 directly queried using a subclass query, already in Prot\'eg\'e, using the class expression
-\verb|companion some PLANT| respectively \verb|anti_companion some PLANT|, where PLANT is
+``\verb|companion some PLANT|'' respectively
+``\verb|anti_companion some PLANT|'', where \verb|PLANT| is
 the identified of the corresponding plant. For each plant, we can furthermore ask for detailed
-explanations using the functionality of Prot\'eg\'e (see \Cref{fig:})
-
+explanations using the functionality of Prot\'eg\'e (see \Cref{fig:justification-companion}).
 All relevant axioms are in the OWL EL profile, more
-specifically in the subset that is supported by the ELK reasoner. As a consequence
+specifically in the subset that is supported by the ELK reasoner\cite{ELK}. As a consequence,
+we can use more advanced explanation services based on proofs that are obtained by the ELK
+reasoner, such as the ones provided by XXX and evee~\cite{evee}~\cite{EVEE} (\Cref{fig:proof-companion}).
+
+\newcommand{\cl}[1]{\texttt{#1}}
 
 \subsection{Analysing Garden Configurations}
+
+Garden Configurations can be modelled using the \cl{Garden} class. Specifically, we link
+link instances of \cl{Flora} to a \cl{Garden} via the \cl{insideGarden} property. The
+\cl{neighbour}-property is used to denote that two plants are placed next to each other
+(see \Cref{fig:garden-graph}). To determine whether a plant has a neighbour that is an
+(anti-)companion, we use axioms of the following form, which were automatically generated
+for each plant:
+\begin{verbatim}
+ hasNeighbour some PLANT and companion some PLANT
+                            SubClassOf companionNeighbour some PLANT
+
+ hasNeighbour some PLANT and anti_companion some PLANT
+                            SubClassOf incompatibleNeighbour some PLANT
+\end{verbatim}
+Because OWL does not allow to intersect object properties, there is no more direct way
+to handle this. For our XX, this modelling is sufficient. Moreover, by decoupling the
+\cl{companionNeighbour}/\cl{incompatibleNeighbour} property from the (\cl{anti-})\cl{companion}
+property, we are able to use them in cardinality restrictions, and thus use class expressions
+to refer to plants with two or more companion neighbours. This would not be possible if
+\cl{companionNeighbour} was a subclass of \cl{companion}, because \cl{companion} is
+\emph{complex}. Complex properties are those that are super classes of a role chain, and
+for decidability reasons are not allowed to be used in cardinality restrictions~\cite{TODO}.
+
+We are now able to define classes for plants that have an incompatible neighbour, a companion
+neigbour, or a specific number of companion neighbours. This in turn allows us to define
+special concepts for \cl{Garden}s: A \cl{BadGarden} is one in which some plant has an
+incompatible neighbour. A \cl{CompanionGarden} is one in which a plant has at least one
+companion, and a \cl{3TripleCompanionGarden} is a garden in which at least 3 plants have
+3 companions etc.
+
+A garden desribed in this way as an OWL knowledge graph can then be analyed and classified to
+the predefined categories using a standard OWL reasoner. Moreover, we can use the explanation
+services described above to understand why the garden is classified for instance as a
+\cl{BadGarden}.
+
+\subsection{Suggesting Garden Configurations}
+
+Using non-standard reasoning services, we can furthermore automatically generate suggestions
+on how to improve the given garden layout. Specifically, ontology repair can be used to
+fix a garden configuration so that it does not get classified as \cl{BadGarden} anymore, and
+abduction can be used to suggest implementations based on an incomplete garden configuration.
+We here only focus on repairs, and leave abduction for future work.
+
+Ontology repair works by removing axioms so that an undesired entailment is not produced
+anymore. Because we at the same time want to keep companionships where possible, we use
+a different version of repair defined below:
+\begin{definition}
+ Let $\Omc$, $\Omc_f$ be an ontologies with a $\Omc_f\subseteq\Omc$
+ and $\alpha$, $\beta$ two axioms s.t. $\Omc\models\beta$ and $\Omc_f\not\models\alpha$.
+ A \emph{repair of $\Omc\models\beta$ preserving $\Omc\models\alpha$, with fixed
+ component $\Omc_f$}, is an ontology $\Omc_R$ s.t.
+ \begin{enumerate}
+  \item $\Omc_f\subseteq\Omc_R\subseteq\Omc$,
+  \item $\Omc_F\not\models\alpha$, and
+  \item $\Omc_F\models\beta$.
+ \end{enumerate}
+\end{definition}
+Clearly, such a repair need not always exist. If it does, it can be computed similar
+as classical repairs by using justifications, as described in~\cite{XX}.
+
+To use it to suggest garden configurations
+that fix a classification nas \cl{FixedGarden},
+we put all axioms in the fixed component except for the neighbour-hood relationships between
+the plants in the garden. We then try to compute a repair of
+$$\Omc\models \texttt{garden Type BadGarden}$$
+preserving
+$$\Omc\models \texttt{garden Type NiceGarden},$$
+where \cl{NiceGarden} is some Garden class that we would like to preserve, e.g. one
+that has many companionship neighbours. In our implementation, we rank the different
+Garden-classes, and start with the highest ranked class when trying to compute the repair,
+and then step-wise change to lower ranked classes until a repair was found.
