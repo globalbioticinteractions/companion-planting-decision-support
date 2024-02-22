@@ -59,7 +59,7 @@ public class Controller{
         return result;
     }
 
-    @PostMapping("/check")
+    @PostMapping(value = "/check", consumes = {"*/*"})
     public List<PropertyResult> check(@RequestBody List<String> selectedPlants) throws OWLOntologyCreationException{
         Set<OWLClass> plantClasses = new HashSet<OWLClass>();
 
