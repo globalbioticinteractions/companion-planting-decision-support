@@ -21,7 +21,7 @@ public class OntologyTools {
 
         Set<OWLClass> result = new HashSet<>();
 
-        while(toProcess.isEmpty()){
+        while(!toProcess.isEmpty()){
             OWLClass next = toProcess.poll();
             if(!processed.contains(next)) {
                 processed.add(next);
