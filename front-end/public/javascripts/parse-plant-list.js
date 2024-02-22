@@ -10,15 +10,13 @@ function parsePlants(data) {
     multi_selectors.forEach(selector => {
         console.log('populating multi-selector')
         
-        console.log(data)
-        
-        
         data.forEach(item => {
-            console.log(item)
-            let id = item['iri'];
-            let text = item['name'].concat(' (', item['scientificName'], ')');
-            let option = new Option(text, id, false, false) 
-            selector.append(option);
+            if (item['name'] != null) {
+                let id = item['iri'];
+                let text = item['name'].concat(' (', item['scientificName'], ')');
+                let option = new Option(text, id, false, false) 
+                selector.append(option);
+            }
         })
     })
 }
@@ -32,7 +30,6 @@ addEventListener('DOMContentLoaded', (event) =>
         dataType: 'json', // // <-------- use JSON
         success: function(response){
             parsePlants(response);
-            console.log(data);
         },
         error: function(xhr, status, error) {
             window.alert(xhr.status,status,error);
