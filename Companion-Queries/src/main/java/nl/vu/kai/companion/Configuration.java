@@ -4,6 +4,9 @@ public class Configuration {
     private Configuration() {
     } // utility class
 
+    public static final String LANGUAGE = "en";
+    public static final String SCIENTIFIC_LANGUAGE = "lt";
+
     public static final String ONTOLOGY_PATH="../owl/companion_planting-with-tablev4.owl";
 
     public static final String IRI_PREFIX="http://www.semanticweb.org/kai/ontologies/2024/";
@@ -11,6 +14,8 @@ public class Configuration {
     public static final String NEIGHBOUR_IRI =IRI_PREFIX+"neighbour";
     public static final String GARDEN_IRI=IRI_PREFIX+"Garden";
     public static final String GARDEN_RELATION_IRI =IRI_PREFIX+"containsFlora";
+
+    public static final String PLANT_IRI=IRI_PREFIX+"Flora";
 
     public enum GardenConfigurationProperty {
         BAD_GARDEN("BadGarden",-1),
