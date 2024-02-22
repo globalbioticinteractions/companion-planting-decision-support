@@ -17,9 +17,9 @@ function suggestPlantPlacement() {
     musts.forEach(item => {
         must_ids.push(item.id)
     });
-    must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot");
-    must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot");
-    must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
+    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot");
+    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot");
+    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
     
     // let may_ids = [];
     // mays.forEach(item => {
