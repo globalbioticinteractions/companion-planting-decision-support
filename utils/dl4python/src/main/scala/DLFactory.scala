@@ -45,6 +45,12 @@ object DLFactory {
 
   def getLabelAnnotation(name: Name, label: String, language: String) =
     LabelAnnotation(name,label,language)
+
+  def getSeeAlsoAnnotation(name:Name, ref:String) =
+    SeeAlsoAnnotation(name,ref)
+
+  def getTaxonAnnotation(name:Name, ref:String) =
+    TaxonAnnotation(name,ref)
 }
 
 

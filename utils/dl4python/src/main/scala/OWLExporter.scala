@@ -142,17 +142,34 @@ class OWLExporter(simplifiedNames: Boolean = true) {
     factory.getOWLNamedIndividual(toIRI(owlOntology, individual.name))
 
   def toOwl(owlOntology: OWLOntology, annotation: Annotation): OWLAnnotationAssertionAxiom = annotation match {
+
+    case TaxonAnnotation(name: Name, ref:String) =>
+      factory.getOWLAnnotationAssertionAxiom(
+        getTaxonProperty(),
+        toIRI(owlOntology,name.nameAsString()),
+        factory.getOWLLiteral(ref)
+      )
     case LabelAnnotation(name: Name, label, language) =>
       factory.getOWLAnnotationAssertionAxiom(
         getLabelProperty(),
         toIRI(owlOntology,name.nameAsString()),
         factory.getOWLLiteral(label, language)
       )
+    case SeeAlsoAnnotation(name: Name, ref: String) =>
+      factory.getOWLAnnotationAssertionAxiom(
+        getSeeAlsoProperty(),
+        toIRI(owlOntology,name.nameAsString()),
+        factory.getOWLLiteral(ref)
+      )
+
     case other => throw new AssertionError("Unsupported annotation type: "+other)
   }
 
   def getLabelProperty() = factory.getOWLAnnotationProperty("http://www.w3.org/2000/01/rdf-schema#label")
 
+  def getSeeAlsoProperty() = factory.getOWLAnnotationProperty("https://www.w3.org/TR/rdf-schema#seeAlso") //maybe add '/'
+
+  def getTaxonProperty() = factory.getOWLAnnotationProperty("http://rs.tdwg.org/dwc/terms/scientificName")
   def toIRI(owlOntology: OWLOntology, name: String): IRI = 
     if(!simplifiedNames && name.startsWith("<") && name.endsWith(">")) {
       IRI.create(name.substring(1,name.length-1))
