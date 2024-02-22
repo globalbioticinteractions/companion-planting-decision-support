@@ -51,9 +51,9 @@ public class Controller{
         List<Plant> result = plantsStream.collect(Collectors.toList());
 
         //remove once checker.plants() works!
-        result.add(new Plant("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot", Optional.of("Carrot"), Optional.of("Daucus Carota")));
-        result.add(new Plant("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint", Optional.of("Mint"), Optional.of("Mentha")));
-        result.add(new Plant("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot", Optional.of("Shallot"), Optional.of("Allium Ascalonicum")));
+        // result.add(new Plant("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot", Optional.of("Carrot"), Optional.of("Daucus Carota")));
+        // result.add(new Plant("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint", Optional.of("Mint"), Optional.of("Mentha")));
+        // result.add(new Plant("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot", Optional.of("Shallot"), Optional.of("Allium Ascalonicum")));
 
         // System.out.println(result); //This is currently still empty for some reason...
         return result;
