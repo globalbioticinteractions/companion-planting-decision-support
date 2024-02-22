@@ -11,7 +11,7 @@ public class Configuration {
     public static final String ONTOLOGY_PATH="companion_planting_ontology.owl";
 
 
-    public static final String IRI_PREFIX="http://www.semanticweb.org/kai/ontologies/2024/";
+    public static final String IRI_PREFIX="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#";
 
     public static final String NEIGHBOUR_IRI =IRI_PREFIX+"neighbour";
     public static final String GARDEN_IRI=IRI_PREFIX+"Garden";
