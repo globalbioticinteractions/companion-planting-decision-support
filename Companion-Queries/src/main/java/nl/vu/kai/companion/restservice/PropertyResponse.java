@@ -2,13 +2,13 @@ package nl.vu.kai.companion.restservice;
 
 import nl.vu.kai.companion.Configuration.GardenConfigurationProperty;
 
-public class PropertyResult {
+public class PropertyResponse {
 
 	private final GardenConfigurationProperty property;
 	private final String result;
     private final String text;
 
-	public PropertyResult(GardenConfigurationProperty property, boolean res) {
+	public PropertyResponse(GardenConfigurationProperty property, boolean res) {
 		this.property = property;
 		this.result = String.valueOf(res);
         if (res) {

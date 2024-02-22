@@ -1,6 +1,6 @@
 import parseResult from './parse-result.js'
 // import fetch from node-fetch
-const URL = "localhost:8080/greeting"
+const URL = "http://localhost:8080"
 
 
 $(document).ready(function(){
@@ -31,21 +31,24 @@ function submitPreferences() {
     
 
     // TODO: init API call and pass the result to the following function. 
-    
+   
+    let plantlist = JSON.stringify(must_ids);
    
     $.post({
-        url: "http://localhost:8080/check",
+        url: URL.concat("/check"),
         headers: {'Access-Control-Allow-Origin':'*'}, // <-------- set this
-        data: JSON.stringify(must_ids),
+        data: plantlist,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         
         success: function(response){
             console.log(response)
-            parseResult(response)
+            parseResult(response,plantlist)
         },
+        
         error: function(xhr, status, error) {
-            console.log(JSON.stringify(must_ids));
+            window.alert("Something went wrong while sending the request: "+plantlist); 
+
             // window.alert(xhr.status,status,error);
             
         }
@@ -54,4 +57,5 @@ function submitPreferences() {
     // window.alert(data);
     // parseResult(data)
 
+    // return must_ids;
 }

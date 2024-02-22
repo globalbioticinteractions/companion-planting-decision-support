@@ -2,8 +2,9 @@
 import explainResult from './explain-result.js'
 //  TODO: get API call. This should replace the function below
 
-function parseResult(message) {
-    console.log(message)
+function parseResult(message,plantlist) {
+    
+    // console.log(message)
     $('#ResultTable tr').remove();
     let res_table = $('table#ResultTable')[0];
     let col_names = Object.keys(message[0]);
@@ -29,11 +30,13 @@ function parseResult(message) {
             click: explainResult,
             text: 'Explain!'
           });
+        
         // let button = document.createElement("BUTTON");
         // button.addEventListener("click", )
         // button.click(function(){
-        //     explainResult(message[i])
+        //     explainResult(must_ids,message[i])
         // });
+
         explain_button.append(button[0])
 
     }
