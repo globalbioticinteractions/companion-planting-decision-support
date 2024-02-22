@@ -66,14 +66,18 @@ public class GardenConfigurationChecker {
                 .map(x -> x.getLiteral())
                 .findFirst();
         Optional<String> scientificName = plantOntology.annotationAssertionAxioms(iri)
-                .filter(x -> x.getProperty().isLabel())
+                .filter(this::scientificNameAnnotation)
                 .flatMap(x->  x.literalValue().stream())
-                .filter(x -> x.hasLang(Configuration.SCIENTIFIC_LANGUAGE))
                 .map(x -> x.getLiteral())
                 .findFirst();
 
         return new Plant(iriString,label,scientificName);
     }
+
+    private boolean scientificNameAnnotation(OWLAnnotationAssertionAxiom ax) {
+        return ax.getProperty().getIRI().getIRIString().equals(Configuration.SCIENTIFIC_NAME_IRI);
+    }
+
 
     /**
      * Check whether plants represented by given classes are compatible.
