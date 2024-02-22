@@ -1,7 +1,9 @@
 package nl.vu.kai.companion;
 
+import nl.vu.kai.companion.data.Plant;
 import nl.vu.kai.companion.repairs.ClassicalRepairGenerator;
 import nl.vu.kai.companion.repairs.RepairException;
+import nl.vu.kai.companion.util.OntologyTools;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owl.explanation.api.Explanation;
 import org.semanticweb.owl.explanation.api.ExplanationGenerator;
@@ -15,6 +17,7 @@ import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import java.io.File;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class GardenConfigurationChecker {
 
@@ -32,6 +35,44 @@ public class GardenConfigurationChecker {
 
     public OWLOntology getPlantOntology() {
         return plantOntology;
+    }
+
+    public Stream<Plant> plants() {
+        return OntologyTools
+                .assertedLeafs(plantOntology,
+                        owlFactory.getOWLClass(
+                                IRI.create(
+                                        Configuration.PLANT_IRI)))
+                .stream()
+                .map(OWLClass::getIRI)
+                .map(this::toPlant);
+
+    }
+
+    public Plant getPlant(String iriString) {
+        return toPlant(IRI.create(iriString));
+    }
+
+    public OWLClass asOWLClass(Plant plant) {
+        return owlFactory.getOWLClass(IRI.create(plant.getIri()));
+    }
+
+    public Plant toPlant(IRI iri) {
+        String iriString = iri.getIRIString();
+        Optional<String> label = plantOntology.annotationAssertionAxioms(iri)
+                .filter(x -> x.getProperty().isLabel())
+                .flatMap(x->  x.literalValue().stream())
+                .filter(x -> x.hasLang(Configuration.LANGUAGE))
+                .map(x -> x.getLiteral())
+                .findFirst();
+        Optional<String> scientificName = plantOntology.annotationAssertionAxioms(iri)
+                .filter(x -> x.getProperty().isLabel())
+                .flatMap(x->  x.literalValue().stream())
+                .filter(x -> x.hasLang(Configuration.SCIENTIFIC_LANGUAGE))
+                .map(x -> x.getLiteral())
+                .findFirst();
+
+        return new Plant(iriString,label,scientificName);
     }
 
     /**
