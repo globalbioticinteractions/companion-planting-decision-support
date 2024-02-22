@@ -1,7 +1,12 @@
 services:
-  queries:
+  back-end:
+    container_name: cpds-backend
     build: Companion-Queries/.
+    ports:
+      - "8080:8080"
   front-end:
+    container_name: cpds-frontend
     build: front-end/.
     ports:
-      - "0:3000"
+      - "3000:3000"
+    

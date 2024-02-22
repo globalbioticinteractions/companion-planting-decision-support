@@ -1,8 +1,11 @@
+nl/vu/kai/companion/restservice/Greeting.class
 nl/vu/kai/companion/util/OWLFormatter$1.class
 nl/vu/kai/companion/cmd/Main.class
 nl/vu/kai/companion/repairs/ClassicalRepairGenerator.class
+nl/vu/kai/companion/restservice/Controller.class
 nl/vu/kai/companion/repairs/RepairException.class
 nl/vu/kai/companion/util/OWLFormatter.class
+nl/vu/kai/companion/restservice/CompanionApplication.class
 nl/vu/kai/companion/Configuration$GardenConfigurationProperty.class
 nl/vu/kai/companion/GardenConfigurationChecker.class
 nl/vu/kai/companion/Configuration.class

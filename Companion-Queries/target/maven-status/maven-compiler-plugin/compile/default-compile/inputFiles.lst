@@ -1,6 +1,9 @@
 /home/romi/Documents/Research/companion-planting-decision-support/Companion-Queries/src/main/java/nl/vu/kai/companion/util/OWLFormatter.java
 /home/romi/Documents/Research/companion-planting-decision-support/Companion-Queries/src/main/java/nl/vu/kai/companion/repairs/RepairException.java
+/home/romi/Documents/Research/companion-planting-decision-support/Companion-Queries/src/main/java/nl/vu/kai/companion/restservice/CompanionApplication.java
+/home/romi/Documents/Research/companion-planting-decision-support/Companion-Queries/src/main/java/nl/vu/kai/companion/restservice/Controller.java
 /home/romi/Documents/Research/companion-planting-decision-support/Companion-Queries/src/main/java/nl/vu/kai/companion/repairs/ClassicalRepairGenerator.java
+/home/romi/Documents/Research/companion-planting-decision-support/Companion-Queries/src/main/java/nl/vu/kai/companion/restservice/Greeting.java
 /home/romi/Documents/Research/companion-planting-decision-support/Companion-Queries/src/main/java/nl/vu/kai/companion/cmd/Main.java
 /home/romi/Documents/Research/companion-planting-decision-support/Companion-Queries/src/main/java/nl/vu/kai/companion/GardenConfigurationChecker.java
 /home/romi/Documents/Research/companion-planting-decision-support/Companion-Queries/src/main/java/nl/vu/kai/companion/Configuration.java
