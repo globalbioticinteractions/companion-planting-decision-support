@@ -20,12 +20,12 @@ onto = parser.parseFile('./owl/companion-planting-base-noPlantHierarchy.owl')
 fac = gateway.getDLFactory()
 
 # load the companion planting dataset/table
-df = pd.read_csv('./../datasets/companion_plants_including_taxon.csv')
-#load the names-taxon-products dataframe: idx, taxon,plantCommonName,plantWikidata,productCommonName,productWikidata
-ntp = pd.read_csv('./../datasets/names-taxon-products.csv')
+df = pd.read_csv('../datasets/Processed/companion_plants_including_taxon.csv')
 
-# adding the various vegetables
-#vegetables = pd.unique(df[['v1', 'v2']].values.ravel())
+#load the names-taxon-products dataframe: idx, taxon,plantCommonName,plantWikidata,productCommonName,productWikidata
+ntp = pd.read_csv('../datasets/Processed/names-taxon-products.csv')
+
+# adding the various plants
 plants=pd.concat([df[['v1','taxon_v1']].rename(columns={'v1':'v','taxon_v1':'taxon'}),df[['v2','taxon_v2']].rename(columns={'v2':'v','taxon_v2':'taxon'})]).drop_duplicates().values
 floraConcept = fac.getConceptName(iri + "Flora")
 
@@ -35,12 +35,18 @@ for v in plants:
     allPlantConcepts.append(concept)
     onto.addStatement(fac.getGCI(concept, floraConcept))
     onto.addAnnotation(fac.getLabelAnnotation(concept,v[0].title(),'en' ))
+
+    # if the latin/taxon name exists:
     if(not pd.isna(v[1])):
         onto.addAnnotation(fac.getTaxonAnnotation(concept, v[1].title()))
         row = ntp[ntp.taxon == v[1]]
+
+        # if there is a link to the wikidata entry
         if not row.empty:
             onto.addAnnotation(fac.getSeeAlsoAnnotation(concept, row.iloc[0].plantWikidata))
 
+    #add neighbouring axioms
+    # exist (companion_with some C) and (neighbour some C) SubClassOf (companionNeighbour some C)
     onto.addStatement(
         fac.getGCI(
             fac.getConjunction(
@@ -60,6 +66,7 @@ for v in plants:
         )
     )
 
+    # exist (anticompanion_with some C) and (neighbour some C) SubClassOf (incompatibleNeighbour some C)
     onto.addStatement(
         fac.getGCI(
             fac.getConjunction(
@@ -79,7 +86,7 @@ for v in plants:
         )
     )
 
-## add disjointness
+## add disjointness, each plant is disjoint with the others
 for v1,v2 in itertools.combinations(allPlantConcepts,2):
     onto.addStatement(fac.disjointnessAxiom(v1,v2))
 
@@ -98,17 +105,6 @@ for _, row in df.iterrows():
         onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
 
 # export the ontology
-
-#current fix, remember to make neighbour symmetric
 gateway.getOWLExporter().exportOntology(onto, './owl/companion_planting-with-tablev4.owl')
 
-# converting the default iri into the correct one - will improve in the future
-# with open('./../owl/companion_planting-with-table.owl', 'r') as file:
-#     filedata = file.read()
-#
-# filedata = filedata.replace('http://example.com/ns/foo#',
-#                             'http://www.semanticweb.org/kai/ontologies/2024/companion-planting#')
-#
-# # Write the file out again
-# with open('./../owl/companion_planting-with-table.owl', 'w') as file:
-#     file.write(filedata)
+
