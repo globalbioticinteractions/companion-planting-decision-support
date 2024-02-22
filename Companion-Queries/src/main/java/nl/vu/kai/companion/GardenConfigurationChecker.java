@@ -52,6 +52,11 @@ public class GardenConfigurationChecker {
     public Plant getPlant(String iriString) {
         return toPlant(IRI.create(iriString));
     }
+
+    public OWLClass asOWLClass(Plant plant) {
+        return owlFactory.getOWLClass(IRI.create(plant.getIri()));
+    }
+
     public Plant toPlant(IRI iri) {
         String iriString = iri.getIRIString();
         Optional<String> label = plantOntology.annotationAssertionAxioms(iri)
