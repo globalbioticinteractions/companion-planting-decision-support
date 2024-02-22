@@ -4,7 +4,8 @@ public class Configuration {
     private Configuration() {
     } // utility class
 
-    public static final String ONTOLOGY_PATH="../owl/companion_planting-with-tablev3.owl";
+    //public static final String ONTOLOGY_PATH="../owl/companion_planting-with-tablev3.owl";
+    public static final String ONTOLOGY_PATH="../owl/companion-planting-base0.1.owl";
 
     public static final String IRI_PREFIX="http://www.semanticweb.org/kai/ontologies/2024/";
 
