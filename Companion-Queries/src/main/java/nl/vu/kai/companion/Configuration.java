@@ -4,10 +4,13 @@ public class Configuration {
     private Configuration() {
     } // utility class
 
+
     public static final String LANGUAGE = "en";
     public static final String SCIENTIFIC_LANGUAGE = "lt";
 
-    // public static final String ONTOLOGY_PATH="owl/companion_planting-with-tablev4.owl";
+//     public static final String ONTOLOGY_PATH="../owl/companion_planting-with-tablev3.owl";
+//     public static final String ONTOLOGY_PATH="../owl/companion-planting-base0.1.owl";
+//     public static final String ONTOLOGY_PATH="owl/companion_planting-with-tablev4.owl";
     public static final String ONTOLOGY_PATH="companion_planting_ontology.owl";
 
 
