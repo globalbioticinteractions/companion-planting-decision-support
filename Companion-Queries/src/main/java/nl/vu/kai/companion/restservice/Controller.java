@@ -99,26 +99,31 @@ public class Controller{
         Set<OWLClass> plantClasses = getPlants(data.getPlantlist());
         OWLFormatter formatter = new OWLFormatter(checker.getPlantOntology());
         List<String> explanationString = new ArrayList<String>();
-
+        
         try {
-            Set<OWLAxiom> explanation = checker.explainProperty(plantClasses, data.getProperty());
-            System.out.println("===============================");
-            System.out.println("Explanation for " + explanation + ":");
-            System.out.println("Explanation for " + explanation + ":".replaceAll(".", "="));
-            System.out.println();
-            explanation
-                    .stream()
-                    .map(formatter::format)
-                    .forEach(System.out::println);
+            System.out.println("I AM HERE! AND THIS IS THE DATA I RECEIVED: "+data.getProperty().toString() +", "+data.getPlantlist().toString());
             
-            System.out.println("===============================");
-            System.out.println();
-            System.out.println();
+            Set<OWLAxiom> explanation = checker.explainProperty(plantClasses, data.getProperty());
+            System.out.println("I RAN THE EXPLANATION AND I GOT "+explanation.size()+" NUMBER OF AXIOMS.");
+            // System.out.println("===============================");
+            // System.out.println("Explanation for " + explanation + ":");
+            // System.out.println("Explanation for " + explanation + ":".replaceAll(".", "="));
+            // System.out.println();
+            // explanation
+            //         .stream()
+            //         .map(formatter::format)
+            //         .forEach(System.out::println);
+            
+            // System.out.println("===============================");
+            // System.out.println();
+            // System.out.println();
 
             for(OWLAxiom exp:checker.explainProperty(plantClasses, data.getProperty())){
                 explanationString.add(formatter.format(exp));
             }
         } catch (IllegalArgumentException ie) {
+            System.out.println("====================");
+            System.out.println("There was an error getting the explanation.");
             ;
         }
 
