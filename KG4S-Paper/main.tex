@@ -1,0 +1,122 @@
+%% The first command in your LaTeX source must be the \documentclass command.
+%%
+%% Options:
+%% twocolumn : Two column layout.
+%% hf: enable header and footer.
+\documentclass[
+% twocolumn,
+% hf,
+]{ceurart}
+
+%%
+%% One can fix some overfulls
+\sloppy
+
+%%
+%% Minted listings support 
+%% Need pygment <http://pygments.org/> <http://pypi.python.org/pypi/Pygments>
+\usepackage{listings}
+%% auto break lines
+\lstset{breaklines=true}
+
+\usepackage{amsthm}
+\usepackage{cleveref}
+\usepackage{csquotes}
+\usepackage{todonotes}
+
+\usepackage{macros}
+
+\newtheorem{definition}{Definition}
+
+\newcommand{\patrick}[1]{\todo[inline]{Patrick: #1}}
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% Rights management information.
+%% CC-BY is default license.
+\copyrightyear{2024}
+\copyrightclause{Copyright for this paper by its authors.
+  Use permitted under Creative Commons License Attribution 4.0
+  International (CC BY 4.0).}
+
+%%
+%% This command is for the conference information
+\conference{The second international Workshop on Knowledge Graphs for Sustainability --- KG4S}
+
+%%
+%% The "title" command
+\title{Companion Plant Paper}
+
+
+
+\author{Patrick Koopmann}[%
+orcid=0000-0001-5999-2583,
+email=p.k.koopmann@vu.nl,
+url=https://pkoopmann.github.io/,
+]
+% \fnmark[1]
+% \cormark[1]
+
+\author{Ilaria Tiddi}[%
+orcid=0000-0001-7116-9338,
+email=i.tiddi@vu.nl,
+url=https://kmitd.github.io/ilaria/,
+]
+% \fnmark[1]
+% \cormark[1]
+\address{Vrije Universiteit Amsterdam, De Boelelaan 1105, 1081 HV Amsterdam, The Netherlands}
+
+%% Footnotes
+% \cortext[1]{Corresponding author.}
+% \fntext[1]{These authors contributed equally.}
+
+\patrick{Other authors: add your own todo macros and author information}
+\patrick{Come up with a title}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+TODO
+\end{abstract}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\begin{keywords}
+  TODO
+\end{keywords}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\input{introduction}
+\input{related-work}
+\input{ontology}
+\input{use-cases}
+\input{user-frontend}
+\input{conclusion}
+
+
+\begin{acknowledgments}
+  TODO
+\end{acknowledgments}
+
+%%
+%% Define the bibliography file to be used
+\bibliography{kgs-bibliography}
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\appendix
+
+
+\end{document}
+
+%%
+%% End of file
