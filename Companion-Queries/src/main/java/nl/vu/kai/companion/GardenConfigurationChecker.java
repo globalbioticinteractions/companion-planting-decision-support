@@ -83,7 +83,6 @@ public class GardenConfigurationChecker {
             Configuration.GardenConfigurationProperty property) throws OWLOntologyCreationException {
         OWLOntology maximalABox = createMaximalABox(plants);
 
-        maximalABox.axioms().forEach(System.out::println);
 
         maximalABox.addAxioms(plantOntology.axioms());
 
@@ -124,11 +123,15 @@ public class GardenConfigurationChecker {
                 axiom,
                 1);
 
-        return explanations
+        Optional<Set> optExplanation = explanations
                 .stream()
                 .map((Explanation x) -> x.getAxioms())
-                .findFirst()
-                .get();
+                .findFirst();
+
+        if(!optExplanation.isPresent())
+            throw new AssertionError("No explanation present!");
+
+        return optExplanation.get();
     }
 
 
