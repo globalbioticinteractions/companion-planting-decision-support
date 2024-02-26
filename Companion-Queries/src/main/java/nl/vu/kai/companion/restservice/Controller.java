@@ -56,11 +56,11 @@ public class Controller{
     }
 
     // passing # in the param doesn't work, so the last part of the IRI gets trancuated in the process
-    // change it to a post?
+    // change it to a post? - # --> %23 on client side, then this works fine
     @GetMapping("/getCompanions")
     public List<Plant> getCompanions(@RequestParam(value = "plant", defaultValue = "http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot") String plantString) throws OWLOntologyCreationException{
         
-        System.out.println("Plant IRI:" + plantString);
+        System.out.println("Plant IRI: " + plantString);
 
         OWLClass plantClass = checker.asOWLClass(checker.getPlant(plantString));
         OWLOntology ontology = checker.getPlantOntology();
