@@ -1,8 +1,10 @@
 package nl.vu.kai.companion.restservice;
 
 import java.util.concurrent.atomic.AtomicLong;
+
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,6 +21,7 @@ import jakarta.annotation.PostConstruct;
 
 import nl.vu.kai.companion.GardenConfigurationChecker;
 import nl.vu.kai.companion.util.OWLFormatter;
+import nl.vu.kai.companion.util.OntologyTools;
 import rationals.properties.isEmpty;
 import nl.vu.kai.companion.Configuration;
 import nl.vu.kai.companion.Configuration.*;
@@ -49,13 +52,28 @@ public class Controller{
         checker = new GardenConfigurationChecker();
         Stream<Plant> plantsStream = checker.plants(); //This is currenlty still empty so I'm using the following as an example to test the rest of functionality
         List<Plant> result = plantsStream.collect(Collectors.toList());
+        return result;
+    }
 
-        //remove once checker.plants() works!
-        // result.add(new Plant("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot", Optional.of("Carrot"), Optional.of("Daucus Carota")));
-        // result.add(new Plant("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint", Optional.of("Mint"), Optional.of("Mentha")));
-        // result.add(new Plant("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot", Optional.of("Shallot"), Optional.of("Allium Ascalonicum")));
+    // passing # in the param doesn't work, so the last part of the IRI gets trancuated in the process
+    // change it to a post?
+    @GetMapping("/getCompanions")
+    public List<Plant> getCompanions(@RequestParam(value = "plant", defaultValue = "http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot") String plantString) throws OWLOntologyCreationException{
+        
+        System.out.println("Plant IRI:" + plantString);
 
-        // System.out.println(result); //This is currently still empty for some reason...
+        OWLClass plantClass = checker.asOWLClass(checker.getPlant(plantString));
+        OWLOntology ontology = checker.getPlantOntology();
+        // ontology.property
+        
+        OWLObjectProperty property = ontology.getOWLOntologyManager().getOWLDataFactory().getOWLObjectProperty(Configuration.COMPANION_PROPERTY_IRI);
+        Collection<OWLClass> answercol = OntologyTools.simpleQuery(checker.getPlantOntology(), plantClass, property);
+        
+        List<Plant> result = answercol.stream()
+                .map(OWLClass::getIRI)
+                .map(x -> checker.toPlant(x))
+                .collect(Collectors.toList());
+            
         return result;
     }
 

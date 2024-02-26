@@ -22,6 +22,8 @@ public class Configuration {
 
     public static final String PLANT_IRI=IRI_PREFIX+"Flora";
 
+    public static final String COMPANION_PROPERTY_IRI=IRI_PREFIX+"companion_with";
+
     public static final String SCIENTIFIC_NAME_IRI="http://rs.tdwg.org/dwc/terms/scientificName";
 
     public enum GardenConfigurationProperty {

@@ -1,7 +1,15 @@
 package nl.vu.kai.companion.util;
 
+import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLClassExpression;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLProperty;
+import org.semanticweb.owlapi.reasoner.NodeSet;
+import org.semanticweb.owlapi.reasoner.OWLReasoner;
+import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -46,5 +54,18 @@ public class OntologyTools {
                 .collect(Collectors.toList());
     }
 
+    public static Collection<OWLClass> simpleQuery(OWLOntology ontology, OWLClass plant, OWLObjectProperty property){
+        OWLReasonerFactory reasonerFactory = new ReasonerFactory();
+        OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
+        
+        OWLDataFactory factory = ontology.getOWLOntologyManager().getOWLDataFactory();
+        OWLClassExpression query = factory.getOWLObjectSomeValuesFrom(property, plant);
+
+        NodeSet<OWLClass> answer = reasoner.getSubClasses(query);
+        // answer.entities();
+
+        return answer.entities()
+                .collect(Collectors.toList());
+    }
 
 }
