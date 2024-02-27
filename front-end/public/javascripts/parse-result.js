@@ -14,7 +14,7 @@ function parseResult(message,plantlist) {
         col_name.innerHTML = col_names[i];
     }
     let explain_col = header.insertCell(col_names.length);
-    explain_col.innerHTML = 'explanation'
+    // explain_col.innerHTML = 'explanation'
 
     for (let i = 0; i < message.length; i++) {
         let r = res_table.insertRow(i+1);
@@ -22,14 +22,19 @@ function parseResult(message,plantlist) {
             let cell = r.insertCell(j);
             cell.innerHTML = message[i][col_names[j]];
         }
-        let explain_button = r.insertCell(col_names.lenth);
-        let button = $('<button />', {
+                
+        if (message[i]['result']=="true" ){
+            let explain_button = r.insertCell(col_names.lenth);
+            let button = $('<button />', {
             class: 'btn btn-primary btn-block',
             type: 'button',
             id: message[i]['property'],
             click: explainResult,
             text: 'Explain!'
           });
+          explain_button.append(button[0])
+        }
+
         
         // let button = document.createElement("BUTTON");
         // button.addEventListener("click", )
@@ -37,7 +42,7 @@ function parseResult(message,plantlist) {
         //     explainResult(must_ids,message[i])
         // });
 
-        explain_button.append(button[0])
+        
 
     }
 

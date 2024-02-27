@@ -13,11 +13,24 @@ block content
   //- </select>
 
   <div class="button-container">
-  <button type='button' id='SubmitButton' class='btn btn-primary btn-lg btn-block'> Check plant compatibility </button>
-  <button type='button' id='SuggestButton' class='btn btn-primary btn-lg btn-block'> Suggest plant placement </button>
+  <div class="checkboxes">
+  <fieldset>
+  //- <legend>Query options:</legend>
+  <div>
+  <input type="checkbox" id="companion" name="companion" checked/>
+  <label for="companion">Companion</label>
+  </div>
+  <div>
+  <input type="checkbox" id="intersection" name="intersection" />
+  <label for="intersection">Intersection</label>
+  </div>
+  </fieldset>
+  </div>
+  <button type='button' id='QueryButton' class='button'> Get Companions </button>
+  <button type='button' id='SubmitButton' class='button'> Check Compatibility </button>
+  <button type='button' id='SuggestButton' class='button'> Suggest Placement </button>
   </div>
 
-  <table id='ResultTable' class='table'>
-
-  </table>
+  <div id='container'></div>
+  <table id='ResultTable' class='table'></table>
 

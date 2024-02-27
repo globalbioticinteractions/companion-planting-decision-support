@@ -43,7 +43,7 @@ function suggestPlantPlacement() {
         success: function(response){
             // window.alert(response);
             console.log("Response:".concat(response));
-            parseSuggestion(response);
+            parseSuggestionAsGraph(response);
         },
         
         error: function(xhr, status, error) {
@@ -60,8 +60,38 @@ function suggestPlantPlacement() {
     // return must_ids;
 }
 
+function parseSuggestionAsGraph(message) {
+    
+    console.log(message)
+    $('#ResultTable tr').remove();
+    let graph = $('div#container')[0];
+    let nodes = [];
+    let edges = [];
 
-function parseSuggestion(message) {
+    for (let i = 0; i < message.length; i++){
+        let subject = message[i][0];
+        let pred = message[i][1];
+        let object = message[i][2];
+
+        if(pred=="Type"& subject.startsWith("plant")){
+            nodes.push({"id":subject,"label":object});
+        }
+        if(pred=="neighbour"){
+            edges.push({"from":subject,"to":object})
+        }
+
+    }
+    // print(nodes);
+    // print(edges);
+
+    let data = JSON.stringify({nodes,edges});
+    console.log(data);
+    graph.graph(data);
+    graph.container("container").draw();
+}
+
+
+function parseSuggestionAsTable(message) {
     
     // console.log(message)
     $('#ResultTable tr').remove();
@@ -72,20 +102,6 @@ function parseSuggestion(message) {
         let col_name = header.insertCell(i);
         col_name.innerHTML = col_names[i];
     }
-    // let explain_col = header.insertCell(col_names.length);
-    // explain_col.innerHTML = 'explanation';
-
-    // console.log(typeof message);
-    // let array = message.split(',');
-    // array.forEach((triple,i) => {
-    //     let r = res_table.insertRow(i+1);
-    //     t = triple.split('/t'),
-    //     t.forEach((o,j) => {
-    //         let cell = r.insertCell(j);
-    //         cell.innerHTML = o;
-    //     });
-
-    // });
 
     for (let i = 0; i < message.length; i++) {
         let r = res_table.insertRow(i+1);
@@ -93,21 +109,5 @@ function parseSuggestion(message) {
             let cell = r.insertCell(j);
             cell.innerHTML = message[i][col_names[j]];
         }
-        // let explain_button = r.insertCell(col_names.lenth);
-        // let button = $('<button />', {
-        //     class: 'btn btn-primary btn-block',
-        //     type: 'button',
-        //     id: message[i]['property'],
-        //     click: explainResult,
-        //     text: 'Explain!'
-        //   });
-        
-        // let button = document.createElement("BUTTON");
-        // button.addEventListener("click", )
-        // button.click(function(){
-        //     explainResult(must_ids,message[i])
-        // });
-
-        // explain_button.append(button[0])
     }
 }
