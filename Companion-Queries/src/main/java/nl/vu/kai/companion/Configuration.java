@@ -6,7 +6,7 @@ public class Configuration {
 
 
     public static final String LANGUAGE = "en";
-    public static final String SCIENTIFIC_NAME = "lt";
+    //public static final String SCIENTIFIC_NAME_LANGUAGE = "lt";
 
 //     public static final String ONTOLOGY_PATH="../owl/companion_planting-with-tablev3.owl";
 //     public static final String ONTOLOGY_PATH="../owl/companion-planting-base0.1.owl";
@@ -21,6 +21,10 @@ public class Configuration {
     public static final String GARDEN_RELATION_IRI =IRI_PREFIX+"containsFlora";
 
     public static final String PLANT_IRI=IRI_PREFIX+"Flora";
+
+    public static final String COMPANION_PROPERTY_IRI=IRI_PREFIX+"companion_with";
+
+    public static final String SCIENTIFIC_NAME_IRI="http://rs.tdwg.org/dwc/terms/scientificName";
 
     public enum GardenConfigurationProperty {
         BAD_GARDEN("BadGarden",-1),
