@@ -6,11 +6,14 @@ import com.clarkparsia.owlapi.explanation.util.SilentExplanationProgressMonitor;
 import nl.vu.kai.companion.repairs.ClassicalRepairGenerator;
 import nl.vu.kai.companion.repairs.RepairException;
 import org.semanticweb.HermiT.ReasonerFactory;
+import org.semanticweb.owl.explanation.impl.blackbox.checker.InconsistentOntologyExplanationGeneratorFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.model.parameters.Imports;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
+import org.semanticweb.owlapi.reasoner.OWLReasonerConfiguration;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
+import uk.ac.manchester.cs.jfact.JFactFactory;
 
 import java.io.File;
 import java.util.*;
@@ -51,13 +54,33 @@ public class CompatibilityChecker {
 
         maximalABox.addAxioms(plantOntology.axioms());
 
-        OWLReasonerFactory reasonerFactory = new ReasonerFactory();
+       /* org.semanticweb.HermiT.Configuration conf = new org.semanticweb.HermiT.Configuration();
+        conf.throwInconsistentOntologyException=false;
+
+        OWLReasonerFactory reasonerFactory = new ReasonerFactory() {
+            @Override
+            public OWLReasoner createReasoner(OWLOntology ontology) {
+                return this.createReasoner(ontology, conf);
+            }
+
+            @Override
+            public OWLReasoner createNonBufferingReasoner(OWLOntology ontology) {
+                return this.createNonBufferingReasoner(ontology, conf);
+            }
+        };
+
+
+        OWLReasoner reasoner = reasonerFactory.createReasoner(maximalABox, conf);
+           */
+
+        OWLReasonerFactory reasonerFactory = new JFactFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(maximalABox);
 
         if(reasoner.isConsistent())
             throw new IllegalArgumentException("Plants are compatible!");
 
         ExplanationGenerator explanationGenerator =
+                new InconsistentOntologyExplanationGeneratorFactory(reasonerFactory);
                 new DefaultExplanationGenerator(
                         owlManager,
                         reasonerFactory,

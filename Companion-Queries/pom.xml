@@ -55,6 +55,19 @@
             <artifactId>org.semanticweb.hermit</artifactId>
             <version>1.4.5.519</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/jfact -->
+        <dependency>
+            <groupId>net.sourceforge.owlapi</groupId>
+            <artifactId>jfact</artifactId>
+            <version>5.0.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/owlexplanation -->
+        <dependency>
+            <groupId>net.sourceforge.owlapi</groupId>
+            <artifactId>owlexplanation</artifactId>
+            <version>5.0.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
