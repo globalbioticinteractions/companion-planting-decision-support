@@ -43,7 +43,7 @@ function suggestPlantPlacement() {
         success: function(response){
             // window.alert(response);
             console.log("Response:".concat(response));
-            drawLayout(response)
+            // drawLayout(response)
             parseSuggestionAsGraph(response);
         },
         
@@ -65,14 +65,15 @@ function parseSuggestionAsGraph(message) {
     
     console.log(message)
     $('#ResultTable tr').remove();
-    let graph = $('div#container')[0];
+    // let graph = $('div#container')[0];
     let nodes = [];
     let edges = [];
 
     for (let i = 0; i < message.length; i++){
-        let subject = message[i][0];
-        let pred = message[i][1];
-        let object = message[i][2];
+        let subject = message[i]['subject'];
+        console.log(subject)
+        let pred = message[i]['property'];
+        let object = message[i]['object'];
 
         if(pred=="Type"& subject.startsWith("plant")){
             nodes.push({"id":subject,"label":object});
@@ -87,7 +88,7 @@ function parseSuggestionAsGraph(message) {
 
     let data = JSON.stringify({nodes,edges});
     console.log(data);
-    graph.graph(data);
+    let graph = anychart.graph(data);
     graph.container("container").draw();
 }
 
