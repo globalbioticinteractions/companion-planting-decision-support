@@ -43,7 +43,8 @@ function suggestPlantPlacement() {
         success: function(response){
             // window.alert(response);
             console.log("Response:".concat(response));
-            parseSuggestionAsGraph(response);
+            drawLayout(response)
+            // parseSuggestionAsGraph(response);
         },
         
         error: function(xhr, status, error) {
@@ -63,6 +64,7 @@ function suggestPlantPlacement() {
 function parseSuggestionAsGraph(message) {
     $('div#container').remove();
     $('#ResultTable tr').remove();
+    // let graph = $('div#container')[0];
     let nodes = [];
     let edges = [];
 
@@ -83,17 +85,9 @@ function parseSuggestionAsGraph(message) {
     }
     
     let data = JSON.stringify({nodes,edges});
-
-    var chart = $('#chartcontainer').anychart();
-    chart.graph(data);
-    chart.draw();
-
-    // var chart = anychart.graph(data);
-    // chart.container("container").draw();
-
-    // let graph = $('div#container');
-    // graph.graph(data);
-    // graph.container("container").draw();
+    console.log(data);
+    let graph = anychart.graph(data);
+    graph.container("container").draw();
 }
 
 
@@ -116,4 +110,41 @@ function parseSuggestionAsTable(message) {
             cell.innerHTML = message[i][col_names[j]];
         }
     }
+}
+
+function drawLayout(message) {
+    anychart.onDocumentReady(function () {
+        anychart.data.loadJsonFile(
+          // The data used in this sample can be obtained from the CDN
+          'https://cdn.anychart.com/samples-data/graph/knowledge_graph/data.json',
+          function (data) {
+            // create graph chart
+            var chart = anychart.graph(data);
+  
+            // set settings for each group
+            for (var i = 0; i < 8; i++) {
+              // get group
+              var group = chart.group(i);
+  
+              // set group labels settings
+              group
+                .labels()
+                .enabled(true)
+                .anchor('left-center')
+                .position('right-center')
+                .padding(0, -5)
+                .fontColor(anychart.palettes.defaultPalette[i]);
+  
+              // set group nodes stroke and fill
+              group.stroke(anychart.palettes.defaultPalette[i]);
+              group.fill(anychart.palettes.defaultPalette[i]);
+            }
+  
+            // set container id for the chart
+            chart.container('container');
+            // initiate chart drawing
+            chart.draw();
+          }
+        );
+      });
 }
