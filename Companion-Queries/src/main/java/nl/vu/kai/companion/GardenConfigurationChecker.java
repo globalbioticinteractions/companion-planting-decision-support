@@ -1,12 +1,17 @@
 package nl.vu.kai.companion;
 
+import com.clarkparsia.owlapi.explanation.DefaultExplanationGenerator;
+import com.clarkparsia.owlapi.explanation.ExplanationGenerator;
+import com.clarkparsia.owlapi.explanation.util.SilentExplanationProgressMonitor;
 import nl.vu.kai.companion.data.Plant;
 import nl.vu.kai.companion.repairs.ClassicalRepairGenerator;
 import nl.vu.kai.companion.repairs.RepairException;
 import nl.vu.kai.companion.util.OntologyTools;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owl.explanation.api.Explanation;
-import org.semanticweb.owl.explanation.api.ExplanationGenerator;
+import org.semanticweb.owl.explanation.api.ExplanationManager;
+import org.semanticweb.owl.explanation.impl.blackbox.checker.BlackBoxExplanationGeneratorFactory;
+import org.semanticweb.owl.explanation.impl.blackbox.checker.DefaultBlackBoxConfiguration;
 import org.semanticweb.owl.explanation.impl.blackbox.checker.InconsistentOntologyExplanationGeneratorFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
@@ -14,7 +19,10 @@ import org.semanticweb.owlapi.model.parameters.Imports;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -87,7 +95,6 @@ public class GardenConfigurationChecker {
             Configuration.GardenConfigurationProperty property) throws OWLOntologyCreationException {
         OWLOntology maximalABox = createMaximalABox(plants);
 
-        maximalABox.axioms().forEach(System.out::println);
 
         maximalABox.addAxioms(plantOntology.axioms());
 
@@ -115,12 +122,15 @@ public class GardenConfigurationChecker {
         if(!reasoner.isEntailed(axiom))
             throw new IllegalArgumentException("Property not satisfied!");
 
+        /*
         ExplanationGenerator explanationGenerator =
-                new InconsistentOntologyExplanationGeneratorFactory(
-                        reasonerFactory,
-                        owlFactory,
-                        () -> owlManager,
-                        1000)
+                ExplanationManager.createExplanationGeneratorFactory(reasonerFactory, () -> owlManager)
+                //new BlackBoxExplanationGeneratorFactory(
+                //        new DefaultBlackBoxConfiguration(reasonerFactory, () -> owlManager))
+               //         reasonerFactory,
+               //         owlFactory,
+               //         () -> owlManager,
+               //         1000)
                         .createExplanationGenerator(maximalABox);
 
 
@@ -128,11 +138,31 @@ public class GardenConfigurationChecker {
                 axiom,
                 1);
 
-        return explanations
+        Optional<Set> optExplanation = explanations
                 .stream()
                 .map((Explanation x) -> x.getAxioms())
-                .findFirst()
-                .get();
+                .findFirst();
+
+        if(!optExplanation.isPresent()) {
+            try {
+                owlManager.saveOntology(maximalABox, new FileOutputStream(new File("debug.owl")));
+            } catch (OWLOntologyStorageException e) {
+                e.printStackTrace();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+            throw new AssertionError("No explanation present!");
+        }
+
+        return optExplanation.get();
+          */
+
+        DefaultExplanationGenerator explanationGenerator =
+                new DefaultExplanationGenerator(owlManager, reasonerFactory, maximalABox,
+                        new SilentExplanationProgressMonitor());
+
+        return explanationGenerator.getExplanation(axiom);
+
     }
 
 
