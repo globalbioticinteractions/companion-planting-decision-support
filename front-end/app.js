@@ -12,7 +12,6 @@ var app = express();
 
 // view engine setup
 
-// jQuery.support.cors = true;
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
