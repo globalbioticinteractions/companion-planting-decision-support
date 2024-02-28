@@ -43,8 +43,8 @@ function suggestPlantPlacement() {
         success: function(response){
             // window.alert(response);
             console.log("Response:".concat(response));
-            // drawLayout(response)
-            parseSuggestionAsGraph(response);
+            drawLayout(response)
+            // parseSuggestionAsGraph(response);
         },
         
         error: function(xhr, status, error) {
@@ -115,19 +115,38 @@ function parseSuggestionAsTable(message) {
 }
 
 function drawLayout(message) {
-    var chart = anychart.pie();
-    // set the data --> TODO: use the provided message
-    chart.data([
-        ["Chocolate", 5],
-        ["Rhubarb compote", 2],
-        ["Crêpe Suzette", 2],
-        ["American blueberry", 2],
-        ["Buttermilk", 1]
-        ]);
-    // set chart title
-    chart.title("Top 5 pancake fillings");
-    // set the container element 
-    chart.container("container");
-    // initiate chart display
-    chart.draw();
+    anychart.onDocumentReady(function () {
+        anychart.data.loadJsonFile(
+          // The data used in this sample can be obtained from the CDN
+          'https://cdn.anychart.com/samples-data/graph/knowledge_graph/data.json',
+          function (data) {
+            // create graph chart
+            var chart = anychart.graph(data);
+  
+            // set settings for each group
+            for (var i = 0; i < 8; i++) {
+              // get group
+              var group = chart.group(i);
+  
+              // set group labels settings
+              group
+                .labels()
+                .enabled(true)
+                .anchor('left-center')
+                .position('right-center')
+                .padding(0, -5)
+                .fontColor(anychart.palettes.defaultPalette[i]);
+  
+              // set group nodes stroke and fill
+              group.stroke(anychart.palettes.defaultPalette[i]);
+              group.fill(anychart.palettes.defaultPalette[i]);
+            }
+  
+            // set container id for the chart
+            chart.container('container');
+            // initiate chart drawing
+            chart.draw();
+          }
+        );
+      });
 }
