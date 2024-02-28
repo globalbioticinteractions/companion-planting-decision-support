@@ -1,7 +1,7 @@
 // import parseResult from './parse-result.js'
-// import fetch from node-fetch
-const URL = "http://localhost:8080"
+// import anychart from 'anychart'
 
+const URL = "http://localhost:8080"
 
 $(document).ready(function(){
     $('#SuggestButton').click(function(){
@@ -61,33 +61,39 @@ function suggestPlantPlacement() {
 }
 
 function parseSuggestionAsGraph(message) {
-    
-    console.log(message)
+    $('div#container').remove();
     $('#ResultTable tr').remove();
-    let graph = $('div#container')[0];
     let nodes = [];
     let edges = [];
 
     for (let i = 0; i < message.length; i++){
-        let subject = message[i][0];
-        let pred = message[i][1];
-        let object = message[i][2];
+        var triple = message[i];
 
-        if(pred=="Type"& subject.startsWith("plant")){
+        var subject = triple.subject;
+        var pred = triple.property;
+        var object = triple.object;
+
+        if(pred=="Type"& subject.includes("plant")){
             nodes.push({"id":subject,"label":object});
         }
         if(pred=="neighbour"){
-            edges.push({"from":subject,"to":object})
+            edges.push({"from":subject,"to":object});
         }
 
     }
-    // print(nodes);
-    // print(edges);
-
+    
     let data = JSON.stringify({nodes,edges});
-    console.log(data);
-    graph.graph(data);
-    graph.container("container").draw();
+
+    var chart = $('#chartcontainer').anychart();
+    chart.graph(data);
+    chart.draw();
+
+    // var chart = anychart.graph(data);
+    // chart.container("container").draw();
+
+    // let graph = $('div#container');
+    // graph.graph(data);
+    // graph.container("container").draw();
 }
 
 
