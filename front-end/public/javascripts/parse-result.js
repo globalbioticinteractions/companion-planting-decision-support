@@ -5,7 +5,12 @@ import explainResult from './explain-result.js'
 function parseResult(message,plantlist) {
     
     // console.log(message)
+    var div = document.getElementById('graphcontainer'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
     $('#ResultTable tr').remove();
+
     let res_table = $('table#ResultTable')[0];
     let col_names = Object.keys(message[0]);
     let header = res_table.insertRow(0);
@@ -34,40 +39,9 @@ function parseResult(message,plantlist) {
           });
           explain_button.append(button[0])
         }
-
-        
-        // let button = document.createElement("BUTTON");
-        // button.addEventListener("click", )
-        // button.click(function(){
-        //     explainResult(must_ids,message[i])
-        // });
-
-        
+      
 
     }
-
-    
-
-    // let rows = []
-    // // rows.push(header)
-    // for (let i = 0; i < cols.length; i++) {
-    //     let col_name = header.insertCell(i)
-    //     col_name.innerHTML = cols[i]
-    //     let elements = message[cols[i]]
-    //     console.log(elements.length)
-    //     for (let j = 0; j < elements.length; j++){
-    //         if (rows.length <= j){
-    //             let r = res_table.insertRow(j+1)
-    //             for (let k = 0; k < i; k++) {
-    //                 r.insertCell(k)
-    //             }
-    //             rows.push(r)
-    //         } 
-    //         let cell = rows[j].insertCell(i)
-    //         cell.innerHTML = elements[j]
-    //     }
-    // }
-    // window.alert(message);
 
 }
 

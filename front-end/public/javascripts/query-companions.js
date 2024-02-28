@@ -10,6 +10,12 @@ $(document).ready(function(){
   });
 
 function queryCompanions() {
+    var div = document.getElementById('graphcontainer'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
+
+    $('#ResultTable tr').remove();
     let musts = $('#must-select').select2('data');
     // let mays = $('#may-select').select2('data');
 
@@ -17,21 +23,7 @@ function queryCompanions() {
     musts.forEach(item => {
         plants.push(item.id)
     });
-    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot");
-    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot");
-    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
-    
-    // let may_ids = [];
-    // mays.forEach(item => {
-    //     may_ids.push(item.id)
-    // });
-    // let message = {'musts': must_ids, 'mays': may_ids}
-    // let message = {'selectedplants': must_ids}
-    // parseResult(message);
-    
 
-    // TODO: init API call and pass the result to the following function. 
-   
     let intersection = $('#intersection').is(':checked');
     let companion = $('#companion').is(':checked');
     let plantlist = JSON.stringify({companion,intersection,plants});
@@ -57,8 +49,4 @@ function queryCompanions() {
         }
     });
 
-    // window.alert(data);
-    // parseResult(data)
-
-    // return must_ids;
 }

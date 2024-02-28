@@ -10,6 +10,12 @@ $(document).ready(function(){
   });
 
 function suggestPlantPlacement() {
+    var div = document.getElementById('graphcontainer'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
+    
+    $('#ResultTable tr').remove();
     let musts = $('#must-select').select2('data');
     // let mays = $('#may-select').select2('data');
 
@@ -17,21 +23,7 @@ function suggestPlantPlacement() {
     musts.forEach(item => {
         must_ids.push(item.id)
     });
-    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot");
-    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot");
-    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
-    
-    // let may_ids = [];
-    // mays.forEach(item => {
-    //     may_ids.push(item.id)
-    // });
-    // let message = {'musts': must_ids, 'mays': may_ids}
-    // let message = {'selectedplants': must_ids}
-    // parseResult(message);
-    
 
-    // TODO: init API call and pass the result to the following function. 
-   
     
     $.post({
         url: URL.concat("/suggest"),
@@ -49,16 +41,10 @@ function suggestPlantPlacement() {
         
         error: function(xhr, status, error) {
             window.alert("Something went wrong while sending the request: "+plantlist); 
-
-            // window.alert(xhr.status,status,error);
-            
+           
         }
     });
 
-    // window.alert(data);
-    // parseResult(data)
-
-    // return must_ids;
 }
 
 function parseSuggestionAsGraph(message) {
@@ -93,18 +79,28 @@ function parseSuggestionAsGraph(message) {
         var chart = anychart.graph(json);
 
         chart.nodes().labels(true);
-        // chart.nodes().labels().fontColor("green");
-        // nodes.labels().fontWeight(900);
+        chart.nodes().labels().color('black'); //this is also not doing anything.
+
+        //the size is not changing
+        chart.nodes().normal().size(35);
+
+        chart.nodes().normal().fill('#2c974b');
+        chart.nodes().hovered().fill('white');
+        chart.nodes().selected().fill('black');
+
+        chart.nodes().normal().stroke(null);
+        chart.nodes().hovered().stroke("#2c974b", 3);
+        chart.nodes().selected().stroke("#2c974b", 3);
+
+        chart.edges().normal().stroke("grey", 2, "10 5", "round");
+        chart.edges().hovered().stroke("black", 4);
+        chart.edges().selected().stroke("black", 4);
+
+        chart.nodes().labels().fontWeight(600);
+        chart.nodes().labels().fontSize(16);
         chart.nodes().labels().format("{%label}");
 
-        // chart.nodes().normal().height(40);
-        // chart.nodes().hovered().height(55);
-        // chart.nodes().selected().height(55);
-
-        // chart.edges().normal().stroke("#ffa000", 2, "10 5", "round");
-        // chart.edges().hovered().stroke("#ffa000", 4, "10 5", "round");
-        // chart.edges().selected().stroke("#ffa000", 4);
-
+        chart.fit();
         chart.container('graphcontainer');
         chart.draw();
 
