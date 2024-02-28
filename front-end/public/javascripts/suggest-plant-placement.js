@@ -43,8 +43,8 @@ function suggestPlantPlacement() {
         success: function(response){
             // window.alert(response);
             console.log("Response:".concat(response));
-            drawLayout(response)
-            // parseSuggestionAsGraph(response);
+            // drawLayout(response)
+            parseSuggestionAsGraph(response);
         },
         
         error: function(xhr, status, error) {
@@ -83,11 +83,33 @@ function parseSuggestionAsGraph(message) {
         }
 
     }
-    
-    let data = JSON.stringify({nodes,edges});
-    console.log(data);
-    let graph = anychart.graph(data);
-    graph.container("container").draw();
+
+    var json = {"nodes":nodes,"edges":edges};
+    let jsondata = JSON.stringify(json);
+    console.log(json);
+
+    // anychart.data.loadJsonFile('../data/placement_test.json', function (data) {
+        
+        var chart = anychart.graph(json);
+
+        chart.nodes().labels(true);
+        chart.nodes().labels().fontColor("green");
+        // nodes.labels().fontWeight(900);
+        chart.nodes().labels().format("${%label}");
+
+        // chart.nodes().normal().height(40);
+        // chart.nodes().hovered().height(55);
+        // chart.nodes().selected().height(55);
+
+        // chart.edges().normal().stroke("#ffa000", 2, "10 5", "round");
+        // chart.edges().hovered().stroke("#ffa000", 4, "10 5", "round");
+        // chart.edges().selected().stroke("#ffa000", 4);
+
+        chart.container('graphcontainer');
+        chart.draw();
+
+    // drawLayout(data);
+    // });
 }
 
 
@@ -112,39 +134,24 @@ function parseSuggestionAsTable(message) {
     }
 }
 
-function drawLayout(message) {
-    anychart.onDocumentReady(function () {
-        anychart.data.loadJsonFile(
-          // The data used in this sample can be obtained from the CDN
-          'https://cdn.anychart.com/samples-data/graph/knowledge_graph/data.json',
-          function (data) {
-            // create graph chart
-            var chart = anychart.graph(data);
-  
-            // set settings for each group
-            for (var i = 0; i < 8; i++) {
-              // get group
-              var group = chart.group(i);
-  
-              // set group labels settings
-              group
-                .labels()
-                .enabled(true)
-                .anchor('left-center')
-                .position('right-center')
-                .padding(0, -5)
-                .fontColor(anychart.palettes.defaultPalette[i]);
-  
-              // set group nodes stroke and fill
-              group.stroke(anychart.palettes.defaultPalette[i]);
-              group.fill(anychart.palettes.defaultPalette[i]);
-            }
-  
-            // set container id for the chart
-            chart.container('container');
-            // initiate chart drawing
-            chart.draw();
-          }
-        );
-      });
+function drawLayout(jsondata) {
+         
+    anychart.onDocumentReady(function (data = jsondata) {
+        var chart = anychart.fromJson(data)
+        
+        // anychart.data.loadJsonFile(
+        // The data used in this sample can be obtained from the CDN
+        //   'https://cdn.anychart.com/samples-data/graph/knowledge_graph/data.json',
+        //   function (data=message) {
+        // create graph chart
+        // var chart = anychart.graph(data);
+
+        // set container id for the chart
+        chart.container('container');
+        // initiate chart drawing
+        chart.draw();
+    
+    });
 }
+        // );
+    //   });

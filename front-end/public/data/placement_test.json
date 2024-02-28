@@ -1,0 +1,86 @@
+{
+    "nodes": [
+        {
+            "id": "plant2",
+            "label": "Mulberry"
+        },
+        {
+            "id": "plant1",
+            "label": "Asparagus"
+        },
+        {
+            "id": "plant3",
+            "label": "Celery"
+        },
+        {
+            "id": "plant0",
+            "label": "Garlic"
+        }
+    ],
+    "edges": [
+        {
+            "from": "plant3",
+            "to": "plant0"
+        },
+        {
+            "from": "plant1",
+            "to": "plant0"
+        },
+        {
+            "from": "plant2",
+            "to": "plant1"
+        },
+        {
+            "from": "plant3",
+            "to": "plant2"
+        },
+        {
+            "from": "plant0",
+            "to": "plant1"
+        },
+        {
+            "from": "plant1",
+            "to": "plant2"
+        },
+        {
+            "from": "plant2",
+            "to": "plant3"
+        },
+        {
+            "from": "plant0",
+            "to": "plant3"
+        },
+        {
+            "from": "plant2",
+            "to": "plant0"
+        },
+        {
+            "from": "plant3",
+            "to": "plant1"
+        },
+        {
+            "from": "plant0",
+            "to": "plant0"
+        },
+        {
+            "from": "plant1",
+            "to": "plant1"
+        },
+        {
+            "from": "plant3",
+            "to": "plant3"
+        },
+        {
+            "from": "plant2",
+            "to": "plant2"
+        },
+        {
+            "from": "plant0",
+            "to": "plant2"
+        },
+        {
+            "from": "plant1",
+            "to": "plant3"
+        }
+    ]
+}
