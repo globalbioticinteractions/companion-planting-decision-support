@@ -93,9 +93,9 @@ function parseSuggestionAsGraph(message) {
         var chart = anychart.graph(json);
 
         chart.nodes().labels(true);
-        chart.nodes().labels().fontColor("green");
+        // chart.nodes().labels().fontColor("green");
         // nodes.labels().fontWeight(900);
-        chart.nodes().labels().format("${%label}");
+        chart.nodes().labels().format("{%label}");
 
         // chart.nodes().normal().height(40);
         // chart.nodes().hovered().height(55);
