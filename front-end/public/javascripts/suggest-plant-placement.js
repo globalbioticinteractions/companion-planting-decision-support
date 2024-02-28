@@ -43,6 +43,7 @@ function suggestPlantPlacement() {
         success: function(response){
             // window.alert(response);
             console.log("Response:".concat(response));
+            drawLayout(response)
             parseSuggestionAsGraph(response);
         },
         
@@ -110,4 +111,22 @@ function parseSuggestionAsTable(message) {
             cell.innerHTML = message[i][col_names[j]];
         }
     }
+}
+
+function drawLayout(message) {
+    var chart = anychart.pie();
+    // set the data --> TODO: use the provided message
+    chart.data([
+        ["Chocolate", 5],
+        ["Rhubarb compote", 2],
+        ["Crêpe Suzette", 2],
+        ["American blueberry", 2],
+        ["Buttermilk", 1]
+        ]);
+    // set chart title
+    chart.title("Top 5 pancake fillings");
+    // set the container element 
+    chart.container("container");
+    // initiate chart display
+    chart.draw();
 }
