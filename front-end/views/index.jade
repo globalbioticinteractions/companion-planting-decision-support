@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  h4 Please select the plants that you must have in your garden
+  <select class="multiple-select" id="must-select" data-placeholder="Choose anything" multiple>
+  </select>
+
+  //- h4 Please select the plants that you would like to have in your garden
+  //- <select class="multiple-select" id="may-select" data-placeholder="Choose anything" multiple>
+  //- </select>
+
+  <div class="button-container">
+  <button type='button' id='SubmitButton' class='btn btn-primary btn-lg btn-block'> Check plant compatibility </button>
+  <button type='button' id='SuggestButton' class='btn btn-primary btn-lg btn-block'> Suggest plant placement </button>
+  </div>
+
+  <table id='ResultTable' class='table'>
+
+  </table>
+

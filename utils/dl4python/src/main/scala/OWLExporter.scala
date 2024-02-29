@@ -2,16 +2,12 @@ package nl.vu.kai.dl4python.owlapi
 
 import java.io.File
 import java.net.URL
-
 import scala.collection.JavaConversions._
-
 import com.typesafe.scalalogging.Logger
-
 import org.semanticweb.owlapi.apibinding.OWLManager
 import org.semanticweb.owlapi.io._
 import org.semanticweb.owlapi.model._
-
-import nl.vu.kai.dl4python.datatypes._
+import nl.vu.kai.dl4python.datatypes.{Annotation, LabelAnnotation, _}
 
 class OWLExporter(simplifiedNames: Boolean = true) {
 //  implicit val (logger, formatter, appender) = ZeroLoggerFactory.newLogger(this)
@@ -27,47 +23,25 @@ class OWLExporter(simplifiedNames: Boolean = true) {
   }
 
   def exportOntology(ontology: Ontology, file: File): Unit = {
-    val manager = OWLManager.createOWLOntologyManager()
 
-    val owlOntology = manager.createOntology()
-
-    ontology.tbox.axioms.foreach(addAxiom(owlOntology, _))
-    ontology.rbox.axioms.foreach(addAxiom(owlOntology, _))
-    ontology.abox.assertions.foreach(addAxiom(owlOntology,_))
+    val owlOntology = toOwlOntology(ontology)
 
     val format = new RDFXMLOntologyFormat()
 
     manager.saveOntology(owlOntology, format, IRI.create(file.toURI()))
   }
 
-  def toOwlOntology(ontology: Ontology): OWLOntology = { 
-    val manager = OWLManager.createOWLOntologyManager()
-    
-    val factory = manager.getOWLDataFactory()
-  
+  def toOwlOntology(ontology: Ontology): OWLOntology = {
     val owlOntology = manager.createOntology()
 
-    ontology.tbox.axioms.foreach(axiom => 
-      manager.addAxiom(owlOntology, toOwl(owlOntology, axiom)))
+    ontology.tbox.axioms.foreach(addAxiom(owlOntology, _))
     ontology.rbox.axioms.foreach(addAxiom(owlOntology, _))
     ontology.abox.assertions.foreach(addAxiom(owlOntology,_))
-
-
+    ontology.annotations.foreach(addAxiom(owlOntology,_))
+    ontology.unsupportedOWLAxioms.foreach(owlOntology.addAxiom)
     owlOntology
   }
 
-  def toOwlOntology(axioms: Iterable[OWLAxiom]): OWLOntology = { 
-    val manager = OWLManager.createOWLOntologyManager()
-    
-    val factory = manager.getOWLDataFactory()
-  
-    val owlOntology = manager.createOntology()
-
-    axioms.foreach(axiom => 
-      manager.addAxiom(owlOntology, axiom))
-
-    owlOntology
-  }
 
   def save(owlOntology: OWLOntology, file: File,
   format:OWLOntologyFormat = new OWLXMLOntologyFormat()) = {
@@ -84,6 +58,9 @@ class OWLExporter(simplifiedNames: Boolean = true) {
 
   def addAxiom(owlOntology: OWLOntology, assertion: Assertion) = 
     manager.addAxiom(owlOntology, toOwl(owlOntology, assertion))
+
+  def addAxiom(owlOntology: OWLOntology, annotation: Annotation) =
+    manager.addAxiom(owlOntology, toOwl(owlOntology, annotation))
 
   def toOwl(owlOntology: OWLOntology, statement: DLStatement): OWLLogicalAxiom = statement match {
     case a: Axiom => toOwl(owlOntology, a)
@@ -114,6 +91,7 @@ class OWLExporter(simplifiedNames: Boolean = true) {
       toOwl(owlOntology, sup))
     case TransitiveRoleAxiom(r) => factory.getOWLTransitiveObjectPropertyAxiom(toOwl(owlOntology,r))
     case FunctionalRoleAxiom(r) => factory.getOWLFunctionalObjectPropertyAxiom(toOwl(owlOntology, r))
+    case SymmetricRoleAxiom(r) => factory.getOWLSymmetricObjectPropertyAxiom(toOwl(owlOntology,r))
   }
 
   def toOwl(owlOntology: OWLOntology, assertion: Assertion): OWLIndividualAxiom = assertion match { 
@@ -163,6 +141,35 @@ class OWLExporter(simplifiedNames: Boolean = true) {
   def toOwl(owlOntology: OWLOntology, individual: Individual): OWLIndividual =
     factory.getOWLNamedIndividual(toIRI(owlOntology, individual.name))
 
+  def toOwl(owlOntology: OWLOntology, annotation: Annotation): OWLAnnotationAssertionAxiom = annotation match {
+
+    case TaxonAnnotation(name: Name, ref:String) =>
+      factory.getOWLAnnotationAssertionAxiom(
+        getTaxonProperty(),
+        toIRI(owlOntology,name.nameAsString()),
+        factory.getOWLLiteral(ref)
+      )
+    case LabelAnnotation(name: Name, label, language) =>
+      factory.getOWLAnnotationAssertionAxiom(
+        getLabelProperty(),
+        toIRI(owlOntology,name.nameAsString()),
+        factory.getOWLLiteral(label, language)
+      )
+    case SeeAlsoAnnotation(name: Name, ref: String) =>
+      factory.getOWLAnnotationAssertionAxiom(
+        getSeeAlsoProperty(),
+        toIRI(owlOntology,name.nameAsString()),
+        factory.getOWLLiteral(ref)
+      )
+
+    case other => throw new AssertionError("Unsupported annotation type: "+other)
+  }
+
+  def getLabelProperty() = factory.getOWLAnnotationProperty("http://www.w3.org/2000/01/rdf-schema#label")
+
+  def getSeeAlsoProperty() = factory.getOWLAnnotationProperty("https://www.w3.org/TR/rdf-schema#seeAlso") //maybe add '/'
+
+  def getTaxonProperty() = factory.getOWLAnnotationProperty("http://rs.tdwg.org/dwc/terms/scientificName")
   def toIRI(owlOntology: OWLOntology, name: String): IRI = 
     if(!simplifiedNames && name.startsWith("<") && name.endsWith(">")) {
       IRI.create(name.substring(1,name.length-1))
