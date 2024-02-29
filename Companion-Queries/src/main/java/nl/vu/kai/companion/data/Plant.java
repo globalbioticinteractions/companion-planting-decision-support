@@ -4,6 +4,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 public class Plant {
+    
     private final String iri;
     private Optional<String> name, scientificName;
 

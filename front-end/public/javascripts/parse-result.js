@@ -16,7 +16,12 @@ function parseResult(message,plantlist) {
     let header = res_table.insertRow(0);
     for (let i = 0; i < col_names.length; i++) {
         let col_name = header.insertCell(i);
-        col_name.innerHTML = col_names[i];
+        if(col_names[i]=='property'){
+
+        }else{
+            col_name.innerHTML = col_names[i];
+        }
+        
     }
     let explain_col = header.insertCell(col_names.length);
     // explain_col.innerHTML = 'explanation'

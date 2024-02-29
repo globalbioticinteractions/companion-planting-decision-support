@@ -2,6 +2,25 @@ import parseResult from './parse-result.js'
 // import fetch from node-fetch
 const URL = "http://localhost:8080"
 
+const anticompsetting = {
+    normal: {   stroke:  {
+                        color: "red",
+                        thickness: "3",
+                    }
+            },
+    hovered: {  stroke: "6 red"},
+    selected: { stroke: "6 red"}
+    }
+
+const compsetting = {
+        normal: {   stroke:  {
+                            color: "green",
+                            thickness: "3",
+                        }
+                },
+        hovered: {  stroke: "6 green"},
+        selected: { stroke: "6 green"}
+        }
 
 $(document).ready(function(){
     $('#QueryButton').click(function(){
@@ -24,21 +43,22 @@ function queryCompanions() {
         plants.push(item.id)
     });
 
-    let intersection = $('#intersection').is(':checked');
-    let companion = $('#companion').is(':checked');
-    let plantlist = JSON.stringify({companion,intersection,plants});
+    // let intersection = $('#intersection').is(':checked');
+    // let companion = $('#companion').is(':checked');
+    let plantlist = JSON.stringify({plants});
     console.log(plantlist);
    
     $.post({
-        url: URL.concat("/getCompanions"),
+        url: URL.concat("/getCompanionGraph"),
         headers: {'Access-Control-Allow-Origin':'*'}, // <-------- set this
         data: plantlist,
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         
         success: function(response){
-            console.log(response)
-            parseResult(response,plantlist)
+            // console.log(response);
+            // parseResult(response,plantlist)
+            parseCompanionGraph(response);
         },
         
         error: function(xhr, status, error) {
@@ -49,4 +69,71 @@ function queryCompanions() {
         }
     });
 
+}
+
+function parseCompanionGraph(message) {
+    var div = document.getElementById('graphcontainer'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
+    $('#ResultTable tr').remove();
+    
+    for (var i=0; i<message.edges.length;i++){
+        if (message.edges[i].property == "companion"){
+            message.edges[i].normal = compsetting.normal;
+            message.edges[i].hovered = compsetting.hovered;
+            message.edges[i].selected = compsetting.selected;
+        }else{
+            message.edges[i].normal = anticompsetting.normal;
+            message.edges[i].hovered = anticompsetting.hovered;
+            message.edges[i].selected = anticompsetting.selected;
+        }
+    }
+
+    console.log(message);
+
+    var chart = anychart.graph(message);
+
+    chart.nodes().labels(true);
+    // chart.nodes().labels().color('black'); //this is also not doing anything.
+
+    // chart.nodes().normal().height(35);
+    // chart.nodes().normal().width(35);
+
+    var original = chart.group("original");
+    var other = chart.group("default");
+
+    original.normal().height(40);
+    original.normal().width(40);
+    original.normal().shape("star5");
+    original.normal().fill('#ffa000');
+    original.hovered().fill('white');
+    original.selected().fill('black');
+    original.normal().stroke(null);
+    original.hovered().stroke("#ffa000", 4);
+    original.selected().stroke("#ffa000", 4);
+
+    other.normal().height(25);
+    other.normal().width(25);
+    other.normal().fill('grey');
+    other.hovered().fill('white');
+    other.selected().fill('black');
+    other.normal().stroke(null);
+    other.hovered().stroke("grey", 4);
+    other.selected().stroke("grey", 4);
+
+    // chart.edges().normal().stroke("green", 2, "10 5", "round");
+    // chart.edges().hovered().stroke("black", 4);
+    // chart.edges().selected().stroke("black", 4);
+
+    chart.nodes().labels().fontWeight(600);
+    chart.nodes().labels().fontSize(16);
+    // chart.nodes().labels().format("{%label}");
+
+    chart.fit();
+    chart.container('graphcontainer');
+    chart.draw();
+
+    // drawLayout(data);
+    // });
 }

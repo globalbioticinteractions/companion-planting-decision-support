@@ -28,18 +28,19 @@ public class Configuration {
     public static final String SCIENTIFIC_NAME_IRI="http://rs.tdwg.org/dwc/terms/scientificName";
 
     public enum GardenConfigurationProperty {
-        BAD_GARDEN("BadGarden",-1),
-        GARDEN("Garden",0),
-        GOOD_GARDEN_1("CompanionGarden",1),
-        GOOD_GARDEN_2("3CompanionGarden",2),
-        GOOD_GARDEN_3("3TripleCompanionGarden",3)
+        BAD_GARDEN("BadGarden",-1,"This garden contains incompatible plants."),
+        GARDEN("Garden",0,"This is a garden."),
+        GOOD_GARDEN_1("CompanionGarden",1,"This garden contains at least one pair of companion plants."),
+        GOOD_GARDEN_2("3CompanionGarden",2, "This garden contains at least 3 pairs of compaion plants."),
+        GOOD_GARDEN_3("3TripleCompanionGarden",3, "This garden contains at least 3 plants with each 3 companion plants.")
         ;
-        public final String iri, name;
+        public final String iri, name, description;
         public final int rating;
-        private GardenConfigurationProperty(String name, int rating){
+        private GardenConfigurationProperty(String name, int rating,String description){
             this.name=name;
             this.iri=IRI_PREFIX+name;
             this.rating =rating;
+            this.description=description;
         }
         @Override
         public String toString() { return name; }

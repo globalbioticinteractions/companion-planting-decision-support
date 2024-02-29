@@ -165,6 +165,27 @@ public class GardenConfigurationChecker {
 
     }
 
+    // public Set<OWLAxiom> explainProperty(
+    //         OWLClass plant1, OWLClass plant2,
+    //         OWLObjectProperty property) throws OWLOntologyCreationException {
+        
+    //     OWLReasonerFactory reasonerFactory = new ReasonerFactory();
+    //     OWLReasoner reasoner = reasonerFactory.createReasoner(plantOntology);
+        
+    //     OWLAxiom axiom = new OWLAxiom();
+
+
+    //     if(!reasoner.isEntailed(axiom))
+    //         throw new IllegalArgumentException("Axiom wasn't entailed");
+
+    //     DefaultExplanationGenerator explanationGenerator =
+    //             new DefaultExplanationGenerator(owlManager, reasonerFactory, plantOntology,
+    //                     new SilentExplanationProgressMonitor());
+
+    //     return explanationGenerator.getExplanation(axiom);
+
+    // }
+
 
     public Set<OWLIndividualAxiom> organizePlants(Set<OWLClass> plants) throws OWLOntologyCreationException {
         List<Configuration.GardenConfigurationProperty> properties =
@@ -245,6 +266,13 @@ public class GardenConfigurationChecker {
                 owlFactory.getOWLClass(IRI.create(property.iri)),
                 owlFactory.getOWLNamedIndividual(IRI.create(GARDEN_NAME)));
     }
+
+    // private OWLAxiom getAxiom(OWLClass plant1, OWLClass plant2, OWLProperty property) {
+    //     // "Plant SubClassOf hasCompanion some Other-Plant"
+    //     return owlFactory.getOWLSubClassOfAxiom(
+    //         plant1, 
+    //         owlFactory.getOWLObjectSomeValuesFrom(property, plant2));
+    // }
 
     private OWLOntology createMaximalABox(Set<OWLClass> plants) throws OWLOntologyCreationException {
         OWLOntology ontology = owlManager.createOntology();

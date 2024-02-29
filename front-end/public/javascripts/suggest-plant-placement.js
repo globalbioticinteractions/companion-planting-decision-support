@@ -48,7 +48,10 @@ function suggestPlantPlacement() {
 }
 
 function parseSuggestionAsGraph(message) {
-    $('div#container').remove();
+    var div = document.getElementById('graphcontainer'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
     $('#ResultTable tr').remove();
     // let graph = $('div#container')[0];
     let nodes = [];
@@ -79,10 +82,11 @@ function parseSuggestionAsGraph(message) {
         var chart = anychart.graph(json);
 
         chart.nodes().labels(true);
-        chart.nodes().labels().color('black'); //this is also not doing anything.
+        // chart.nodes().labels().color('black'); //this is also not doing anything.
 
         //the size is not changing
-        chart.nodes().normal().size(35);
+        chart.nodes().normal().height(35);
+        chart.nodes().normal().width(35);
 
         chart.nodes().normal().fill('#2c974b');
         chart.nodes().hovered().fill('white');

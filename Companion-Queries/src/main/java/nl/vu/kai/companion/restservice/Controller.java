@@ -77,6 +77,32 @@ public class Controller{
         return result;
     }
 
+    @PostMapping("/getCompanionGraph")
+    public CompanionResponse getCompanionGraph(@RequestBody CompanionRequest request) {      
+        List<String> plantlist = request.getPlantlist();
+
+        // List<Node> nodes = new Arr
+        
+        Set<Edge> edgeSet = OntologyTools.companionGraph(checker, plantlist);
+        Set<Node> nodeSet = new HashSet<>();
+        
+        // Add the requested nodes in to the set to prevent from plants without companions or anticompanions to not be present in the graph
+        // Assign the requested nodes a seperet group for visualisation purposes
+        for (String plantstring : plantlist) {
+            Node plantNode = new Node(checker.getPlant(plantstring));
+            plantNode.setGroup("original");
+            nodeSet.add(plantNode);    
+        }
+
+        for (Edge edge : edgeSet) {
+            nodeSet.addAll(edge.getNodes());
+        }
+
+        List<Node> nodes = new ArrayList<>(nodeSet);
+        List<Edge> edges = new ArrayList<>(edgeSet);
+        return new CompanionResponse(nodes, edges);
+    }
+
     @PostMapping("/getCompanions")
     public List<Plant> getCompanionsMultiple(@RequestBody CompanionRequest request) throws OWLOntologyCreationException{
         
