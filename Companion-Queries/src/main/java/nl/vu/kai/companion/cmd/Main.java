@@ -68,14 +68,15 @@ public class Main {
     private static void explain(GardenConfigurationChecker checker, Set<OWLClass> plants, OWLFormatter formatter)
             throws OWLOntologyCreationException {
         for(GardenConfigurationProperty property: GardenConfigurationProperty.values()) {
-            if(property.equals(GardenConfigurationProperty.GARDEN))
+            if(property.equals(GardenConfigurationProperty.GARDEN) || !checker.checkProperty(plants,property))
                 continue; // this is not relevant
             try {
+                System.out.println("Explanation for "+property+":");
+                System.out.println(("Explanation for "+property+":").replaceAll(".","="));
+                System.out.println();
+
                 Set<OWLAxiom> explanation = checker.explainProperty(plants, property);
 
-                System.out.println("Explanation for "+explanation+":");
-                System.out.println("Explanation for "+explanation+":".replaceAll(".","="));
-                System.out.println();
                 explanation
                         .stream()
                         .map(formatter::format)
