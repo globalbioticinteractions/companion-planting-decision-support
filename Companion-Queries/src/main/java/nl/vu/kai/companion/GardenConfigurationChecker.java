@@ -79,13 +79,21 @@ public class GardenConfigurationChecker {
                 .map(x -> x.getLiteral())
                 .findFirst();
 
-        return new Plant(iriString,label,scientificName);
+        Optional<String> wikilink = plantOntology.annotationAssertionAxioms(iri)
+                .filter(this::seeAlsoAnnotation)
+                .flatMap(x->  x.literalValue().stream())
+                .map(x -> x.getLiteral())
+                .findFirst();
+        return new Plant(iriString,label,scientificName,wikilink);
     }
 
     private boolean scientificNameAnnotation(OWLAnnotationAssertionAxiom ax) {
         return ax.getProperty().getIRI().getIRIString().equals(Configuration.SCIENTIFIC_NAME_IRI);
     }
 
+    private boolean seeAlsoAnnotation(OWLAnnotationAssertionAxiom ax) {
+        return ax.getProperty().getIRI().getIRIString().equals(Configuration.SEE_ALSO_IRI);
+    }
 
     /**
      * Check whether plants represented by given classes are compatible.

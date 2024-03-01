@@ -6,12 +6,13 @@ import java.util.Optional;
 public class Plant {
     
     private final String iri;
-    private Optional<String> name, scientificName;
+    private Optional<String> name, scientificName, wikilink;
 
-    public Plant(String iri, Optional<String> name, Optional<String> scientificName) {
+    public Plant(String iri, Optional<String> name, Optional<String> scientificName, Optional<String> wikilink) {
         this.iri = iri;
         this.name = name;
         this.scientificName = scientificName;
+        this.wikilink = wikilink;
     }
 
     @Override
@@ -37,5 +38,9 @@ public class Plant {
 
     public Optional<String> getScientificName() {
         return scientificName;
+    }
+
+    public Optional<String> getWikilink() {
+        return wikilink;
     }
 }

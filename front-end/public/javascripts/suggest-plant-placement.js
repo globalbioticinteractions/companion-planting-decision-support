@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 function suggestPlantPlacement() {
     var div = document.getElementById('loading'); 
-    var loadingtext = document.createTextNode('loading...');
+    var loadingtext = document.createTextNode(globalThis.loadMessage);
     div.appendChild(loadingtext);
     
     let musts = $('#must-select').select2('data');

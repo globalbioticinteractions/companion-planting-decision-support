@@ -29,7 +29,7 @@ function queryCompanions() {
     
     
     var div = document.getElementById('loading'); 
-    var loadingtext = document.createTextNode('loading...');
+    var loadingtext = document.createTextNode(globalThis.loadMessage);
     div.appendChild(loadingtext);
 
     let musts = $('#must-select').select2('data');
@@ -95,6 +95,13 @@ function parseCompanionGraph(message) {
         }
     }
 
+    for (var i=0; i<message.nodes.length;i++){
+        
+        message.nodes[i].scientificname = message.nodes[i].plant.scientificName;
+        message.nodes[i].wikilink = message.nodes[i].plant.wikilink;
+        
+    }
+
     console.log(message);
 
     var chart = anychart.graph(message);
@@ -117,6 +124,9 @@ function parseCompanionGraph(message) {
     original.normal().stroke(null);
     original.hovered().stroke("#ffa000", 4);
     original.selected().stroke("#ffa000", 4);
+    original.labels().fontColor("black");
+    original.labels().fontWeight(600);
+    original.labels().fontSize(16);
 
     other.normal().height(25);
     other.normal().width(25);
@@ -126,13 +136,21 @@ function parseCompanionGraph(message) {
     other.normal().stroke(null);
     other.hovered().stroke("grey", 4);
     other.selected().stroke("grey", 4);
+    original.labels().fontColor("black");
+    original.labels().fontSize(13);
+    original.labels().fontWeight(500);
+
+    chart.nodes().tooltip().fontSize(12);
+    // chart.nodes().tooltip().useHtml(true);
+    chart.nodes().tooltip().format('{%id}, {%scientificname}, {%wikilink}');
+
 
     // chart.edges().normal().stroke("green", 2, "10 5", "round");
     // chart.edges().hovered().stroke("black", 4);
     // chart.edges().selected().stroke("black", 4);
 
-    chart.nodes().labels().fontWeight(600);
-    chart.nodes().labels().fontSize(16);
+    // chart.nodes().labels().fontWeight(600);
+    // chart.nodes().labels().fontSize(16);
     // chart.nodes().labels().format("{%label}");
 
     chart.fit();

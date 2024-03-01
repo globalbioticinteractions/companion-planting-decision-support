@@ -26,6 +26,7 @@ public class Configuration {
     public static final String ANTI_COMPANION_PROPERTY_IRI=IRI_PREFIX+"anticompanion_with";
 
     public static final String SCIENTIFIC_NAME_IRI="http://rs.tdwg.org/dwc/terms/scientificName";
+    public static final String SEE_ALSO_IRI="https://www.w3.org/TR/rdf-schema#seeAlso";
 
     public enum GardenConfigurationProperty {
         BAD_GARDEN("BadGarden",-1,"This garden contains incompatible plants."),

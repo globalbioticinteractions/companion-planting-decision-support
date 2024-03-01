@@ -9,12 +9,16 @@ public class Node {
     private String id;
     private Plant plant;
     private String group;
+    private Optional<String> scientificname, wikilink;
+    // private String wikilink;
     
 
     public Node(Plant plant){
         this.plant = plant;
         id = plant.getName().get();
         group = "default";
+        this.scientificname = plant.getScientificName();
+        this.wikilink = plant.getWikilink();
     }
 
     public void setGroup(String g){
