@@ -46,46 +46,46 @@ for v in plants:
         if not row.empty:
             onto.addAnnotation(fac.getSeeAlsoAnnotation(concept, row.iloc[0].plantWikidata))
 
-    #add neighbouring axioms
-    # exist (companion_with some C) and (neighbour some C) SubClassOf (companionNeighbour some C)
-    onto.addStatement(
-        fac.getGCI(
-            fac.getConjunction(
-                fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'neighbour'),
-                    concept
+        #add neighbouring axioms
+        # exist (companion_with some C) and (neighbour some C) SubClassOf (companionNeighbour some C)
+        onto.addStatement(
+            fac.getGCI(
+                fac.getConjunction(
+                    fac.getExistentialRoleRestriction(
+                        fac.getRole(iri + 'neighbour'),
+                        concept
+                    ),
+                    fac.getExistentialRoleRestriction(
+                        fac.getRole(iri + 'companion_with'),
+                        concept
+                    )
                 ),
                 fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'companion_with'),
+                    fac.getRole(iri + 'companionNeighbour'),
                     concept
                 )
-            ),
-            fac.getExistentialRoleRestriction(
-                fac.getRole(iri + 'companionNeighbour'),
-                concept
             )
         )
-    )
 
-    # exist (anticompanion_with some C) and (neighbour some C) SubClassOf (incompatibleNeighbour some C)
-    onto.addStatement(
-        fac.getGCI(
-            fac.getConjunction(
-                fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'neighbour'),
-                    concept
+        # exist (anticompanion_with some C) and (neighbour some C) SubClassOf (incompatibleNeighbour some C)
+        onto.addStatement(
+            fac.getGCI(
+                fac.getConjunction(
+                    fac.getExistentialRoleRestriction(
+                        fac.getRole(iri + 'neighbour'),
+                        concept
+                    ),
+                    fac.getExistentialRoleRestriction(
+                        fac.getRole(iri + 'anticompanion_with'),
+                        concept
+                    )
                 ),
                 fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'anticompanion_with'),
+                    fac.getRole(iri + 'incompatibleNeighbour'),
                     concept
                 )
-            ),
-            fac.getExistentialRoleRestriction(
-                fac.getRole(iri + 'incompatibleNeighbour'),
-                concept
             )
         )
-    )
 
 ## add disjointness, each plant is disjoint with the others
 for v1,v2 in itertools.combinations(allPlantConcepts,2):
@@ -96,7 +96,7 @@ for v1,v2 in itertools.combinations(allPlantConcepts,2):
 for _, row in df.iterrows():
         if not (pd.isna(row.taxon_v1) or pd.isna(row.taxon_v2)):
             v1 = fac.getConceptName(iri + toPascalCase(row.taxon_v1))
-            v2 = fac.getConceptName(iri + toPascalCase(row.taxon_v1))
+            v2 = fac.getConceptName(iri + toPascalCase(row.taxon_v2))
 
             if row['rel'] == 'companion':
                 #this might be redundant
