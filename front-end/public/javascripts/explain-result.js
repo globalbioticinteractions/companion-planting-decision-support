@@ -1,7 +1,4 @@
 
-const URL = "http://localhost:8080"
-
-
 function explainResult(event) {
     // window.alert(event.currentTarget.id);
     
@@ -18,7 +15,7 @@ function explainResult(event) {
     // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
     
     $.post({
-        url: URL.concat("/explain"),
+        url: window.URL(window.apiurl.concat("/explain")),
         headers: {'Access-Control-Allow-Origin':'*'}, // <-------- set this
         data: JSON.stringify({plantlist: must_ids, property: event.currentTarget.id}),
         contentType: "application/json; charset=utf-8",

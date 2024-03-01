@@ -1,14 +1,19 @@
 
 import explainResult from './explain-result.js'
-//  TODO: get API call. This should replace the function below
 
 function parseResult(message,plantlist) {
     
-    // console.log(message)
+    // remove graph 
     var div = document.getElementById('graphcontainer'); 
     while(div.firstChild) { 
         div.removeChild(div.firstChild); 
     };
+    // remove loading message
+    var div = document.getElementById('loading'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
+    //remove table
     $('#ResultTable tr').remove();
 
     let res_table = $('table#ResultTable')[0];

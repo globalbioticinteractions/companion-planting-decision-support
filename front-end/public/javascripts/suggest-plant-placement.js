@@ -1,7 +1,3 @@
-// import parseResult from './parse-result.js'
-// import anychart from 'anychart'
-
-const URL = "http://localhost:8080"
 
 $(document).ready(function(){
     $('#SuggestButton').click(function(){
@@ -10,12 +6,10 @@ $(document).ready(function(){
   });
 
 function suggestPlantPlacement() {
-    var div = document.getElementById('graphcontainer'); 
-    while(div.firstChild) { 
-        div.removeChild(div.firstChild); 
-    };
+    var div = document.getElementById('loading'); 
+    var loadingtext = document.createTextNode('loading...');
+    div.appendChild(loadingtext);
     
-    $('#ResultTable tr').remove();
     let musts = $('#must-select').select2('data');
     // let mays = $('#may-select').select2('data');
 
@@ -26,7 +20,7 @@ function suggestPlantPlacement() {
 
     
     $.post({
-        url: URL.concat("/suggest"),
+        url: new window.URL("/suggest",globalThis.apiurl),
         headers: {'Access-Control-Allow-Origin':'*'}, // <-------- set this
         data: JSON.stringify(must_ids),
         contentType: "application/json; charset=utf-8",
@@ -48,12 +42,21 @@ function suggestPlantPlacement() {
 }
 
 function parseSuggestionAsGraph(message) {
+
+    // remove graph 
     var div = document.getElementById('graphcontainer'); 
     while(div.firstChild) { 
         div.removeChild(div.firstChild); 
     };
+    // remove loading message
+    var div = document.getElementById('loading'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
+    //remove table
     $('#ResultTable tr').remove();
-    // let graph = $('div#container')[0];
+
+
     let nodes = [];
     let edges = [];
 

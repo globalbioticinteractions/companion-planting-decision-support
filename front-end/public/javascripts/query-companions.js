@@ -1,6 +1,3 @@
-import parseResult from './parse-result.js'
-// import fetch from node-fetch
-const URL = "http://localhost:8080"
 
 const anticompsetting = {
     normal: {   stroke:  {
@@ -29,12 +26,12 @@ $(document).ready(function(){
   });
 
 function queryCompanions() {
-    var div = document.getElementById('graphcontainer'); 
-    while(div.firstChild) { 
-        div.removeChild(div.firstChild); 
-    };
+    
+    
+    var div = document.getElementById('loading'); 
+    var loadingtext = document.createTextNode('loading...');
+    div.appendChild(loadingtext);
 
-    $('#ResultTable tr').remove();
     let musts = $('#must-select').select2('data');
     // let mays = $('#may-select').select2('data');
 
@@ -49,7 +46,7 @@ function queryCompanions() {
     console.log(plantlist);
    
     $.post({
-        url: URL.concat("/getCompanionGraph"),
+        url: new URL("/getCompanionGraph",globalThis.apiurl),
         headers: {'Access-Control-Allow-Origin':'*'}, // <-------- set this
         data: plantlist,
         contentType: "application/json; charset=utf-8",
@@ -72,12 +69,20 @@ function queryCompanions() {
 }
 
 function parseCompanionGraph(message) {
+
+    // remove graph 
     var div = document.getElementById('graphcontainer'); 
     while(div.firstChild) { 
         div.removeChild(div.firstChild); 
     };
+    // remove loading message
+    var div = document.getElementById('loading'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
+    //remove table
     $('#ResultTable tr').remove();
-    
+
     for (var i=0; i<message.edges.length;i++){
         if (message.edges[i].property == "companion"){
             message.edges[i].normal = compsetting.normal;
