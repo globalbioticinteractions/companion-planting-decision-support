@@ -106,6 +106,14 @@ public class GardenConfigurationChecker {
 
         maximalABox.addAxioms(plantOntology.axioms());
 
+        try {
+            owlManager.saveOntology(maximalABox, new FileOutputStream(new File("maximal-ABox.owl")));
+        } catch (OWLOntologyStorageException e) {
+            throw new RuntimeException(e);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
         OWLReasoner reasoner = new ReasonerFactory().createReasoner(maximalABox);
 
         return reasoner.isEntailed(getAxiom(property));
@@ -254,13 +262,23 @@ public class GardenConfigurationChecker {
                                 )
                         .collect(Collectors.toSet());
 
-        Set<OWLClassAssertionAxiom> rest =
+        Set<OWLIndividualAxiom> rest =
                 aboxAxioms.stream()
                         .filter(x -> x instanceof OWLClassAssertionAxiom)
                         .map(x -> (OWLClassAssertionAxiom) x)
                         .collect(Collectors.toSet());
 
-        Set<OWLIndividualAxiom> repair = repairGenerator.computeRepair(maximalABox, flexible);
+
+        Optional<Set<OWLIndividualAxiom>> optRepair = repairGenerator.<OWLIndividualAxiom>computeRepair(
+                maximalABox,
+                getAxiom(Configuration.GardenConfigurationProperty.BAD_GARDEN),
+                flexible,
+                Collections.singleton(getAxiom(desiredProperty)));
+
+        if(!optRepair.isPresent())
+            throw new RepairException("Cannot be repaired!");
+
+        Set<OWLIndividualAxiom> repair = optRepair.get();
 
         repair.addAll(rest);
 
@@ -274,7 +292,7 @@ public class GardenConfigurationChecker {
         throw new AssertionError("Not implemented!");
     }
 
-    private OWLAxiom getAxiom(Configuration.GardenConfigurationProperty property)  {
+    private OWLIndividualAxiom getAxiom(Configuration.GardenConfigurationProperty property)  {
         return owlFactory.getOWLClassAssertionAxiom(
                 owlFactory.getOWLClass(IRI.create(property.iri)),
                 owlFactory.getOWLNamedIndividual(IRI.create(GARDEN_NAME)));

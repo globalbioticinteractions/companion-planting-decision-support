@@ -33,6 +33,8 @@ public class ClassicalRepairGenerator {
             Set<T> flexibleAxioms,
             Set<OWLAxiom> keepEntailments) {
 
+        System.out.println("Trying to repair "+undesiredAxiom);
+
         OWLOntologyManager owlManager = ontology.getOWLOntologyManager();
         OWLDataFactory owlFactory = owlManager.getOWLDataFactory();
 
@@ -61,11 +63,13 @@ public class ClassicalRepairGenerator {
             OWLAxiom toRemove)  {
 
         reasoner.flush();
-        if(reasoner.isConsistent()){
+        if(!reasoner.isEntailed(toRemove)){
+            System.out.println("Done repairing!");
             // the repair is successfull - we can return
             return Optional.of(Collections.emptySet());
         }
         if(!keepEntailments.stream().allMatch(reasoner::isEntailed)){
+            System.out.println("Failure repairing.");
             // this branch has failed - we need to backtrack
             return Optional.empty();
         }
@@ -92,14 +96,21 @@ public class ClassicalRepairGenerator {
         boolean success=false;
         while(!success && !candidates.isEmpty()){
             OWLAxiom candidate = candidates.iterator().next();
+            System.out.println("Can we remove "+candidate+"?");
             candidates.remove(candidate);
             if(flexibleAxioms.contains(candidate)){
+                System.out.println("Yes we can and try!");
+                ontology.remove(candidate);
                 Optional<Set<T>> opt =
                         innerRepair(ontology,flexibleAxioms,keepEntailments,reasoner,reasonerFactory,formatter,toRemove);
-                if(!opt.isPresent()){
+                if(opt.isPresent()){
+                    System.out.println("Removing "+candidate+" worked!");
                     success=true;
-                    remove = opt.get();
+                    remove = new HashSet<>(opt.get());
                     remove.add((T)candidate);
+                } else {
+                    System.out.println("Removing "+candidate+" did not work.");
+                    ontology.add(candidate);
                 }
             }
         }
