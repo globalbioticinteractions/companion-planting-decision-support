@@ -28,7 +28,7 @@ function suggestPlantPlacement() {
         
         success: function(response){
             // window.alert(response);
-            console.log("Response:".concat(response));
+            // console.log("Response:".concat(response));
             // drawLayout(response)
             parseSuggestionAsGraph(response);
         },
@@ -60,9 +60,12 @@ function parseSuggestionAsGraph(message) {
     let nodes = [];
     let edges = [];
 
-    for (let i = 0; i < message.length; i++){
-        var triple = message[i];
+    // let longmessage = []
 
+    for (let i = 0; i < message.length; i++){
+        
+        var triple = message[i];
+        // longmessage.push(triple.subject+" " +triple.property + " " +triple.object);
         var subject = triple.subject;
         var pred = triple.property;
         var object = triple.object;
@@ -78,6 +81,7 @@ function parseSuggestionAsGraph(message) {
 
     var json = {"nodes":nodes,"edges":edges};
     let jsondata = JSON.stringify(json);
+    // console.log(longmessage);
     console.log(json);
 
     // anychart.data.loadJsonFile('../data/placement_test.json', function (data) {

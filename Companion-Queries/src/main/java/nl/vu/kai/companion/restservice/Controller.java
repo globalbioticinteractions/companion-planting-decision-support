@@ -172,13 +172,15 @@ public class Controller{
         
         Set<OWLClass> plantClasses = getPlants(data.getPlantlist());
         OWLFormatter formatter = new OWLFormatter(checker.getPlantOntology());
+        
+        
         List<String> explanationString = new ArrayList<String>();
         
         try {
-            System.out.println("I AM HERE! AND THIS IS THE DATA I RECEIVED: "+data.getProperty().toString() +", "+data.getPlantlist().toString());
+            // System.out.println("I AM HERE! AND THIS IS THE DATA I RECEIVED: "+data.getProperty().toString() +", "+data.getPlantlist().toString());
             
-            Set<OWLAxiom> explanation = checker.explainProperty(plantClasses, data.getProperty());
-            System.out.println("I RAN THE EXPLANATION AND I GOT "+explanation.size()+" NUMBER OF AXIOMS.");
+            // Set<OWLAxiom> explanation = checker.explainProperty(plantClasses, data.getProperty());
+            // System.out.println("I RAN THE EXPLANATION AND I GOT "+explanation.size()+" NUMBER OF AXIOMS.");
             for(OWLAxiom exp:checker.explainProperty(plantClasses, data.getProperty())){
                 explanationString.add(formatter.format(exp));
             }
