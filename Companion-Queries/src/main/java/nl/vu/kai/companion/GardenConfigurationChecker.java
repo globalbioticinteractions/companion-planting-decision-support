@@ -217,7 +217,12 @@ public class GardenConfigurationChecker {
         Set<OWLIndividualAxiom> flexible =
                 aboxAxioms.stream()
                         .filter(x -> x instanceof OWLObjectPropertyAssertionAxiom)
-                        .map(x -> (OWLIndividualAxiom) x)
+                        .map(x -> (OWLObjectPropertyAssertionAxiom) x)
+                        .filter(x -> x.getProperty()
+                                .getNamedProperty()
+                                .getIRI()
+                                .equals(IRI.create(Configuration.NEIGHBOUR_IRI))
+                                )
                         .collect(Collectors.toSet());
 
         Set<OWLClassAssertionAxiom> rest =
