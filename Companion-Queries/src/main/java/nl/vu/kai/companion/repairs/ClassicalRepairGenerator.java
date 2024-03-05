@@ -96,20 +96,20 @@ public class ClassicalRepairGenerator {
         boolean success=false;
         while(!success && !candidates.isEmpty()){
             OWLAxiom candidate = candidates.iterator().next();
-            System.out.println("Can we remove "+candidate+"?");
+           // System.out.println("Can we remove "+candidate+"?");
             candidates.remove(candidate);
             if(flexibleAxioms.contains(candidate)){
-                System.out.println("Yes we can and try!");
+           //     System.out.println("Yes we can and try!");
                 ontology.remove(candidate);
                 Optional<Set<T>> opt =
                         innerRepair(ontology,flexibleAxioms,keepEntailments,reasoner,reasonerFactory,formatter,toRemove);
                 if(opt.isPresent()){
-                    System.out.println("Removing "+candidate+" worked!");
+           //         System.out.println("Removing "+candidate+" worked!");
                     success=true;
                     remove = new HashSet<>(opt.get());
                     remove.add((T)candidate);
                 } else {
-                    System.out.println("Removing "+candidate+" did not work.");
+           //         System.out.println("Removing "+candidate+" did not work.");
                     ontology.add(candidate);
                 }
             }

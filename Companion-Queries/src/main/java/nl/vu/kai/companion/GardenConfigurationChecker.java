@@ -262,11 +262,11 @@ public class GardenConfigurationChecker {
                                 )
                         .collect(Collectors.toSet());
 
-        Set<OWLIndividualAxiom> rest =
-                aboxAxioms.stream()
-                        .filter(x -> x instanceof OWLClassAssertionAxiom)
-                        .map(x -> (OWLClassAssertionAxiom) x)
-                        .collect(Collectors.toSet());
+        //Set<OWLIndividualAxiom> rest =
+        //        aboxAxioms.stream()
+        //                .filter(x -> x instanceof OWLClassAssertionAxiom)
+        //                .map(x -> (OWLClassAssertionAxiom) x)
+        //                .collect(Collectors.toSet());
 
 
         Optional<Set<OWLIndividualAxiom>> optRepair = repairGenerator.<OWLIndividualAxiom>computeRepair(
@@ -278,11 +278,14 @@ public class GardenConfigurationChecker {
         if(!optRepair.isPresent())
             throw new RepairException("Cannot be repaired!");
 
-        Set<OWLIndividualAxiom> repair = optRepair.get();
+        //Set<OWLIndividualAxiom> repair = optRepair.get();
 
-        repair.addAll(rest);
+        //repair.addAll(rest);
 
-        return repair;
+        return maximalABox.axioms()
+                .filter(x -> x instanceof OWLIndividualAxiom)
+                .map(x -> (OWLIndividualAxiom) x)
+                .collect(Collectors.toSet());
     }
 
     /**
