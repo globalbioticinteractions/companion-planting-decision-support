@@ -8,7 +8,7 @@ import pandas as pd
 from py4j.java_gateway import JavaGateway
 
 def toPascalCase(s):
-    return ''.join(x for x in s.title() if not x.isspace())
+    return ''.join(x for x in s.title() if not (x.isspace() or x == '.'))
 
 import numpy as np
 # create the links to the java gateway and parse the ontology
@@ -16,7 +16,7 @@ import numpy as np
 iri = 'http://www.semanticweb.org/kai/ontologies/2024/companion-planting#'
 gateway = JavaGateway()
 parser = gateway.getOWLParser(False)
-onto = parser.parseFile('./owl/companion-planting-base-noPlantHierarchy.owl')
+onto = parser.parseFile('./owl/companion-planting-base0.1.owl')
 fac = gateway.getDLFactory()
 
 # load the companion planting dataset/table
@@ -31,13 +31,14 @@ floraConcept = fac.getConceptName(iri + "Flora")
 
 allPlantConcepts = []
 for v in plants:
-    concept = fac.getConceptName(iri+ toPascalCase(v[0])) #v1 for latin name
-    allPlantConcepts.append(concept)
-    onto.addStatement(fac.getGCI(concept, floraConcept))
-    onto.addAnnotation(fac.getLabelAnnotation(concept,v[0].title(),'en' ))
+    if (not pd.isna(v[1])):
+        concept = fac.getConceptName(iri+ toPascalCase(v[1])) #v1 for latin name
+        allPlantConcepts.append(concept)
+        onto.addStatement(fac.getGCI(concept, floraConcept))
+        #common name
+        onto.addAnnotation(fac.getLabelAnnotation(concept,v[0].title(),'en' ))
 
-    # if the latin/taxon name exists:
-    if(not pd.isna(v[1])):
+        #taxon name
         onto.addAnnotation(fac.getTaxonAnnotation(concept, v[1].title()))
         row = ntp[ntp.taxon == v[1]]
 
@@ -45,46 +46,46 @@ for v in plants:
         if not row.empty:
             onto.addAnnotation(fac.getSeeAlsoAnnotation(concept, row.iloc[0].plantWikidata))
 
-    #add neighbouring axioms
-    # exist (companion_with some C) and (neighbour some C) SubClassOf (companionNeighbour some C)
-    onto.addStatement(
-        fac.getGCI(
-            fac.getConjunction(
-                fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'neighbour'),
-                    concept
+        #add neighbouring axioms
+        # exist (companion_with some C) and (neighbour some C) SubClassOf (companionNeighbour some C)
+        onto.addStatement(
+            fac.getGCI(
+                fac.getConjunction(
+                    fac.getExistentialRoleRestriction(
+                        fac.getRole(iri + 'neighbour'),
+                        concept
+                    ),
+                    fac.getExistentialRoleRestriction(
+                        fac.getRole(iri + 'companion_with'),
+                        concept
+                    )
                 ),
                 fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'companion_with'),
+                    fac.getRole(iri + 'companionNeighbour'),
                     concept
                 )
-            ),
-            fac.getExistentialRoleRestriction(
-                fac.getRole(iri + 'companionNeighbour'),
-                concept
             )
         )
-    )
 
-    # exist (anticompanion_with some C) and (neighbour some C) SubClassOf (incompatibleNeighbour some C)
-    onto.addStatement(
-        fac.getGCI(
-            fac.getConjunction(
-                fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'neighbour'),
-                    concept
+        # exist (anticompanion_with some C) and (neighbour some C) SubClassOf (incompatibleNeighbour some C)
+        onto.addStatement(
+            fac.getGCI(
+                fac.getConjunction(
+                    fac.getExistentialRoleRestriction(
+                        fac.getRole(iri + 'neighbour'),
+                        concept
+                    ),
+                    fac.getExistentialRoleRestriction(
+                        fac.getRole(iri + 'anticompanion_with'),
+                        concept
+                    )
                 ),
                 fac.getExistentialRoleRestriction(
-                    fac.getRole(iri + 'anticompanion_with'),
+                    fac.getRole(iri + 'incompatibleNeighbour'),
                     concept
                 )
-            ),
-            fac.getExistentialRoleRestriction(
-                fac.getRole(iri + 'incompatibleNeighbour'),
-                concept
             )
         )
-    )
 
 ## add disjointness, each plant is disjoint with the others
 for v1,v2 in itertools.combinations(allPlantConcepts,2):
@@ -93,16 +94,18 @@ for v1,v2 in itertools.combinations(allPlantConcepts,2):
 
 # adding the companion/anticompanion restrictions
 for _, row in df.iterrows():
-    v1 = fac.getConceptName(iri + toPascalCase(row.v1))
-    v2 = fac.getConceptName(iri + toPascalCase(row.v2))
-    if row['rel'] == 'companion':
-        #this might be redundant
-        role = fac.getRole(iri + 'companion_with')
-        onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
+        if not (pd.isna(row.taxon_v1) or pd.isna(row.taxon_v2)):
+            v1 = fac.getConceptName(iri + toPascalCase(row.taxon_v1))
+            v2 = fac.getConceptName(iri + toPascalCase(row.taxon_v2))
 
-    if row['rel'] == 'antagonistic':
-        role = fac.getRole(iri + 'anticompanion_with')
-        onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
+            if row['rel'] == 'companion':
+                #this might be redundant
+                role = fac.getRole(iri + 'companion_with')
+                onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
+
+            if row['rel'] == 'antagonistic':
+                role = fac.getRole(iri + 'anticompanion_with')
+                onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
 
 # export the ontology
 gateway.getOWLExporter().exportOntology(onto, './owl/companion_planting-with-tablev4.owl')
