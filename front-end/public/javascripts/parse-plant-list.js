@@ -1,7 +1,5 @@
 
-// TODO: Replace this with an API call
-// import data1 from '../data/taxon_product.js';
-// console.log(data1)
+
 
 function parsePlants(data) {
     let multi_selectors = document.querySelectorAll('select.multiple-select');
@@ -25,7 +23,7 @@ addEventListener('DOMContentLoaded', (event) =>
 {
     // var data = [];
     $.get({
-        url: "http://localhost:8080/getPlants",
+        url: new URL("/getPlants",globalThis.apiurl),
         headers: {'Access-Control-Allow-Origin':'*'}, // <-------- set this
         dataType: 'json', // // <-------- use JSON
         success: function(response){

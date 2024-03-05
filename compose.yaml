@@ -1,12 +1,23 @@
 services:
-  back-end:
-    container_name: cpds-backend
-    build: Companion-Queries/.
+  cqueries:
+    image: cqueries:1
+    build: 
+      context: Companion-Queries/.
+      dockerfile: Dockerfile
+    volumes:
+      - /data/Companion-Queries
+    networks:
+      - cqueries-network
     ports:
-      - "8080:8080"
-  front-end:
-    container_name: cpds-frontend
+      - "8000:8080"
+  
+  app:
     build: front-end/.
+    networks:
+      - cqueries-network
     ports:
       - "3000:3000"
-    
+
+networks:
+    cqueries-network:
+        driver: bridge

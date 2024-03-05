@@ -12,9 +12,9 @@ public class PropertyResponse {
 		this.property = property;
 		this.result = String.valueOf(res);
         if (res) {
-            text = new String("Plants satisfy "+property.name+".");
+            text = new String("Plants satisfy "+property.name+". " +property.description);
         } else
-            text = new String("Plants do not satisfy "+property.name+".");
+            text = new String("Plants do not satisfy "+property.name+". " +property.description.replace("contains", "does not contain"));
 	}
 
 	public GardenConfigurationProperty getProperty() {
