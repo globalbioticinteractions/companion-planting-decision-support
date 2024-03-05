@@ -57,7 +57,7 @@ public class Controller{
 
     // passing # in the param doesn't work, so the last part of the IRI gets trancuated in the process
     // change it to a post? - # --> %23 on client side, then this works fine
-    @GetMapping("/getCompanions")
+    @GetMapping("/getCompanion")
     public List<Plant> getCompanions(@RequestParam(value = "plant", defaultValue = "http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot") String plantString) throws OWLOntologyCreationException{
         
         System.out.println("Plant IRI: " + plantString);
@@ -77,18 +77,74 @@ public class Controller{
         return result;
     }
 
+    @PostMapping("/getCompanionGraph")
+    public CompanionResponse getCompanionGraph(@RequestBody CompanionRequest request) {      
+        List<String> plantlist = request.getPlantlist();
+
+        // List<Node> nodes = new Arr
+        
+        Set<Edge> edgeSet = OntologyTools.companionGraph(checker, plantlist);
+        Set<Node> nodeSet = new HashSet<>();
+        
+        // Add the requested nodes in to the set to prevent from plants without companions or anticompanions to not be present in the graph
+        // Assign the requested nodes a seperet group for visualisation purposes
+        for (String plantstring : plantlist) {
+            Node plantNode = new Node(checker.getPlant(plantstring));
+            plantNode.setGroup("original");
+            nodeSet.add(plantNode);    
+        }
+
+        for (Edge edge : edgeSet) {
+            nodeSet.addAll(edge.getNodes());
+        }
+
+        List<Node> nodes = new ArrayList<>(nodeSet);
+        List<Edge> edges = new ArrayList<>(edgeSet);
+        return new CompanionResponse(nodes, edges);
+    }
+
+    @PostMapping("/getCompanions")
+    public List<Plant> getCompanionsMultiple(@RequestBody CompanionRequest request) throws OWLOntologyCreationException{
+        
+        OWLOntology ontology = checker.getPlantOntology();
+        List<String> plantlist = request.getPlantlist();
+        
+        OWLObjectProperty property;
+        if (request.getCompanionOption()) {
+            property = ontology.getOWLOntologyManager().getOWLDataFactory().getOWLObjectProperty(Configuration.COMPANION_PROPERTY_IRI);
+        } else {
+            property = ontology.getOWLOntologyManager().getOWLDataFactory().getOWLObjectProperty(Configuration.ANTI_COMPANION_PROPERTY_IRI);
+        }
+        
+        Set<Plant> result = new HashSet();
+        for (String plantString : plantlist) {
+            OWLClass plantClass = checker.asOWLClass(checker.getPlant(plantString));
+            Collection<OWLClass> answercol = OntologyTools.simpleQuery(checker.getPlantOntology(), plantClass, property);
+            Set<Plant> partialResult = answercol.stream()
+                .map(OWLClass::getIRI)
+                .map(x -> checker.toPlant(x))
+                .collect(Collectors.toSet());
+            
+                if (result.isEmpty()) {
+                result.addAll(partialResult);
+            }
+            
+            if (request.getIntersectionOption()){
+                    //intersection
+                result.retainAll(partialResult);
+            } else {
+                    //union
+                result.addAll(partialResult);
+            }
+        }
+
+        return new ArrayList<>(result);
+    }
+
+
     @PostMapping(value = "/check", consumes = {"*/*"})
     public List<PropertyResponse> check(@RequestBody List<String> selectedPlants) throws OWLOntologyCreationException{
         Set<OWLClass> plantClasses = getPlants(selectedPlants);
-
-        // if (selectedPlants.isEmpty()) {
-        //     selectedPlants = testingplants;
-        // }
-        
-        // OWLOntology ontology = checker.getPlantOntology();
-        // OWLFormatter formatter = new OWLFormatter(ontology);
-
-        // String output = check(checker,plants);
 
         List<PropertyResponse> resultList = new ArrayList();
         for(GardenConfigurationProperty property
@@ -123,19 +179,6 @@ public class Controller{
             
             Set<OWLAxiom> explanation = checker.explainProperty(plantClasses, data.getProperty());
             System.out.println("I RAN THE EXPLANATION AND I GOT "+explanation.size()+" NUMBER OF AXIOMS.");
-            // System.out.println("===============================");
-            // System.out.println("Explanation for " + explanation + ":");
-            // System.out.println("Explanation for " + explanation + ":".replaceAll(".", "="));
-            // System.out.println();
-            // explanation
-            //         .stream()
-            //         .map(formatter::format)
-            //         .forEach(System.out::println);
-            
-            // System.out.println("===============================");
-            // System.out.println();
-            // System.out.println();
-
             for(OWLAxiom exp:checker.explainProperty(plantClasses, data.getProperty())){
                 explanationString.add(formatter.format(exp));
             }
@@ -154,10 +197,6 @@ public class Controller{
 
         Set<OWLClass> plantClasses = getPlants(selectedPlants);
         OWLFormatter formatter = new OWLFormatter(checker.getPlantOntology());
-        
-        // System.out.println("This would be an optimal way to place the plants without having anti companions next to each other:");
-        // System.out.println("===============================");
-        // System.out.println();
         List<PlacementSuggestion> plantconfig = new ArrayList<PlacementSuggestion>();
 
         for(OWLIndividualAxiom axiom:checker.organizePlants(plantClasses)){
@@ -165,10 +204,6 @@ public class Controller{
             plantconfig.add(new PlacementSuggestion(ax));
             // System.out.println(formatter.format(axiom));
         }
-        
-        // System.out.println("===============================");
-        // System.out.println();
-        // System.out.println();
 
         return plantconfig;
     }

@@ -23,22 +23,39 @@ public class Configuration {
     public static final String PLANT_IRI=IRI_PREFIX+"Flora";
 
     public static final String COMPANION_PROPERTY_IRI=IRI_PREFIX+"companion_with";
+    public static final String ANTI_COMPANION_PROPERTY_IRI=IRI_PREFIX+"anticompanion_with";
 
     public static final String SCIENTIFIC_NAME_IRI="http://rs.tdwg.org/dwc/terms/scientificName";
+    public static final String SEE_ALSO_IRI="https://www.w3.org/TR/rdf-schema#seeAlso";
 
     public enum GardenConfigurationProperty {
-        BAD_GARDEN("BadGarden",-1),
-        GARDEN("Garden",0),
-        GOOD_GARDEN_1("CompanionGarden",1),
-        GOOD_GARDEN_2("3CompanionGarden",2),
-        GOOD_GARDEN_3("3TripleCompanionGarden",3)
+        BAD_GARDEN("BadGarden",-1,"This garden contains incompatible plants."),
+        GARDEN("Garden",0,"This is a garden."),
+        GOOD_GARDEN_1("CompanionGarden",1,"This garden contains at least one pair of companion plants."),
+        GOOD_GARDEN_2("3CompanionGarden",2, "This garden contains at least 3 pairs of companion plants."),
+        GOOD_GARDEN_3("3TripleCompanionGarden",3, "This garden contains at least 3 plants with 3 companions.\n" + //
+                        "Folders and files\n" + //
+                        "Name\tLast commit message\n" + //
+                        "\tLast commit date\n" + //
+                        "parent directory\n" + //
+                        "..\n" + //
+                        ".mvn/wrapper\n" + //
+                        "\t\n" + //
+                        "spring framework\n" + //
+                        "\t\n" + //
+                        "src/main\n" + //
+                        "\t\n" + //
+                        "added scientific name and wikidata links to the frontend\n" + //
+                        "\t\n" + //
+                        "test/java/nl/vu/kai/companion each 3 companion plants.")
         ;
-        public final String iri, name;
+        public final String iri, name, description;
         public final int rating;
-        private GardenConfigurationProperty(String name, int rating){
+        private GardenConfigurationProperty(String name, int rating,String description){
             this.name=name;
             this.iri=IRI_PREFIX+name;
             this.rating =rating;
+            this.description=description;
         }
         @Override
         public String toString() { return name; }

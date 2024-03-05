@@ -79,13 +79,21 @@ public class GardenConfigurationChecker {
                 .map(x -> x.getLiteral())
                 .findFirst();
 
-        return new Plant(iriString,label,scientificName);
+        Optional<String> wikilink = plantOntology.annotationAssertionAxioms(iri)
+                .filter(this::seeAlsoAnnotation)
+                .flatMap(x->  x.literalValue().stream())
+                .map(x -> x.getLiteral())
+                .findFirst();
+        return new Plant(iriString,label,scientificName,wikilink);
     }
 
     private boolean scientificNameAnnotation(OWLAnnotationAssertionAxiom ax) {
         return ax.getProperty().getIRI().getIRIString().equals(Configuration.SCIENTIFIC_NAME_IRI);
     }
 
+    private boolean seeAlsoAnnotation(OWLAnnotationAssertionAxiom ax) {
+        return ax.getProperty().getIRI().getIRIString().equals(Configuration.SEE_ALSO_IRI);
+    }
 
     /**
      * Check whether plants represented by given classes are compatible.
@@ -165,6 +173,27 @@ public class GardenConfigurationChecker {
 
     }
 
+    // public Set<OWLAxiom> explainProperty(
+    //         OWLClass plant1, OWLClass plant2,
+    //         OWLObjectProperty property) throws OWLOntologyCreationException {
+        
+    //     OWLReasonerFactory reasonerFactory = new ReasonerFactory();
+    //     OWLReasoner reasoner = reasonerFactory.createReasoner(plantOntology);
+        
+    //     OWLAxiom axiom = new OWLAxiom();
+
+
+    //     if(!reasoner.isEntailed(axiom))
+    //         throw new IllegalArgumentException("Axiom wasn't entailed");
+
+    //     DefaultExplanationGenerator explanationGenerator =
+    //             new DefaultExplanationGenerator(owlManager, reasonerFactory, plantOntology,
+    //                     new SilentExplanationProgressMonitor());
+
+    //     return explanationGenerator.getExplanation(axiom);
+
+    // }
+
 
     public Set<OWLIndividualAxiom> organizePlants(Set<OWLClass> plants) throws OWLOntologyCreationException {
         List<Configuration.GardenConfigurationProperty> properties =
@@ -217,7 +246,12 @@ public class GardenConfigurationChecker {
         Set<OWLIndividualAxiom> flexible =
                 aboxAxioms.stream()
                         .filter(x -> x instanceof OWLObjectPropertyAssertionAxiom)
-                        .map(x -> (OWLIndividualAxiom) x)
+                        .map(x -> (OWLObjectPropertyAssertionAxiom) x)
+                        .filter(x -> x.getProperty()
+                                .getNamedProperty()
+                                .getIRI()
+                                .equals(IRI.create(Configuration.NEIGHBOUR_IRI))
+                                )
                         .collect(Collectors.toSet());
 
         Set<OWLClassAssertionAxiom> rest =
@@ -245,6 +279,13 @@ public class GardenConfigurationChecker {
                 owlFactory.getOWLClass(IRI.create(property.iri)),
                 owlFactory.getOWLNamedIndividual(IRI.create(GARDEN_NAME)));
     }
+
+    // private OWLAxiom getAxiom(OWLClass plant1, OWLClass plant2, OWLProperty property) {
+    //     // "Plant SubClassOf hasCompanion some Other-Plant"
+    //     return owlFactory.getOWLSubClassOfAxiom(
+    //         plant1, 
+    //         owlFactory.getOWLObjectSomeValuesFrom(property, plant2));
+    // }
 
     private OWLOntology createMaximalABox(Set<OWLClass> plants) throws OWLOntologyCreationException {
         OWLOntology ontology = owlManager.createOntology();

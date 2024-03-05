@@ -1,7 +1,3 @@
-// import parseResult from './parse-result.js'
-// import fetch from node-fetch
-const URL = "http://localhost:8080"
-
 
 $(document).ready(function(){
     $('#SuggestButton').click(function(){
@@ -10,6 +6,10 @@ $(document).ready(function(){
   });
 
 function suggestPlantPlacement() {
+    var div = document.getElementById('loading'); 
+    var loadingtext = document.createTextNode(globalThis.loadMessage);
+    div.appendChild(loadingtext);
+    
     let musts = $('#must-select').select2('data');
     // let mays = $('#may-select').select2('data');
 
@@ -17,24 +17,10 @@ function suggestPlantPlacement() {
     musts.forEach(item => {
         must_ids.push(item.id)
     });
-    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot");
-    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot");
-    // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
-    
-    // let may_ids = [];
-    // mays.forEach(item => {
-    //     may_ids.push(item.id)
-    // });
-    // let message = {'musts': must_ids, 'mays': may_ids}
-    // let message = {'selectedplants': must_ids}
-    // parseResult(message);
-    
 
-    // TODO: init API call and pass the result to the following function. 
-   
     
     $.post({
-        url: URL.concat("/suggest"),
+        url: new window.URL("/suggest",globalThis.apiurl),
         headers: {'Access-Control-Allow-Origin':'*'}, // <-------- set this
         data: JSON.stringify(must_ids),
         contentType: "application/json; charset=utf-8",
@@ -43,25 +29,94 @@ function suggestPlantPlacement() {
         success: function(response){
             // window.alert(response);
             console.log("Response:".concat(response));
-            parseSuggestion(response);
+            // drawLayout(response)
+            parseSuggestionAsGraph(response);
         },
         
         error: function(xhr, status, error) {
             window.alert("Something went wrong while sending the request: "+plantlist); 
-
-            // window.alert(xhr.status,status,error);
-            
+           
         }
     });
 
-    // window.alert(data);
-    // parseResult(data)
+}
 
-    // return must_ids;
+function parseSuggestionAsGraph(message) {
+
+    // remove graph 
+    var div = document.getElementById('graphcontainer'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
+    // remove loading message
+    var div = document.getElementById('loading'); 
+    while(div.firstChild) { 
+        div.removeChild(div.firstChild); 
+    };
+    //remove table
+    $('#ResultTable tr').remove();
+
+
+    let nodes = [];
+    let edges = [];
+
+    for (let i = 0; i < message.length; i++){
+        var triple = message[i];
+
+        var subject = triple.subject;
+        var pred = triple.property;
+        var object = triple.object;
+
+        if(pred=="Type"& subject.includes("plant")){
+            nodes.push({"id":subject,"label":object});
+        }
+        if(pred=="neighbour"){
+            edges.push({"from":subject,"to":object});
+        }
+
+    }
+
+    var json = {"nodes":nodes,"edges":edges};
+    let jsondata = JSON.stringify(json);
+    console.log(json);
+
+    // anychart.data.loadJsonFile('../data/placement_test.json', function (data) {
+        
+        var chart = anychart.graph(json);
+
+        chart.nodes().labels(true);
+        // chart.nodes().labels().color('black'); //this is also not doing anything.
+
+        //the size is not changing
+        chart.nodes().normal().height(35);
+        chart.nodes().normal().width(35);
+
+        chart.nodes().normal().fill('#2c974b');
+        chart.nodes().hovered().fill('white');
+        chart.nodes().selected().fill('black');
+
+        chart.nodes().normal().stroke(null);
+        chart.nodes().hovered().stroke("#2c974b", 3);
+        chart.nodes().selected().stroke("#2c974b", 3);
+
+        chart.edges().normal().stroke("grey", 2, "10 5", "round");
+        chart.edges().hovered().stroke("black", 4);
+        chart.edges().selected().stroke("black", 4);
+
+        chart.nodes().labels().fontWeight(600);
+        chart.nodes().labels().fontSize(16);
+        chart.nodes().labels().format("{%label}");
+
+        chart.fit();
+        chart.container('graphcontainer');
+        chart.draw();
+
+    // drawLayout(data);
+    // });
 }
 
 
-function parseSuggestion(message) {
+function parseSuggestionAsTable(message) {
     
     // console.log(message)
     $('#ResultTable tr').remove();
@@ -72,20 +127,6 @@ function parseSuggestion(message) {
         let col_name = header.insertCell(i);
         col_name.innerHTML = col_names[i];
     }
-    // let explain_col = header.insertCell(col_names.length);
-    // explain_col.innerHTML = 'explanation';
-
-    // console.log(typeof message);
-    // let array = message.split(',');
-    // array.forEach((triple,i) => {
-    //     let r = res_table.insertRow(i+1);
-    //     t = triple.split('/t'),
-    //     t.forEach((o,j) => {
-    //         let cell = r.insertCell(j);
-    //         cell.innerHTML = o;
-    //     });
-
-    // });
 
     for (let i = 0; i < message.length; i++) {
         let r = res_table.insertRow(i+1);
@@ -93,21 +134,27 @@ function parseSuggestion(message) {
             let cell = r.insertCell(j);
             cell.innerHTML = message[i][col_names[j]];
         }
-        // let explain_button = r.insertCell(col_names.lenth);
-        // let button = $('<button />', {
-        //     class: 'btn btn-primary btn-block',
-        //     type: 'button',
-        //     id: message[i]['property'],
-        //     click: explainResult,
-        //     text: 'Explain!'
-        //   });
-        
-        // let button = document.createElement("BUTTON");
-        // button.addEventListener("click", )
-        // button.click(function(){
-        //     explainResult(must_ids,message[i])
-        // });
-
-        // explain_button.append(button[0])
     }
 }
+
+function drawLayout(jsondata) {
+         
+    anychart.onDocumentReady(function (data = jsondata) {
+        var chart = anychart.fromJson(data)
+        
+        // anychart.data.loadJsonFile(
+        // The data used in this sample can be obtained from the CDN
+        //   'https://cdn.anychart.com/samples-data/graph/knowledge_graph/data.json',
+        //   function (data=message) {
+        // create graph chart
+        // var chart = anychart.graph(data);
+
+        // set container id for the chart
+        chart.container('container');
+        // initiate chart drawing
+        chart.draw();
+    
+    });
+}
+        // );
+    //   });
