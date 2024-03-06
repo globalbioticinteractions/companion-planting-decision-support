@@ -84,3 +84,7 @@ a {
 .legend {
   font-size: 12px;
 }
+
+.anychart-tooltip img {
+  width: 200px;
+}

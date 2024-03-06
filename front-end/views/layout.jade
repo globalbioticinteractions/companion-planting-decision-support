@@ -6,8 +6,17 @@ html
     script(src="https://cdn.anychart.com/releases/8.8.0/js/anychart-graph.min.js")
     script(src="https://cdn.anychart.com/releases/8.8.0/js/anychart-data-adapter.min.js")
 
-    script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.js") 
+    //- Needs to be placed BEFORE popper.min.js and bootstrap.min.js
+    script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.js")
+
+    //- Needs to be places AFTER jquery.js
     script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js")
+
+    //- Needs to be placed AFTER jquery.js and BEFORE bootstrap.min.js
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js")
+
+    //- Needs to be placed AFTER pooper.min.js and jquery.js
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
 
     
     script(type="module", src="/javascripts/config.js")
@@ -16,6 +25,14 @@ html
     script(type="module", src="/javascripts/submit-preferences.js")
     script(type="module", src="/javascripts/suggest-plant-placement.js")
     script(type="module", src="/javascripts/query-companions.js")
+
+    //- Needed to enable Bootstrap tooltips. 
+    script.
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip({
+          trigger : 'hover'
+        });
+      })
     
 
     link(rel='stylesheet', href='/stylesheets/style.css')

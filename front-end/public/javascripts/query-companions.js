@@ -1,3 +1,59 @@
+class SPARQLQueryDispatcher {
+	constructor( endpoint ) {
+		this.endpoint = endpoint;
+	}
+
+	query( sparqlQuery ) {
+		const fullUrl = this.endpoint + '?query=' + encodeURIComponent( sparqlQuery );
+		const headers = { 'Accept': 'application/sparql-results+json' };
+
+		return fetch( fullUrl, { headers } ).then( body => body.json() );
+	}
+}
+
+class imageFetcher {
+	constructor( chart, SPARQLDispatcher ) {
+		this.chart = chart;
+        this.openRequests = 0;
+        this.SPARQLDispatcher = SPARQLDispatcher;
+	}
+
+    drawChart() {
+        if (this.openRequests == 0){
+            drawChart();
+        }
+    }
+
+    getImage(node) {
+        const endpointUrl = 'https://query.wikidata.org/sparql';
+        const sparqlQuery = `
+        SELECT ?itemImage
+        WHERE {  
+            #P31 : "Instance Of" property
+            #Q5: "Human" entity 
+            wd:Q23425 wdt:P18 ?itemImage .
+            SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }     
+        } limit 1
+        `;
+    //     const sparqlQuery = `
+    //   SELECT ?item ?itemLabel
+    //   WHERE {  
+    //     #P31 : "Instance Of" property
+    //     #Q5: "Human" entity 
+    //     ?item wdt:P31 wd:Q5.
+    //     ?item ?label "Bond"@en. 
+    //     SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
+    //   } limit 10
+    // `;
+    
+        // const queryDispatcher = new SPARQLQueryDispatcher( endpointUrl );
+        
+        this.openRequests++; 
+        this.queryDispatcher.query( sparqlQuery ).then( (response) => {
+            this.openRequests--; node.img = JSON.stringify(response.results); drawChart()
+        });
+    }
+}
 
 const anticompsetting = {
     normal: {   stroke:  {
@@ -33,12 +89,16 @@ function queryCompanions() {
     div.appendChild(loadingtext);
 
     let musts = $('#must-select').select2('data');
-    // let mays = $('#may-select').select2('data');
 
     let plants = [];
     musts.forEach(item => {
         plants.push(item.id)
     });
+    // console.log(plants)
+    plants.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot");
+    plants.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot");
+    plants.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
+    
 
     // let intersection = $('#intersection').is(':checked');
     // let companion = $('#companion').is(':checked');
@@ -55,7 +115,7 @@ function queryCompanions() {
         success: function(response){
             // console.log(response);
             // parseResult(response,plantlist)
-            parseCompanionGraph(response);
+            parseData(response);
         },
         
         error: function(xhr, status, error) {
@@ -68,8 +128,70 @@ function queryCompanions() {
 
 }
 
-function parseCompanionGraph(message) {
+function iriToWDNamespace(iri) {
+    let toUpper = function(x){ 
+        return x.toUpperCase();
+      };
+    let id = iri.split("/").slice(-1).map(toUpper);
 
+    return "wd:".concat(id);
+}
+
+function fetchImage(node, SPARQLDispatcher) {
+    let object = iriToWDNamespace(node.plant.wikilink);
+    const sparqlQuery = `
+        SELECT ?plantImage
+        WHERE {  
+            #P31 : "Instance Of" property
+            #Q5: "Human" entity 
+            ${object} wdt:P18 ?plantImage .
+            SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }     
+        } limit 1
+        `;
+    return SPARQLDispatcher.query(sparqlQuery).then((response) => {node.img = JSON.stringify(response.results.bindings[0].plantImage.value)})
+}
+
+function parseEdge(edge) {
+    if (edge.property == "companion"){
+        edge.normal = compsetting.normal;
+        edge.hovered = compsetting.hovered;
+        edge.selected = compsetting.selected;
+    }else{
+        edge.normal = anticompsetting.normal;
+        edge.hovered = anticompsetting.hovered;
+        edge.selected = anticompsetting.selected;
+    }
+}
+
+function parseNode(node) {
+    node.scientificname = node.plant.scientificName;
+    node.wikilink = node.plant.wikilink;
+    node.img = 'not updated yet'
+    return 
+}
+
+function parseData(message) {
+    for (var i=0; i<message.edges.length;i++){
+        parseEdge(message.edges[i]);
+    }
+
+    for (var i=0; i<message.nodes.length;i++){
+        parseNode(message.nodes[i]);
+    }
+
+    let promiseArray = [];
+    const endpointUrl = 'https://query.wikidata.org/sparql';
+    let SPARQLDispatcher = new SPARQLQueryDispatcher(endpointUrl);
+
+    for (var i=0; i<message.nodes.length;i++){
+        let node = message.nodes[i];
+        promiseArray.push(fetchImage(node, SPARQLDispatcher))
+    }
+
+    Promise.all(promiseArray).then((response) => {console.log(response); parseCompanionGraph(message)});
+}
+
+function parseCompanionGraph(message) {
     // remove graph 
     var div = document.getElementById('graphcontainer'); 
     while(div.firstChild) { 
@@ -83,26 +205,9 @@ function parseCompanionGraph(message) {
     //remove table
     $('#ResultTable tr').remove();
 
-    for (var i=0; i<message.edges.length;i++){
-        if (message.edges[i].property == "companion"){
-            message.edges[i].normal = compsetting.normal;
-            message.edges[i].hovered = compsetting.hovered;
-            message.edges[i].selected = compsetting.selected;
-        }else{
-            message.edges[i].normal = anticompsetting.normal;
-            message.edges[i].hovered = anticompsetting.hovered;
-            message.edges[i].selected = anticompsetting.selected;
-        }
-    }
-
-    for (var i=0; i<message.nodes.length;i++){
-        
-        message.nodes[i].scientificname = message.nodes[i].plant.scientificName;
-        message.nodes[i].wikilink = message.nodes[i].plant.wikilink;
-        
-    }
-
     console.log(message);
+    // create a stage
+    var stage = anychart.graphics.create("graphcontainer");
 
     var chart = anychart.graph(message);
 
@@ -136,27 +241,81 @@ function parseCompanionGraph(message) {
     other.normal().stroke(null);
     other.hovered().stroke("grey", 4);
     other.selected().stroke("grey", 4);
-    original.labels().fontColor("black");
-    original.labels().fontSize(13);
-    original.labels().fontWeight(500);
+    other.labels().fontColor("black");
+    other.labels().fontSize(13);
+    other.labels().fontWeight(500);
 
     chart.nodes().tooltip().fontSize(12);
-    // chart.nodes().tooltip().useHtml(true);
-    chart.nodes().tooltip().format('{%id}, {%scientificname}, {%wikilink}');
 
+    // LOOK HERE!!!! --> https://www.anychart.com/products/anychart/gallery/General_Features/HTML_Tooltip.php
+    // var tooltip = chart.nodes().tooltip();
 
-    // chart.edges().normal().stroke("green", 2, "10 5", "round");
-    // chart.edges().hovered().stroke("black", 4);
-    // chart.edges().selected().stroke("black", 4);
-
-    // chart.nodes().labels().fontWeight(600);
-    // chart.nodes().labels().fontSize(16);
-    // chart.nodes().labels().format("{%label}");
-
+    // tooltip
+    //     
+    //     // .format('<p>"{%wikilink}"></p>')
+    
+    // // Prevent overriding tooltip content
+    // tooltip.onBeforeContentChange(function () {
+    //     return false;
+    //   });
+    
+    // chart.nodes().tooltip().format('{%id}, {%scientificname}, {%wikilink}');
+    chart.nodes().tooltip().useHtml(true).format(
+        '<table><tr><th>Common name</th><th>{%id}</th></tr><tr><th>Scientific name</th><th>{%scientificname}</th></tr><tr><th>Image</th><th><img src={%img}></th></tr><tr><th>wikiData</th><th>{%wikilink}</th></tr></table>');
     chart.fit();
-    chart.container('graphcontainer');
+    chart.container(stage);
     chart.draw();
+    // chart.addEventListener('pointMouseOver', onPointClick);
 
+
+    
+
+    
+    // Legend configuration
+    var legend = anychart.standalones.legend();
+    // create an array for storing legend items
+    var legendItems = [];
+    legendItems.push({
+        text: "Selected plants",
+        iconType: original.normal().shape(),
+        iconFill: original.normal().fill(),
+        // iconStroke
+    });
+    legendItems.push({
+        text: "Other plants",
+        iconType: "circle",
+        iconFill: other.normal().fill(),
+        // iconStroke
+    });
+
+    legendItems.push({
+        text: "companions",
+        iconType: "line",
+        iconStroke: compsetting.normal.stroke
+        // iconStroke
+    });
+    legendItems.push({
+        text: "anticompanions",
+        iconType: "line",
+        iconStroke: anticompsetting.normal.stroke
+        // iconStroke
+    });
+
+    legend.items(legendItems);
+    legend.container(stage);
+    legend.positionMode("inside");
+    legend.drag(true);
+    legend.draw();
+    
+    // <div class = "embed-responsive embed-responsive-4by3">
+    //         <iframe class = "embed-responsive-item" src = "https://wiki.ubc.ca/extensions/EmbedPage/getPage.php?title=/index.php/Help%3AEmbed_a_wiki_page&referer=https://wiki.ubc.ca/Help:Embed_a_wiki_page"></iframe>
+    // </div>
     // drawLayout(data);
     // });
+    // <script type="text/javascript">
+    // document.write(
+    //     '<script type="text/javascript" charset="utf-8" src="https://wiki.ubc.ca/extensions/EmbedPage/getPage.php?title=/index.php/Help%3AEmbed_a_wiki_page&referer=https://wiki.ubc.ca/Help:Embed_a_wiki_page "></script>');
+    // </script>
 }
+
+
