@@ -29,7 +29,7 @@ function parseResult(message,plantlist) {
         
     }
     let explain_col = header.insertCell(col_names.length);
-    // explain_col.innerHTML = 'explanation'
+    explain_col.innerHTML = 'explanation'
 
     for (let i = 0; i < message.length; i++) {
         let r = res_table.insertRow(i+1);
