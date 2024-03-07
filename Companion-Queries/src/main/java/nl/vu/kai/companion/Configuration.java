@@ -32,8 +32,8 @@ public class Configuration {
         BAD_GARDEN("BadGarden",-1,"This garden contains incompatible plants."),
         GARDEN("Garden",0,"This is a garden."),
         GOOD_GARDEN_1("CompanionGarden",1,"This garden contains at least one pair of companion plants."),
-        GOOD_GARDEN_2("3CompanionGarden",2, "This garden contains at least 3 pairs of compaion plants."),
-        GOOD_GARDEN_3("3TripleCompanionGarden",3, "This garden contains at least 3 plants with each 3 companion plants.")
+        GOOD_GARDEN_2("3CompanionGarden",2, "This garden contains at least 3 pairs of companion plants."),
+        GOOD_GARDEN_3("3TripleCompanionGarden",3, "This garden contains at least 3 plants with 3 companions.")
         ;
         public final String iri, name, description;
         public final int rating;

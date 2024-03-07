@@ -45,35 +45,36 @@ with onto:
     #classes
     Garden = types.new_class("Garden", (Thing,))
     Flora = types.new_class("Flora", (Thing,))
+    Fauna = types.new_class("Fauna", (Thing,))
     BadGarden = types.new_class("BadGarden", (Garden,))
     CompanionGarden = types.new_class("CompanionGarden", (Garden,))
-    ThreeCompanionGarden = types.new_class("ThreeCompanionGarden", (Garden,))
-    ThreeTripleCompanionGarden = types.new_class("ThreeTripleCompanionGarden", (Garden,))
+    ThreeCompanionGarden = types.new_class("3CompanionGarden", (Garden,))
+    ThreeTripleCompanionGarden = types.new_class("3TripleCompanionGarden", (Garden,))
     BadlyPlacedFlora = types.new_class("BadlyPlacedFlora", (Flora,))
     PlantWithCompanion = types.new_class("PlantWithCompanion", (Flora,))
     PlantWith2Companions = types.new_class("PlantWith2Companions", (Flora,))
     PlantWith3Companions = types.new_class("PlantWith3Companions", (Flora,))
     Fruit = types.new_class("Fruit", (Flora,))
+    Predator = types.new_class("Predator", (Fauna,))
+    Pollinator = types.new_class("Pollinator", (Fauna,))
 
     #companion properties (do we need all of these?)
     anticompanionWith = types.new_class("anticompanionWith", (ObjectProperty,))
     companionWith = types.new_class("companionWith", (ObjectProperty,))
     positiveHostingFor = types.new_class("positiveHostingFor", (companionWith,))
-    reqruitsPollinatorsFor = types.new_class("reqruitsPollinatorsFor", (positiveHostingFor,))
-    reqruitsPredatorsFor = types.new_class("reqruitsPredatorsFor", (positiveHostingFor,))
+    recruitsPollinatorsFor = types.new_class("recruitsPollinatorsFor", (positiveHostingFor,))
+    recruitsPredatorsFor = types.new_class("recruitsPredatorsFor", (positiveHostingFor,))
     trapCropFor = types.new_class("trapCropFor", (companionWith,))
 
-    #types.new_class("suppressesPestsFor", (companionWith,))
-    increasedLevelInteractionFor = types.new_class("increasedLevelInteractionFor", (companionWith,))
-    providesNutrientsFor = types.new_class("providesNutrientsFor", (increasedLevelInteractionFor,))
+    providesNutrientsFor = types.new_class("providesNutrientsFor", (companionWith,))
     fixatesNitrogenFor = types.new_class("fixatesNitrogenFor", (providesNutrientsFor,))
     replenishesCalcium = types.new_class("replenishesCalcium", (providesNutrientsFor,))
     replenishesPhosphorus = types.new_class("replenishesPhosphorus", (providesNutrientsFor,))
     replenishesPotassium = types.new_class("replenishesPotassium", (providesNutrientsFor,))
-    protectiveShelterFor = types.new_class("protectiveShelterFor", (increasedLevelInteractionFor,))
-    providesShadeFor = types.new_class("providesShadeFor", (increasedLevelInteractionFor,))
-    providesWaterFor = types.new_class("providesWaterFor", (increasedLevelInteractionFor,))
-    providesWindProtectionFor = types.new_class("providesWindProtectionFor", (increasedLevelInteractionFor,))
+    providesWaterFor = types.new_class("providesWaterFor", (providesNutrientsFor,))
+    physicalSupportFor = types.new_class("physicalSupportFor", (companionWith,))
+    providesShadeFor = types.new_class("providesShadeFor", (physicalSupportFor,))
+    providesWindProtectionFor = types.new_class("providesWindProtectionFor", (physicalSupportFor,))
 
     companionNeighbour = types.new_class("companionNeighbour", (ObjectProperty,))
     neighbour = types.new_class("neighbour", (ObjectProperty,SymmetricProperty))
@@ -108,9 +109,9 @@ with onto:
     hasPart = types.new_class("hasPart", (ObjectProperty,))
 
     #property chains
-    reqruitsPredatorsFor.property_chain.append(PropertyChain([visitedBy, _eatenBy, parasiteOf]))
-    reqruitsPollinatorsFor.property_chain.append(PropertyChain([visitedBy, _pollinatedBy]))
-    reqruitsPollinatorsFor.property_chain.append(PropertyChain([flowersVisitedBy, _pollinatedBy]))
+    recruitsPredatorsFor.property_chain.append(PropertyChain([visitedBy, _eatenBy, parasiteOf]))
+    recruitsPollinatorsFor.property_chain.append(PropertyChain([visitedBy, _pollinatedBy]))
+    recruitsPollinatorsFor.property_chain.append(PropertyChain([flowersVisitedBy, _pollinatedBy]))
     repellerOf.property_chain.append(PropertyChain([hasPart, repellerOf]))
 
     #other axioms
@@ -162,23 +163,23 @@ with onto:
 
     AllDisjoint(list(allPlantConcepts.values()))
 
-    for _, row in df.iterrows():
-        if not (pd.isna(row.taxon_v1) or pd.isna(row.taxon_v2)):
-            v1 = allPlantConcepts[row.taxon_v1]
-            v2 = allPlantConcepts[row.taxon_v2]
-
-            if row['rel'] == 'companion':
-                if len(v1.companionWith) == 0 :
-                    v1.companionWith = [v2]
-
-                else:
-                    v1.companionWith.append(v2)
-            if row['rel'] == 'antagonistic':
-                if len(v1.anticompanionWith) == 0:
-                    v1.anticompanionWith = [v2]
-
-                else:
-                    v1.anticompanionWith.append(v2)
+    # for _, row in df.iterrows():
+    #     if not (pd.isna(row.taxon_v1) or pd.isna(row.taxon_v2)):
+    #         v1 = allPlantConcepts[row.taxon_v1]
+    #         v2 = allPlantConcepts[row.taxon_v2]
+    #
+    #         if row['rel'] == 'companion':
+    #             if len(v1.companionWith) == 0 :
+    #                 v1.companionWith = [v2]
+    #
+    #             else:
+    #                 v1.companionWith.append(v2)
+    #         if row['rel'] == 'antagonistic':
+    #             if len(v1.anticompanionWith) == 0:
+    #                 v1.anticompanionWith = [v2]
+    #
+    #             else:
+    #                 v1.anticompanionWith.append(v2)
 
 #onto.save(file='../owl/companion_planting_v5.owl')
 '''
@@ -208,6 +209,7 @@ with onto:
                 pass
             else:
                 species_class = types.new_class(species, (Thing,)) #thing should be more specific, plant or other animal
+                #species_class.scientificName = row[0][0]
                 interaction_predicate = types.new_class(predicate, (ObjectProperty,))
                 interaction_predicate_inverse = types.new_class("_"+predicate, (ObjectProperty,))
 
@@ -215,10 +217,13 @@ with onto:
                 if interacting_species.startswith(tuple(['UCSC','CLEMS','SBMNH','CUP'])):
                     pass
                 else:
+                    interacting_species_ln = interacting_species
                     interacting_species = toPascalCase(interacting_species)
+
                     interacting_species_class = types.new_class(interacting_species, (Thing,))
-                    species_class.equivalent_to = [Thing & interaction_predicate.some(interacting_species_class)]
-                    interacting_species_class.equivalent_to = [Thing & interaction_predicate_inverse.some(species_class)]
+                    interacting_species_class.scientificName = interacting_species_ln
+                    species_class.is_a.append(interaction_predicate.some(interacting_species_class))
+                    interacting_species_class.is_a.append(interaction_predicate_inverse.some(species_class))
         except:
             pass
 

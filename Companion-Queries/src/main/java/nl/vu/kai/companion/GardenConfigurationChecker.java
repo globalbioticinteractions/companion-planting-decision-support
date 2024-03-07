@@ -106,6 +106,14 @@ public class GardenConfigurationChecker {
 
         maximalABox.addAxioms(plantOntology.axioms());
 
+        try {
+            owlManager.saveOntology(maximalABox, new FileOutputStream(new File("maximal-ABox.owl")));
+        } catch (OWLOntologyStorageException e) {
+            throw new RuntimeException(e);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
         OWLReasoner reasoner = new ReasonerFactory().createReasoner(maximalABox);
 
         return reasoner.isEntailed(getAxiom(property));
@@ -246,20 +254,38 @@ public class GardenConfigurationChecker {
         Set<OWLIndividualAxiom> flexible =
                 aboxAxioms.stream()
                         .filter(x -> x instanceof OWLObjectPropertyAssertionAxiom)
-                        .map(x -> (OWLIndividualAxiom) x)
+                        .map(x -> (OWLObjectPropertyAssertionAxiom) x)
+                        .filter(x -> x.getProperty()
+                                .getNamedProperty()
+                                .getIRI()
+                                .equals(IRI.create(Configuration.NEIGHBOUR_IRI))
+                                )
                         .collect(Collectors.toSet());
 
-        Set<OWLClassAssertionAxiom> rest =
-                aboxAxioms.stream()
-                        .filter(x -> x instanceof OWLClassAssertionAxiom)
-                        .map(x -> (OWLClassAssertionAxiom) x)
-                        .collect(Collectors.toSet());
+        //Set<OWLIndividualAxiom> rest =
+        //        aboxAxioms.stream()
+        //                .filter(x -> x instanceof OWLClassAssertionAxiom)
+        //                .map(x -> (OWLClassAssertionAxiom) x)
+        //                .collect(Collectors.toSet());
 
-        Set<OWLIndividualAxiom> repair = repairGenerator.computeRepair(maximalABox, flexible);
 
-        repair.addAll(rest);
+        Optional<Set<OWLIndividualAxiom>> optRepair = repairGenerator.<OWLIndividualAxiom>computeRepair(
+                maximalABox,
+                getAxiom(Configuration.GardenConfigurationProperty.BAD_GARDEN),
+                flexible,
+                Collections.singleton(getAxiom(desiredProperty)));
 
-        return repair;
+        if(!optRepair.isPresent())
+            throw new RepairException("Cannot be repaired!");
+
+        //Set<OWLIndividualAxiom> repair = optRepair.get();
+
+        //repair.addAll(rest);
+
+        return maximalABox.axioms()
+                .filter(x -> x instanceof OWLIndividualAxiom)
+                .map(x -> (OWLIndividualAxiom) x)
+                .collect(Collectors.toSet());
     }
 
     /**
@@ -269,7 +295,7 @@ public class GardenConfigurationChecker {
         throw new AssertionError("Not implemented!");
     }
 
-    private OWLAxiom getAxiom(Configuration.GardenConfigurationProperty property)  {
+    private OWLIndividualAxiom getAxiom(Configuration.GardenConfigurationProperty property)  {
         return owlFactory.getOWLClassAssertionAxiom(
                 owlFactory.getOWLClass(IRI.create(property.iri)),
                 owlFactory.getOWLNamedIndividual(IRI.create(GARDEN_NAME)));
