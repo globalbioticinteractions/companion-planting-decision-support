@@ -45,11 +45,12 @@ function explainResult(event) {
 
 function parseResult(property, message) {
 
-    var formatted = ""
+    var formatted = "<ul>"
     for (var item=0; item<message.length; item++){
-        formatted = formatted.concat(message[item],"<br />");
+        formatted = formatted.concat("<li>",message[item],"</i>");
         // formatted = formatted.concat("\n");
     }
+    formatted = formatted.concat("</ul>")
     console.log(formatted);
     let cell = document.getElementById(property)
     cell.innerHTML = formatted; 

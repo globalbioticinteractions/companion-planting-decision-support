@@ -41,7 +41,7 @@ function parseResult(message,plantlist) {
         if (message[i]['result']=="true" ){
             let explain_button = r.insertCell(col_names.lenth);
             let button = $('<button />', {
-            class: 'btn btn-primary btn-block',
+            class: 'button',
             type: 'button',
             id: message[i]['property'],
             click: explainResult,
