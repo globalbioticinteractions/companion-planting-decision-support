@@ -15,7 +15,7 @@ function explainResult(event) {
     // must_ids.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
     
     $.post({
-        url: window.URL(window.apiurl.concat("/explain")),
+        url: new window.URL(window.apiurl.concat("/explain")),
         headers: {'Access-Control-Allow-Origin':'*'}, // <-------- set this
         data: JSON.stringify({plantlist: must_ids, property: event.currentTarget.id}),
         contentType: "application/json; charset=utf-8",

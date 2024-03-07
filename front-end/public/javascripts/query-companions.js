@@ -95,9 +95,9 @@ function queryCompanions() {
         plants.push(item.id)
     });
     // console.log(plants)
-    plants.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot");
-    plants.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot");
-    plants.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
+    // plants.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Carrot");
+    // plants.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Shallot");
+    // plants.push("http://www.semanticweb.org/kai/ontologies/2024/companion-planting#Mint");
     
 
     // let intersection = $('#intersection').is(':checked');
@@ -137,18 +137,35 @@ function iriToWDNamespace(iri) {
     return "wd:".concat(id);
 }
 
+function parseImage(node, wikiDataResponse) {
+    if (wikiDataResponse.results.bindings.length === 0){
+        node.img = '/images/no_image_found.png'
+    }
+    else {
+        node.img = JSON.stringify(wikiDataResponse.results.bindings[0].plantImage.value)
+    }
+}
+
 function fetchImage(node, SPARQLDispatcher) {
-    let object = iriToWDNamespace(node.plant.wikilink);
-    const sparqlQuery = `
-        SELECT ?plantImage
-        WHERE {  
-            #P31 : "Instance Of" property
-            #Q5: "Human" entity 
-            ${object} wdt:P18 ?plantImage .
-            SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }     
-        } limit 1
-        `;
-    return SPARQLDispatcher.query(sparqlQuery).then((response) => {node.img = JSON.stringify(response.results.bindings[0].plantImage.value)})
+    let iri = node.wikilink
+    console.log(iri);
+    if (!(typeof iri === 'string' || iri instanceof String) || iri.length === 0){
+         node.img = '/images/no_image_found.png'
+         node.wikilink = 'missing'   
+    }
+    else {
+        let object = iriToWDNamespace(node.plant.wikilink);
+        const sparqlQuery = `
+            SELECT ?plantImage
+            WHERE {  
+                #P31 : "Instance Of" property
+                #Q5: "Human" entity 
+                ${object} wdt:P18 ?plantImage .
+                SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }     
+            } limit 1
+            `;
+        return SPARQLDispatcher.query(sparqlQuery).then((response) => {parseImage(node, response)})
+    }
 }
 
 function parseEdge(edge) {
@@ -175,17 +192,14 @@ function parseData(message) {
         parseEdge(message.edges[i]);
     }
 
-    for (var i=0; i<message.nodes.length;i++){
-        parseNode(message.nodes[i]);
-    }
-
     let promiseArray = [];
     const endpointUrl = 'https://query.wikidata.org/sparql';
     let SPARQLDispatcher = new SPARQLQueryDispatcher(endpointUrl);
 
     for (var i=0; i<message.nodes.length;i++){
         let node = message.nodes[i];
-        promiseArray.push(fetchImage(node, SPARQLDispatcher))
+        parseNode(node);
+        promiseArray.push(fetchImage(node, SPARQLDispatcher));
     }
 
     Promise.all(promiseArray).then((response) => {console.log(response); parseCompanionGraph(message)});

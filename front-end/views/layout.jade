@@ -2,10 +2,6 @@ doctype html
 html
   head
     title= title
-    script(src="https://cdn.anychart.com/releases/8.8.0/js/anychart-core.min.js")
-    script(src="https://cdn.anychart.com/releases/8.8.0/js/anychart-graph.min.js")
-    script(src="https://cdn.anychart.com/releases/8.8.0/js/anychart-data-adapter.min.js")
-
     //- Needs to be placed BEFORE popper.min.js and bootstrap.min.js
     script(src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.js")
 
@@ -17,6 +13,10 @@ html
 
     //- Needs to be placed AFTER pooper.min.js and jquery.js
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+
+    script(src="https://cdn.anychart.com/releases/8.8.0/js/anychart-core.min.js")
+    script(src="https://cdn.anychart.com/releases/8.8.0/js/anychart-graph.min.js")
+    script(src="https://cdn.anychart.com/releases/8.8.0/js/anychart-data-adapter.min.js")
 
     
     script(type="module", src="/javascripts/config.js")
