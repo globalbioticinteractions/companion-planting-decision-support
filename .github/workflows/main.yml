@@ -24,4 +24,4 @@ jobs:
       - name: OQuaRE module
         uses: kai-vu/oquare-metrics@v3.0
         with:
-          ontology-folders: ontologies
+          ontology-folders: Companion-Queries
