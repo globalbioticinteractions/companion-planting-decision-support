@@ -1,3 +1,14 @@
+## Instructions to run as Spring Boot Application
+
+Requires a maven and Java installetion.
+To compine execute on command line:
+
+.\mvnw clean package
+
+This is required to be executed before you can run the docker with the backend or the docker compose that runs both the backend and the frontend together.
+
+
+## Instructions to run the command line tool
 * Compiling
 
 To compile, you need to have maven installed (e.g. run "brew install maven" on mac os). You then execute:
