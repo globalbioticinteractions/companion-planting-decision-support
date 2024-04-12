@@ -1,0 +1,36 @@
+* Testing
+A default .jar file is included to circumvent the need for compiling the java code. To get this working, simply copy the default compiled .jar file into its partent directory:
+
+cp target/default/companion-0.0.1-SNAPSHOT.jar  target/
+
+
+## Instructions to run as Spring Boot Application
+
+A default .jar file is included to circumvent the need for compiling the java code. To make this working, simply copy the default compiled .jar file into its partent directory:                                                                                                                                                                                        cp target/default/companion-0.0.1-SNAPSHOT.jar  target/ 
+
+To recompile, make sure maven is installed (e.g. run "brew install maven" on mac os). You then execute:
+
+.\mvnw clean package  
+
+This is required to be executed before you can run the docker with the backend or the docker compose that runs both the backend and the frontend together.
+
+
+## Instructions to run the command line tool
+* Compiling
+
+For regular compilation, also ensure maven installed (e.g. run "brew install maven" on mac os). You then execute:
+
+mvn install
+
+* Running
+
+To see how to use the tool, simply run without options:
+
+java -jar target/companion-queries-0.1-SNAPSHOT-jar-with-dependencies.jar
+
+For example:
+
+java -jar target/companion-queries-0.1-SNAPSHOT-jar-with-dependencies.jar check test.list
+
+
+Important: only works if executed in this folder.

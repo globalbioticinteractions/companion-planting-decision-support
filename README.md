@@ -21,3 +21,9 @@ The ontology is designed to answer key questions that aid in understanding and a
 - How can companion planting be used to combat specific pests (e.g., aphids)?
 
 Feel free to explore the ontology and contribute to its development. Your insights and feedback are valuable in enhancing this knowledge base.
+
+## How to run
+To run the front- and back-end you simply run the docker compose in this directory. However you need to do the following things before.
+- Install java and mvn for the backend
+- Compile the back-end (from the Companion-Queries folder) using the command "./mvnw clean package". This produces the necessary jar file for the next command to work.
+- execute "docker compose" from this folder.
