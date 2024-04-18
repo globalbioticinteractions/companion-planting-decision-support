@@ -1,11 +1,4 @@
-#################
-# Before running the script, make sure that dl4python jar is running with:
-# java -jar "./utils/dl4python/target/dl4python-0.1.5-jar-with-dependencies.jar"
-#################
-import itertools
-
 import pandas as pd
-from py4j.java_gateway import JavaGateway
 from owlready2 import *
 import types
 import requests
@@ -250,73 +243,3 @@ onto.save(file='../owl/companion_planting_v6.owl')
 ##############################
 '''
 
-#
-# allPlantConcepts = []
-# for v in plants:
-#
-#
-#     #add neighbouring axioms
-#     # exist (companion_with some C) and (neighbour some C) SubClassOf (companionNeighbour some C)
-#     onto.addStatement(
-#         fac.getGCI(
-#             fac.getConjunction(
-#                 fac.getExistentialRoleRestriction(
-#                     fac.getRole(iri + 'neighbour'),
-#                     concept
-#                 ),
-#                 fac.getExistentialRoleRestriction(
-#                     fac.getRole(iri + 'companion_with'),
-#                     concept
-#                 )
-#             ),
-#             fac.getExistentialRoleRestriction(
-#                 fac.getRole(iri + 'companionNeighbour'),
-#                 concept
-#             )
-#         )
-#     )
-#
-#     # exist (anticompanion_with some C) and (neighbour some C) SubClassOf (incompatibleNeighbour some C)
-#     onto.addStatement(
-#         fac.getGCI(
-#             fac.getConjunction(
-#                 fac.getExistentialRoleRestriction(
-#                     fac.getRole(iri + 'neighbour'),
-#                     concept
-#                 ),
-#                 fac.getExistentialRoleRestriction(
-#                     fac.getRole(iri + 'anticompanion_with'),
-#                     concept
-#                 )
-#             ),
-#             fac.getExistentialRoleRestriction(
-#                 fac.getRole(iri + 'incompatibleNeighbour'),
-#                 concept
-#             )
-#         )
-#     )
-#
-# ## add disjointness, each plant is disjoint with the others
-# for v1,v2 in itertools.combinations(allPlantConcepts,2):
-#     onto.addStatement(fac.disjointnessAxiom(v1,v2))
-#
-#
-# # adding the companion/anticompanion restrictions
-# for _, row in df.iterrows():
-#         if not (pd.isna(row.taxon_v1) or pd.isna(row.taxon_v2)):
-#             v1 = fac.getConceptName(iri + toPascalCase(row.taxon_v1))
-#             v2 = fac.getConceptName(iri + toPascalCase(row.taxon_v1))
-#
-#             if row['rel'] == 'companion':
-#                 #this might be redundant
-#                 role = fac.getRole(iri + 'companion_with')
-#                 onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
-#
-#             if row['rel'] == 'antagonistic':
-#                 role = fac.getRole(iri + 'anticompanion_with')
-#                 onto.addStatement(fac.getGCI(v1, fac.getExistentialRoleRestriction(role, v2)))
-#
-# # export the ontology
-# gateway.getOWLExporter().exportOntology(onto, './owl/companion_planting-with-tablev4.owl')
-#
-#

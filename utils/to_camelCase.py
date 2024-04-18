@@ -12,8 +12,8 @@ def camelCase(s):
 
 
 #print(re.sub("#[^_<>]+(?:_[^_<>]+)+>", lambda x: camelCase(x.group()), "http://www.semanticweb.org/kai/ontologies/2024/companion-planting#anticompanion_with>"))
-with open('./../owl/companion-planting-base0.1.owl','r') as fp:
-    with open('./../owl/companion-planting-base0.2.owl','w') as fout:
+with open('../owl/old/companion-planting-base0.1.owl', 'r') as fp:
+    with open('../owl/old/companion-planting-base0.2.owl', 'w') as fout:
         for line in fp.readlines():
             fout.write(re.sub("#[^_<>]+(?:_[^_<>]+)+>", lambda x: camelCase(x.group()),
                    line)) #match a pattern that has #string1_string2_...>, and change it to camelcase

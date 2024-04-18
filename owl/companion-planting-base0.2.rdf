@@ -81,9 +81,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#fixatesNitrogen -->
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesNitrogen -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#fixatesNitrogen">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesNitrogen">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesNutrients"/>
     </owl:ObjectProperty>
     
@@ -247,25 +247,25 @@
     
 
 
-    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishesCalcium -->
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesCalcium -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishesCalcium">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesCalcium">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesNutrients"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishesPhosphorus -->
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesPhosphorus -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishesPhosphorus">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesPhosphorus">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesNutrients"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishesPotassium -->
+    <!-- http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesPotassium -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#replenishesPotassium">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesPotassium">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/kai/ontologies/2024/companion-planting#providesNutrients"/>
     </owl:ObjectProperty>
     
