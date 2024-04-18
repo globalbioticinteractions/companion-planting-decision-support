@@ -16,6 +16,7 @@ iri = 'http://www.semanticweb.org/kai/ontologies/2024/companion-planting#'
 # partof = get_ontology('http://www.ontologydesignpatterns.org/cp/owl/partof.owl#')
 # onto = get_ontology('../owl/companion-planting-base0.2.rdf').load()
 onto = get_ontology('../owl/companion-planting-base0.2.rdf')
+onto.base_iri = iri
 darwin = get_ontology('http://rs.tdwg.org/dwc/terms/')
 
 with darwin:
@@ -63,10 +64,10 @@ with onto:
     trapCropFor = types.new_class("trapCropFor", (companionWith,))
 
     providesNutrientsFor = types.new_class("providesNutrientsFor", (companionWith,))
-    fixatesNitrogenFor = types.new_class("fixatesNitrogenFor", (providesNutrientsFor,))
-    replenishesCalcium = types.new_class("replenishesCalcium", (providesNutrientsFor,))
-    replenishesPhosphorus = types.new_class("replenishesPhosphorus", (providesNutrientsFor,))
-    replenishesPotassium = types.new_class("replenishesPotassium", (providesNutrientsFor,))
+    providesNitrogenFor = types.new_class("providesNitrogenFor", (providesNutrientsFor,))
+    providesCalcium = types.new_class("providesCalcium", (providesNutrientsFor,))
+    providesPhosphorus = types.new_class("providesPhosphorus", (providesNutrientsFor,))
+    providesPotassium = types.new_class("providesPotassium", (providesNutrientsFor,))
     providesWaterFor = types.new_class("providesWaterFor", (providesNutrientsFor,))
     physicalSupportFor = types.new_class("physicalSupportFor", (companionWith,))
     providesShadeFor = types.new_class("providesShadeFor", (physicalSupportFor,))
