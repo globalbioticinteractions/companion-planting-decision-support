@@ -1,6 +1,7 @@
 package nl.vu.kai.companion.util;
 
 import org.semanticweb.HermiT.ReasonerFactory;
+// import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;

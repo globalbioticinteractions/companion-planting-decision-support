@@ -49,7 +49,7 @@
             <version>1.4.5.519</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/net.sourceforge.owlapi/jfact -->
-	<dependency>
+		<dependency>
             <groupId>net.sourceforge.owlapi</groupId>
             <artifactId>jfact</artifactId>
             <version>5.0.3</version>
@@ -59,6 +59,11 @@
             <artifactId>owlexplanation</artifactId>
             <version>5.0.0</version>
         </dependency>
+		<dependency>
+		    <groupId>org.semanticweb.elk</groupId>
+		    <artifactId>elk-owlapi</artifactId>
+		    <version>0.4.3</version>
+		</dependency>
     </dependencies>
 
     <build>

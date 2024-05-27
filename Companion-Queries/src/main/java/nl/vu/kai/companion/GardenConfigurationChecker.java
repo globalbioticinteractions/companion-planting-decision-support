@@ -8,6 +8,8 @@ import nl.vu.kai.companion.repairs.ClassicalRepairGenerator;
 import nl.vu.kai.companion.repairs.RepairException;
 import nl.vu.kai.companion.util.OntologyTools;
 import org.semanticweb.HermiT.ReasonerFactory;
+// import org.semanticweb.elk.ReasonerFactory;
+// import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owl.explanation.api.Explanation;
 import org.semanticweb.owl.explanation.api.ExplanationManager;
 import org.semanticweb.owl.explanation.impl.blackbox.checker.BlackBoxExplanationGeneratorFactory;

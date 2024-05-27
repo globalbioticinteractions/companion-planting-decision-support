@@ -4,6 +4,7 @@ import com.clarkparsia.owlapi.explanation.DefaultExplanationGenerator;
 import com.clarkparsia.owlapi.explanation.util.SilentExplanationProgressMonitor;
 import nl.vu.kai.companion.util.OWLFormatter;
 import org.semanticweb.HermiT.ReasonerFactory;
+// import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owl.explanation.api.Explanation;
 import org.semanticweb.owl.explanation.api.ExplanationGenerator;
 import org.semanticweb.owl.explanation.api.ExplanationGeneratorFactory;
