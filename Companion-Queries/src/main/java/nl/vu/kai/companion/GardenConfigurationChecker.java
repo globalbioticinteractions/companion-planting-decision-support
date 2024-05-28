@@ -7,9 +7,9 @@ import nl.vu.kai.companion.data.Plant;
 import nl.vu.kai.companion.repairs.ClassicalRepairGenerator;
 import nl.vu.kai.companion.repairs.RepairException;
 import nl.vu.kai.companion.util.OntologyTools;
-import org.semanticweb.HermiT.ReasonerFactory;
-// import org.semanticweb.elk.ReasonerFactory;
-// import org.semanticweb.elk.owlapi.ElkReasonerFactory;
+//import org.semanticweb.HermiT.ReasonerFactory;
+//import org.semanticweb.elk.ReasonerFactory;
+import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owl.explanation.api.Explanation;
 import org.semanticweb.owl.explanation.api.ExplanationManager;
 import org.semanticweb.owl.explanation.impl.blackbox.checker.BlackBoxExplanationGeneratorFactory;
@@ -116,7 +116,7 @@ public class GardenConfigurationChecker {
             throw new RuntimeException(e);
         }
 
-        OWLReasoner reasoner = new ReasonerFactory().createReasoner(maximalABox);
+        OWLReasoner reasoner = new ElkReasonerFactory().createReasoner(maximalABox);
 
         return reasoner.isEntailed(getAxiom(property));
     }
@@ -134,7 +134,7 @@ public class GardenConfigurationChecker {
 
         maximalABox.addAxioms(plantOntology.axioms());
 
-        OWLReasonerFactory reasonerFactory = new ReasonerFactory();
+        OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(maximalABox);
 
         if(!reasoner.isEntailed(axiom))

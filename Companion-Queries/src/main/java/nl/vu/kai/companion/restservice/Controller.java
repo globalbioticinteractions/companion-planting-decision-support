@@ -22,7 +22,7 @@ import jakarta.annotation.PostConstruct;
 import nl.vu.kai.companion.GardenConfigurationChecker;
 import nl.vu.kai.companion.util.OWLFormatter;
 import nl.vu.kai.companion.util.OntologyTools;
-import rationals.properties.isEmpty;
+//import rationals.properties.isEmpty;
 import nl.vu.kai.companion.Configuration;
 import nl.vu.kai.companion.Configuration.*;
 import nl.vu.kai.companion.repairs.RepairException;

@@ -1,7 +1,7 @@
 package nl.vu.kai.companion.util;
 
-import org.semanticweb.HermiT.ReasonerFactory;
-// import org.semanticweb.elk.owlapi.ElkReasonerFactory;
+//import org.semanticweb.HermiT.ReasonerFactory;
+import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
@@ -63,7 +63,7 @@ public class OntologyTools {
     }
 
     public static Collection<OWLClass> simpleQuery(OWLOntology ontology, OWLClass plant, OWLObjectProperty property){
-        OWLReasonerFactory reasonerFactory = new ReasonerFactory();
+        OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
         
         OWLDataFactory factory = ontology.getOWLOntologyManager().getOWLDataFactory();

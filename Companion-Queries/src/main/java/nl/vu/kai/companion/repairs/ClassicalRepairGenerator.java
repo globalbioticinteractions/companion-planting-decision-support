@@ -3,8 +3,8 @@ package nl.vu.kai.companion.repairs;
 import com.clarkparsia.owlapi.explanation.DefaultExplanationGenerator;
 import com.clarkparsia.owlapi.explanation.util.SilentExplanationProgressMonitor;
 import nl.vu.kai.companion.util.OWLFormatter;
-import org.semanticweb.HermiT.ReasonerFactory;
-// import org.semanticweb.elk.owlapi.ElkReasonerFactory;
+//import org.semanticweb.HermiT.ReasonerFactory;
+import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owl.explanation.api.Explanation;
 import org.semanticweb.owl.explanation.api.ExplanationGenerator;
 import org.semanticweb.owl.explanation.api.ExplanationGeneratorFactory;
@@ -40,7 +40,7 @@ public class ClassicalRepairGenerator {
         OWLDataFactory owlFactory = owlManager.getOWLDataFactory();
 
 
-        OWLReasonerFactory reasonerFactory = new ReasonerFactory();
+        OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
         /*ExplanationGeneratorFactory egFactory =
                 new InconsistentOntologyExplanationGeneratorFactory(
@@ -140,7 +140,7 @@ public class ClassicalRepairGenerator {
                 owlFactory.getOWLNothing()
         );
 
-        OWLReasonerFactory reasonerFactory = new ReasonerFactory();
+        OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
         OWLReasoner reasoner = reasonerFactory.createReasoner(ontology);
         ExplanationGeneratorFactory egFactory =
                 new InconsistentOntologyExplanationGeneratorFactory(
