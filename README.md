@@ -27,3 +27,9 @@ To run the front- and back-end you simply run the docker compose in this directo
 - Install java and mvn for the backend
 - Compile the back-end (from the Companion-Queries folder) using the command "./mvnw clean package". This produces the necessary jar file for the next command to work.
 - execute "docker compose build" and then "docker compose up" from this folder.
+
+## Indexing
+
+Host-pests claims included in this repository are configured to be indexed by Global Biotic Interactions (GloBI, https://globalbioticinteractions.org).
+
+[![GloBI Review by Elton](../../actions/workflows/review.yml/badge.svg)](../../actions/workflows/review.yml) [![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:kai-vu/companion-planting-decision-support&refutes=true&refutes=false)](https://globalbioticinteractions.org/?accordingTo=globi:kai-vu/companion-planting-decision-support)
